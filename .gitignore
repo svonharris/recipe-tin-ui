@@ -23,5 +23,9 @@ dist-ssr
 *.sln
 *.sw?
 
+# Storybook build outputs
 *storybook.log
 storybook-static
+
+# Design files
+Tafito - Food Recipe App UI Kit - UI8.fig
