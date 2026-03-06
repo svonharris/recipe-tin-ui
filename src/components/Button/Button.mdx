@@ -1,0 +1,40 @@
+import { Canvas, Meta, Controls } from "@storybook/addon-docs/blocks";
+
+import * as ButtonStories from "./Button.stories";
+import * as PlaygroundStories from "./Button.playground.stories";
+
+<Meta of={ButtonStories} />
+
+# Button
+
+Allows the user to perform an action.
+
+## Guidelines
+
+- Do not use a Button to link to another page. Use a [Standalone Link](/story/components-link--navigation) or a [Call to Action Link](/story/components-link--arrow) instead, or an [inline Link](/story/components-link--default) in the running text.
+- Describe the Button’s function through a short label.
+
+## Props
+
+<Canvas of={PlaygroundStories.PlaygroundDocs} />
+<Controls of={PlaygroundStories.PlaygroundDocs} />
+
+## Examples
+
+### Primary
+
+A primary button draws attention to the most important call to action.
+
+<Canvas of={ButtonStories.Primary} />
+
+### Secondary
+
+Use a secondary button for other actions.
+
+<Canvas of={ButtonStories.Secondary} />
+
+### Disabled
+
+Use a Disabled button to inform the user no actions can be taken.
+
+<Canvas of={ButtonStories.Disabled} />
