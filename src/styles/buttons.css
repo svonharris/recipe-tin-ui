@@ -1,0 +1,111 @@
+button {
+  color: inherit;
+  font: inherit;
+  margin: 0;
+  overflow: visible;
+}
+button, [type='button'], [type='reset'] {
+  border: 0;
+  cursor: pointer;
+}
+.baseButton {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--color-white);
+    background-color: var(--color-primary-500);
+}
+
+button.baseButton:disabled {
+    color: var(--color-gray-400);
+    background-color: var(--color-gray-200);
+}
+button.baseButton:disabled:hover {
+    background-color: var(--color-gray-200);
+}
+
+button.iconWText:disabled {
+    color: var(--color-gray-400);
+    background-color: var(--color-gray-200);
+}
+button.iconWText:disabled:hover {
+    background-color: var(--color-gray-200);
+}
+
+.iconOnlyFillLg_background { /* Large */
+    padding: 12px;
+    min-width: 48px;
+    min-height: 48px;
+    color: var(--color-white);
+    background-color: var(--color-primary-500);
+    font-size: 24px;
+}
+.iconOnlyFillLg_background:hover {
+    background-color: var(--color-primary-600);
+}
+.iconOnlyFillLg_icon {
+    height: auto;
+    width: 24px;
+}
+
+.iconOnlyFillMd_background { /* Medium */
+    padding: 10px;
+    min-width: 40px;
+    min-height: 40px;
+    color: var(--color-white);
+    background-color: var(--color-primary-500);
+    font-size: 20px;
+}
+.iconOnlyFillMd_background:hover {
+    background-color: var(--color-primary-600);
+}
+.iconOnlyFillMd_icon {
+    height: auto;
+    width: 20px;
+}
+
+.iconOnlyFillXs_background { /* Extra Small */
+    padding: 6px;
+    min-width: 28px;
+    min-height: 28px;
+    color: var(--color-white);
+    background-color: var(--color-primary-500);
+    font-size: 16px;
+}
+.iconOnlyFillXs_background:hover {
+    background-color: var(--color-primary-600);
+}
+.iconOnlyFillXs_icon {
+    height: auto;
+    width: 16px;
+}
+
+.iconWText {
+    gap: 10px;
+    padding: 16px 24px;
+}
+.iconWText:hover {
+    background-color: var(--color-primary-600);
+}
+
+.iconWTextOutline {
+    gap: 10px;
+    padding: 16px 24px;
+    color: var(--color-primary-500);
+    background-color: var(--color-white);
+    border: 1px solid var(--color-primary-500);
+}
+.iconWTextOutline:hover {
+    color: var(--color-primary-600);
+    border: 1px solid var(--color-primary-600);
+}
+
+button.iconWTextOutline:disabled {
+    color: var(--color-gray-300);
+    border-color: var(--color-gray-200);
+}
+button.iconWTextOutline:disabled:hover {
+    color: var(--color-gray-300);
+    border-color: var(--color-gray-200);
+    background-color: var(--color-white);
+}
