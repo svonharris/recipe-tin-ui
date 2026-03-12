@@ -25,13 +25,16 @@ module.exports = {
     };
 
     const ${componentName} = React.forwardRef(
-      ({ size = 24, color = "currentColor", title, titleId, ...props }: IconProps, ref: React.Ref<SVGSVGElement>) => (
-        ${jsx}
-      )
+      ({ size = 24, color = "currentColor", title, titleId, ...props }: IconProps,
+        ref: React.Ref<SVGSVGElement>) => {
+        const svgProps = { width: size, height: size, style: { color }, ref, ...props };
+        const inner = ${jsx};
+        return React.cloneElement(inner, svgProps);
+      }
     );
 
     ${componentName}.displayName = "${componentName}";
-
+    
     export default ${componentName};
   `,
 };

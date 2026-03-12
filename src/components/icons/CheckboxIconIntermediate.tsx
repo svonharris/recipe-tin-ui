@@ -1,17 +1,20 @@
 import * as React from "react";
 import type { SVGProps } from "react";
 type IconProps = SVGProps<SVGSVGElement> & {
-  size?: number,
-  color?: string,
-  title?: string,
-  titleId?: string,
+  size?: number;
+  color?: string;
+  title?: string;
+  titleId?: string;
 };
 const SvgCheckboxIconIntermediate = React.forwardRef(
   (
     { size = 24, color = "currentColor", title, titleId, ...props }: IconProps,
-    ref: React.Ref<SVGSVGElement>
+    ref: React.Ref<SVGSVGElement>,
   ) => (
     <svg
+      width={size}
+      height={size}
+      style={{ color }}
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
       viewBox="0 0 24 24"
@@ -23,7 +26,7 @@ const SvgCheckboxIconIntermediate = React.forwardRef(
       <rect x={4} y={4} width={16} height={16} rx={4} fill="currentColor" />
       <rect x={7} y={11} width={10} height={2} rx={1} fill="currentColor" />
     </svg>
-  )
+  ),
 );
 SvgCheckboxIconIntermediate.displayName = "SvgCheckboxIconIntermediate";
 export default SvgCheckboxIconIntermediate;
