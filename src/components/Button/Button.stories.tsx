@@ -1,6 +1,7 @@
 import type { Meta, StoryObj } from "@storybook/react";
 import { fn } from "storybook/test";
 import Button from "./Button";
+import { Gps } from "../icons";
 
 const meta = {
   title: "Components/Buttons/Button",
@@ -43,5 +44,37 @@ export const Disabled: Story = {
   args: {
     children: "Disabled Button",
     disabled: true,
+  },
+};
+
+export const DefaultButtons: Story = {
+  args: {
+    children: (
+      <>
+        <p className="text-md-medium">Button Icon</p>{" "}
+        <button className="baseButton iconOnlyFillLg_background">
+          <Gps />
+        </button>
+        <button className="baseButton iconOnlyFillLg_background" disabled>
+          <Gps />
+        </button>
+        <br></br>
+        <p className="text-md-medium">Button Icon with Text Filled</p>{" "}
+        <button className="baseButton iconWText">
+          <Gps /> Button
+        </button>
+        <button className="baseButton iconWText" disabled>
+          <Gps /> Button
+        </button>
+        <br></br>
+        <p className="text-md-medium">Button Icon with Text Outline</p>{" "}
+        <button className="baseButton iconWTextOutline">
+          <Gps /> Button
+        </button>
+        <button className="baseButton iconWTextOutline" disabled>
+          <Gps /> Button
+        </button>
+      </>
+    ),
   },
 };
