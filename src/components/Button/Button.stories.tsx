@@ -6,18 +6,24 @@ import { Gps } from "../icons";
 const meta = {
   title: "Components/Buttons/Button",
   component: Button,
-  args: { onClick: fn() },
+  args: { onClick: fn(), disabled: false },
   argTypes: {
     variant: {
       control: false, //renders prop documentation without a control
     },
     disabled: {
-      control: false,
+      control: "boolean",
     },
     title: {
       table: { disable: true }, //removes prop control
     },
     type: {
+      table: { disable: true },
+    },
+    withIcon: {
+      table: { disable: true },
+    },
+    icon: {
       table: { disable: true },
     },
   },
@@ -26,55 +32,34 @@ const meta = {
 export default meta;
 type Story = StoryObj<typeof Button>;
 
-export const Primary: Story = {
+export const IconTextFilled: Story = {
   args: {
-    children: "Primary Button",
-    variant: "primary",
+    children: "Button",
+    variant: "filled",
+    withIcon: true,
+    icon: <Gps />,
   },
 };
 
-export const Secondary: Story = {
+export const IconTextOutline: Story = {
   args: {
-    children: "Secondary Button",
-    variant: "secondary",
+    children: "Button",
+    variant: "outline",
+    withIcon: true,
+    icon: <Gps />,
   },
 };
 
-export const Disabled: Story = {
+export const TextFilled: Story = {
   args: {
-    children: "Disabled Button",
-    disabled: true,
+    ...IconTextFilled.args,
+    withIcon: false,
   },
 };
 
-export const DefaultButtons: Story = {
+export const TextOutline: Story = {
   args: {
-    children: (
-      <>
-        <p className="text-md-medium">Button Icon</p>{" "}
-        <button className="baseButton iconOnlyFillLg_background">
-          <Gps />
-        </button>
-        <button className="baseButton iconOnlyFillLg_background" disabled>
-          <Gps />
-        </button>
-        <br></br>
-        <p className="text-md-medium">Button Icon with Text Filled</p>{" "}
-        <button className="baseButton iconWText">
-          <Gps /> Button
-        </button>
-        <button className="baseButton iconWText" disabled>
-          <Gps /> Button
-        </button>
-        <br></br>
-        <p className="text-md-medium">Button Icon with Text Outline</p>{" "}
-        <button className="baseButton iconWTextOutline">
-          <Gps /> Button
-        </button>
-        <button className="baseButton iconWTextOutline" disabled>
-          <Gps /> Button
-        </button>
-      </>
-    ),
+    ...IconTextOutline.args,
+    withIcon: false,
   },
 };
