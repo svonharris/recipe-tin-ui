@@ -8,30 +8,21 @@ button, [type='button'], [type='reset'] {
   border: 0;
   cursor: pointer;
 }
+
 .baseButton {
     display: flex;
     justify-content: center;
     align-items: center;
-    color: var(--color-white);
-    background-color: var(--color-primary-500);
 }
-
 button.baseButton:disabled {
     color: var(--color-gray-400);
     background-color: var(--color-gray-200);
 }
 button.baseButton:disabled:hover {
-    background-color: var(--color-gray-200);
+    cursor: default;
 }
 
-button.iconWText:disabled {
-    color: var(--color-gray-400);
-    background-color: var(--color-gray-200);
-}
-button.iconWText:disabled:hover {
-    background-color: var(--color-gray-200);
-}
-
+/* Icon Only */
 .iconOnlyFillLg_background { /* Large */
     padding: 12px;
     min-width: 48px;
@@ -80,14 +71,41 @@ button.iconWText:disabled:hover {
     width: 16px;
 }
 
+/* Text Only -- Filled */
+.textFilled {
+    padding: 16px 24px;
+    background-color: var(--color-primary-500);
+    color: var(--color-white);
+}
+.textFilled:hover {
+    background-color: var(--color-primary-600);
+}
+
+/* Text with Icon -- Filled */
 .iconWText {
     gap: 10px;
     padding: 16px 24px;
+    background-color: var(--color-primary-500);
+    color: var(--color-white);
 }
 .iconWText:hover {
     background-color: var(--color-primary-600);
 }
 
+
+/* Text Only -- Outline */
+.textOutline {
+    padding: 16px 24px;
+    color: var(--color-primary-500);
+    background-color: var(--color-white);
+    border: 1px solid var(--color-primary-500);
+}
+.textOutline:hover {
+    color: var(--color-primary-600);
+    border: 1px solid var(--color-primary-600);
+}
+
+/* Text with Icon -- Outline */
 .iconWTextOutline {
     gap: 10px;
     padding: 16px 24px;
@@ -100,12 +118,10 @@ button.iconWText:disabled:hover {
     border: 1px solid var(--color-primary-600);
 }
 
+/* Disabled */
+button.textOutline:disabled,
 button.iconWTextOutline:disabled {
     color: var(--color-gray-300);
-    border-color: var(--color-gray-200);
-}
-button.iconWTextOutline:disabled:hover {
-    color: var(--color-gray-300);
-    border-color: var(--color-gray-200);
-    background-color: var(--color-white);
+    border: 1px solid var(--color-gray-200);
+    background-color: var(--color-transparent);
 }
