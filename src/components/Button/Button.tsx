@@ -1,4 +1,4 @@
-import style from "./Button.module.css";
+import React from "react";
 
 type ButtonProps = {
   children: React.ReactNode;
@@ -6,12 +6,23 @@ type ButtonProps = {
   title?: string;
   type?: "button" | "submit";
   disabled?: boolean;
-  variant?: "primary" | "secondary";
+  variant?: "filled" | "outline";
+  withIcon?: boolean;
+  icon?: React.ReactNode;
 };
 
-const VARIANT_STYLES: Record<"primary" | "secondary", string> = {
-  primary: style.primaryButton,
-  secondary: style.secondaryButton,
+const VARIANT_CLASSES: Record<
+  "filled" | "outline",
+  Record<"withIcon" | "textOnly", string>
+> = {
+  filled: {
+    withIcon: "iconWText",
+    textOnly: "textFilled",
+  },
+  outline: {
+    withIcon: "iconWTextOutline",
+    textOnly: "textOutline",
+  },
 };
 
 const Button = ({
@@ -20,17 +31,22 @@ const Button = ({
   title,
   type = "button",
   disabled = false,
-  variant = "primary",
+  variant = "filled",
+  withIcon = false,
+  icon,
 }: ButtonProps) => {
+  const variantClass =
+    VARIANT_CLASSES[variant][withIcon ? "withIcon" : "textOnly"];
+
   return (
     <button
-      className={`${style.baseButton} ${VARIANT_STYLES[variant]}`}
+      className={`baseButton ${variantClass}`}
       onClick={onClick}
       type={type}
       disabled={disabled}
       title={title}
     >
-      {children}
+      {withIcon && icon} <span className="text-md-regular">{children}</span>
     </button>
   );
 };
