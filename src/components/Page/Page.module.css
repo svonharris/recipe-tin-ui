@@ -1,0 +1,191 @@
+.info {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding-bottom: 8px;
+}
+.imageHero {
+    border-radius: 0 0 10px 10px;
+}
+
+/* Ratings Bar */
+.ratings {
+    display: flex;
+    flex-direction: row;
+}
+.ratingsStars {
+    display: flex;
+    flex-direction: row;
+}
+.ratingsText {
+    color: var(--color-gray-700);
+    padding-left: 8px;
+}
+
+/* Cook Time */
+.cookTime {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+.cookTimeText {
+    color: var(--color-gray-500);
+    text-transform: capitalize;
+}
+
+.recipeTitle {
+    color: var(--color-dark-500);
+}
+
+.divider {
+    border: none;
+    border-bottom: 1px solid var(--color-gray-200);
+    margin-top: 16px;
+    margin-bottom: 24px;
+}
+
+/* Recipe Description */
+.recipeDescription {
+    margin-bottom: 24px;
+}
+.recipeDescriptionTitle {
+    color: var(--color-dark-500);
+    padding-bottom: 4px;
+}
+.recipeDescriptionContent {
+    color: var(--color-gray-700);
+}
+.recipeDescriptionReadMore {
+    color: var(--color-primary-500);
+    text-decoration: none;
+    text-transform: capitalize;
+}
+
+/* Ingredients */
+.ingredients {
+    margin-bottom: 24px;
+}
+.ingredientsTitle {
+    color: var(--color-dark-500);
+    margin-bottom: 16px;
+}
+.ingredientsItem {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 16px;
+    &:last-child {
+        margin-bottom: 0;
+    }
+}
+.ingredientsName {
+    color: var(--color-dark-500);
+    text-transform: capitalize;
+}
+.ingredientsAmount {
+    color: var(--color-gray-700);
+}
+
+/* Instructions */
+.instructions {
+    margin-bottom: 24px;
+}
+.instructionsTitle {
+    color: var(--color-dark-500);
+    margin-bottom: 16px;
+}
+.instructionsContent {
+    color: var(--color-gray-700);
+}
+
+/* Nutrition */
+.nutrition {
+    min-height: 52px;
+    margin-bottom: 24px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+.nutritionProgress {
+    width: 300px;
+    display: flex;
+    flex-direction: row;
+    gap: 8px;
+}
+.nutritionAmount {
+    color: var(--color-dark-500);
+    margin-bottom: 4px;
+}
+.nutritionLabel {
+    color: var(--color-gray-700);
+    text-transform: capitalize;
+}
+
+/* Progress Bar */
+progress {
+  width: 6px;
+  height: 52px;
+  writing-mode: vertical-rl;   /* makes the progress bar vertical */
+  transform: rotate(180deg);   /* fills from bottom to top */
+  appearance: none;
+  -webkit-appearance: none;
+}
+/* Protein */
+progress[id="protein"]::-webkit-progress-bar { /* Background track */
+  background-color: #99F6E4;
+  border-radius: 3px;
+}
+progress[id="protein"]::-webkit-progress-value { /* Filled value */
+  background-color: #14B8A6;
+  border-radius: 3px;
+}
+progress[id="protein"]::-moz-progress-bar { /* Firefox */
+  background-color: #14B8A6;
+  border-radius: 3px;
+}
+/* Carbs */
+progress[id="carb"]::-webkit-progress-bar { /* Background track */
+  background-color: var(--color-information-100);
+  border-radius: 3px;
+}
+progress[id="carb"]::-webkit-progress-value { /* Filled value */
+  background-color: var(--color-information-500);
+  border-radius: 3px;
+}
+progress[id="carb"]::-moz-progress-bar { /* Firefox */
+  background-color: var(--color-information-500);
+  border-radius: 3px;
+}
+/* Fat */
+progress[id="fat"]::-webkit-progress-bar { /* Background track */
+  background-color: var(--color-warning-100);
+  border-radius: 3px;
+}
+progress[id="fat"]::-webkit-progress-value { /* Filled value */
+  background-color: var(--color-warning-500);
+  border-radius: 3px;
+}
+progress[id="fat"]::-moz-progress-bar { /* Firefox */
+  background-color: var(--color-warning-500);
+  border-radius: 3px;
+}
+/* Calories */
+progress[id="calories"]::-webkit-progress-bar { /* Background track */
+  background-color: var(--color-gray-100);
+  border-radius: 3px;
+}
+progress[id="calories"]::-webkit-progress-value { /* Filled value */
+  background-color: var(--color-gray-500);
+  border-radius: 3px;
+}
+progress[id="calories"]::-moz-progress-bar { /* Firefox */
+  background-color: var(--color-gray-500);
+  border-radius: 3px;
+}
+
+/* 
+Protein: 16 = 64 cal
+Carb: 65 = 260 cal
+Fat: 90 = 810 cal
+Total: 1134 cal
+*/
