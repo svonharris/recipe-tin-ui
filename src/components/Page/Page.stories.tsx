@@ -26,15 +26,15 @@ export const RecipeDetails: Story = {
           borderRadius={"var(--image-border-bottom)"}
         />
         <div className={styles.info}>
-          <Ratings url="/api/ratings" />
+          <Ratings rating={3} reviews={300} />
           <div className={`text-xs-regular ${styles.cookTime}`}>
             <ClockCircle size={16} color="var(--color-gray-500)" />
             <p className={styles.cookTimeText}>20 min</p>
           </div>
         </div>
-        <div className={`text-xl-bold ${styles.recipeTitle}`}>
+        <h1 className={`text-xl-bold ${styles.recipeTitle}`}>
           Bruschetta Ricotta Pesto
-        </div>
+        </h1>
         <hr className={styles.divider} />
         <div className={styles.recipeDescription}>
           <p className={`text-lg-bold ${styles.recipeDescriptionTitle}`}>
