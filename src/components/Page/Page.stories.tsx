@@ -4,6 +4,7 @@ import Image from "../Image/Image";
 import { ClockCircle } from "../../icons";
 import Ratings from "../Ratings/Ratings";
 import NutrientBar from "../NutrientBar/NutrientBar";
+import IngredientsItem from "../IngredientsItem/IngredientsItem";
 import styles from "./Page.module.css";
 
 const meta = {
@@ -51,9 +52,7 @@ export const RecipeDetails: Story = {
           <NutrientBar value={16} macronutrient={"protein"} />
           <NutrientBar value={65} macronutrient={"carb"} />
           <NutrientBar value={90} macronutrient={"fat"} />
-          <div
-            className={`${styles.nutritionProgress} ${styles.nutritionCalories}`}
-          >
+          <div>
             <progress
               id="calories"
               value={1134}
@@ -77,22 +76,8 @@ export const RecipeDetails: Story = {
           <p className={`text-lg-bold ${styles.ingredientsTitle}`}>
             Ingredients
           </p>
-          <div className={styles.ingredientsItem}>
-            <div className={`text-md-bold ${styles.ingredientsName}`}>
-              olive oil
-            </div>
-            <div className={`text-sm-regular ${styles.ingredientsAmount}`}>
-              3 tbsp
-            </div>
-          </div>
-          <div className={styles.ingredientsItem}>
-            <div className={`text-md-bold ${styles.ingredientsName}`}>
-              cherry tomatoes
-            </div>
-            <div className={`text-sm-regular ${styles.ingredientsAmount}`}>
-              15 tomatoes
-            </div>
-          </div>
+          <IngredientsItem name={"olive oil"} amount={"3 tbsp"} />
+          <IngredientsItem name={"cherry tomatoes"} amount={"15 tomatoes"} />
         </div>
         <div className={styles.instructions}>
           <p className={`text-lg-bold ${styles.instructionsTitle}`}>
