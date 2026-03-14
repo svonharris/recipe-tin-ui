@@ -1,0 +1,20 @@
+.nutrientBar {
+    display: flex;
+    flex-direction: row;
+    gap: 8px;
+}
+
+.label {
+    display: flex;
+    flex-direction: column;
+}
+
+.amount {
+    color: var(--color-dark-500);
+    margin-bottom: 4px;
+}
+
+.macronutrient {
+    color: var(--color-gray-700);
+    text-transform: capitalize;
+}
