@@ -7,18 +7,18 @@ type ButtonIconProps = {
   type?: "button" | "submit";
   disabled?: boolean;
   size?: "lg" | "md" | "sm";
+  variant?: "filled" | "outline";
 };
 
-const SIZE_CLASSES: Record<"lg" | "md" | "sm", string> = {
-  lg: "iconOnlyFillLg_background",
-  md: "iconOnlyFillMd_background",
-  sm: "iconOnlyFillSm_background",
+const SIZE: Record<"lg" | "md" | "sm", { className: string; px: number }> = {
+  lg: { className: "iconOnlyFillLg_background", px: 24 },
+  md: { className: "iconOnlyFillMd_background", px: 20 },
+  sm: { className: "iconOnlyFillSm_background", px: 18 },
 };
 
-const SIZE_PX: Record<"lg" | "md" | "sm", number> = {
-  lg: 24,
-  md: 20,
-  sm: 18,
+const VARIANT_CLASSES: Record<"filled" | "outline", string> = {
+  filled: "iconOnlyFilled",
+  outline: "iconOnlyOutline",
 };
 
 const ButtonIcon = ({
@@ -28,16 +28,17 @@ const ButtonIcon = ({
   type = "button",
   disabled = false,
   size = "lg",
+  variant = "filled",
 }: ButtonIconProps) => {
   return (
     <button
-      className={`baseButton ${SIZE_CLASSES[size]}`}
+      className={`baseButton ${SIZE[size].className} ${VARIANT_CLASSES[variant]}`}
       onClick={onClick}
       type={type}
       disabled={disabled}
       title={title}
     >
-      {React.cloneElement(children, { size: SIZE_PX[size] })}
+      {React.cloneElement(children, { size: SIZE[size].px })}
     </button>
   );
 };
