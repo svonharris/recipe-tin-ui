@@ -1,7 +1,8 @@
 import type { Meta, StoryObj } from "@storybook/react";
 import Page from "./Page";
 import Image from "../Image/Image";
-import { Star, ClockCircle } from "../../icons";
+import { ClockCircle } from "../../icons";
+import Ratings from "../Ratings/Ratings";
 import styles from "./Page.module.css";
 
 const meta = {
@@ -22,18 +23,7 @@ export const RecipeDetails: Story = {
           borderRadius={"var(--image-border-bottom)"}
         />
         <div className={styles.info}>
-          <div className={styles.ratings}>
-            <div className={styles.ratingsStars}>
-              <Star size={16} color="var(--color-warning-500)" />
-              <Star size={16} color="var(--color-warning-500)" />
-              <Star size={16} color="var(--color-warning-500)" />
-              <Star size={16} color="var(--color-warning-500)" />
-              <Star size={16} color="var(--color-warning-500)" />
-            </div>
-            <p className={`text-xs-regular ${styles.ratingsText}`}>
-              5.0 (2.3K Reviews)
-            </p>
-          </div>
+          <Ratings url="/api/ratings" />
           <div className={`text-xs-regular ${styles.cookTime}`}>
             <ClockCircle size={16} color="var(--color-gray-500)" />
             <p className={styles.cookTimeText}>20 min</p>
