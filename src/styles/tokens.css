@@ -178,4 +178,12 @@
     --text-sx-leading:  1.30;
     --text-sx-tracking: -0.02em;
 
+    /* Border */
+    --border-radius-sm: 4px;
+    --border-radius-md: 8px;
+    --border-radius-lg: 12px;
+    --border-radius-xl: 16px;
+    --border-radius-2xl: 24px;
+    --image-border-bottom: 0 0 var(--border-radius-xl) var(--border-radius-xl);
+
 }
