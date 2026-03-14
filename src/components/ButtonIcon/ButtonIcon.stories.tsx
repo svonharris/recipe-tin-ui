@@ -36,5 +36,6 @@ export const IconFilled: Story = {
 export const IconOutline: Story = {
   args: {
     ...IconFilled.args,
+    variant: "outline",
   },
 };
