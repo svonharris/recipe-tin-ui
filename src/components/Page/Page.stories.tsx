@@ -7,6 +7,7 @@ import NutrientBar from "../NutrientBar/NutrientBar";
 import IngredientsItem from "../IngredientsItem/IngredientsItem";
 import ReadMore from "../ReadMore/ReadMore";
 import styles from "./Page.module.css";
+import Heading from "../Heading/Heading";
 
 const meta = {
   title: "Components/Page",
@@ -32,14 +33,22 @@ export const RecipeDetails: Story = {
             <p className={styles.cookTimeText}>20 min</p>
           </div>
         </div>
-        <h1 className={`text-xl-bold ${styles.recipeTitle}`}>
+        <Heading
+          htmlElement="h1"
+          textClassName="text-xl-bold"
+          color="var(--color-dark-500)"
+        >
           Bruschetta Ricotta Pesto
-        </h1>
+        </Heading>
         <hr className={styles.divider} />
         <div className={styles.recipeDescription}>
-          <p className={`text-lg-bold ${styles.recipeDescriptionTitle}`}>
+          <Heading
+            htmlElement="h2"
+            textClassName="text-lg-bold"
+            color="var(--color-dark-500)"
+          >
             Description
-          </p>
+          </Heading>
           <ReadMore
             className={`text-md-regular ${styles.recipeDescriptionText}`}
             text="This bruschetta recipe is a delicious and easy appetizer that combines the flavors of fresh tomatoes, creamy ricotta cheese, and fragrant basil pesto. Perfect for entertaining or as a light snack, this dish is sure to impress your guests with its vibrant colors and bold flavors. Toast slices of crusty bread until golden, spread with creamy ricotta, top with a fresh tomato mixture, and finish with a drizzle of homemade basil pesto for a stunning and satisfying dish."
@@ -70,16 +79,24 @@ export const RecipeDetails: Story = {
           </div>
         </div>
         <div className={styles.ingredients}>
-          <p className={`text-lg-bold ${styles.ingredientsTitle}`}>
+          <Heading
+            htmlElement="h2"
+            textClassName="text-lg-bold"
+            color="var(--color-dark-500)"
+          >
             Ingredients
-          </p>
+          </Heading>
           <IngredientsItem name={"olive oil"} amount={"3 tbsp"} />
           <IngredientsItem name={"cherry tomatoes"} amount={"15 tomatoes"} />
         </div>
         <div className={styles.instructions}>
-          <p className={`text-lg-bold ${styles.instructionsTitle}`}>
-            Instructions
-          </p>
+          <Heading
+            htmlElement="h2"
+            textClassName="text-lg-bold"
+            color="var(--color-dark-500)"
+          >
+            Description
+          </Heading>
           <p className={`text-md-regular ${styles.instructionsContent}`}>
             Follow these steps to prepare the dish.
           </p>
