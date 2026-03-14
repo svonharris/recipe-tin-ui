@@ -5,6 +5,7 @@ import { ClockCircle } from "../../icons";
 import Ratings from "../Ratings/Ratings";
 import NutrientBar from "../NutrientBar/NutrientBar";
 import IngredientsItem from "../IngredientsItem/IngredientsItem";
+import ReadMore from "../ReadMore/ReadMore";
 import styles from "./Page.module.css";
 
 const meta = {
@@ -39,14 +40,10 @@ export const RecipeDetails: Story = {
           <p className={`text-lg-bold ${styles.recipeDescriptionTitle}`}>
             Description
           </p>
-          <p className={`text-md-regular ${styles.recipeDescriptionContent}`}>
-            This bruschetta recipe is a delicious and easy appetizer that
-            combines the flavors of fresh tomatoes, creamy ricotta cheese, and
-            fragrant basil pesto. Perfect for entertaining or as a light snack,
-            this dish is sure to impress your guests with its vibrant colors and
-            bold flavors...{" "}
-            <span className={styles.recipeDescriptionReadMore}>read more</span>
-          </p>
+          <ReadMore
+            className={`text-md-regular ${styles.recipeDescriptionText}`}
+            text="This bruschetta recipe is a delicious and easy appetizer that combines the flavors of fresh tomatoes, creamy ricotta cheese, and fragrant basil pesto. Perfect for entertaining or as a light snack, this dish is sure to impress your guests with its vibrant colors and bold flavors. Toast slices of crusty bread until golden, spread with creamy ricotta, top with a fresh tomato mixture, and finish with a drizzle of homemade basil pesto for a stunning and satisfying dish."
+          />
         </div>
         <div className={styles.nutrition}>
           <NutrientBar value={16} macronutrient={"protein"} />
