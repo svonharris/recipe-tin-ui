@@ -1,15 +1,18 @@
 import type { Meta, StoryObj } from "@storybook/react";
 import { fn } from "storybook/test";
 import ButtonIcon from "./ButtonIcon";
-import { Gps } from "../icons";
+import { Gps } from "../../icons";
 
 const meta = {
   title: "Components/Buttons/Icon Button",
   component: ButtonIcon,
-  args: { onClick: fn() },
+  args: { onClick: fn(), size: "lg", disabled: false },
   argTypes: {
+    children: {
+      control: false, //renders prop documentation without a control
+    },
     disabled: {
-      control: false,
+      control: "boolean",
     },
     title: {
       table: { disable: true },
@@ -23,17 +26,15 @@ const meta = {
 export default meta;
 type Story = StoryObj<typeof ButtonIcon>;
 
-export const Default: Story = {
+export const IconFilled: Story = {
   args: {
     children: <Gps />,
     title: "GPS Icon Button",
   },
 };
 
-export const Disabled: Story = {
+export const IconOutline: Story = {
   args: {
-    children: <Gps />,
-    disabled: true,
-    title: "Disabled GPS Icon Button",
+    ...IconFilled.args,
   },
 };
