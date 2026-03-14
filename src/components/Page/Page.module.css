@@ -21,10 +21,6 @@
     padding-top: 2px;
 }
 
-.recipeTitle {
-    color: var(--color-dark-500);
-}
-
 .divider {
     border: none;
     border-bottom: 1px solid var(--color-gray-200);
@@ -36,10 +32,6 @@
 .recipeDescription {
     margin-bottom: 24px;
 }
-.recipeDescriptionTitle {
-    color: var(--color-dark-500);
-    padding-bottom: 4px;
-}
 .recipeDescriptionText {
     color: var(--color-gray-700);
 }
@@ -48,18 +40,10 @@
 .ingredients {
     margin-bottom: 24px;
 }
-.ingredientsTitle {
-    color: var(--color-dark-500);
-    margin-bottom: 16px;
-}
 
 /* Instructions */
 .instructions {
     margin-bottom: 24px;
-}
-.instructionsTitle {
-    color: var(--color-dark-500);
-    margin-bottom: 16px;
 }
 .instructionsContent {
     color: var(--color-gray-700);
