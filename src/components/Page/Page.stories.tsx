@@ -19,8 +19,7 @@ export const RecipeDetails: Story = {
         <Image
           src="../Bruschetta-Ricotta-Pesto.jpg"
           altText="Bruschetta with ricotta and pesto"
-          // style={styles.imageHero}
-          style={{ borderRadius: "0 0 10px 10px" }}
+          borderRadius={"var(--image-border-bottom)"}
         />
         <div className={styles.info}>
           <div className={styles.ratings}>
