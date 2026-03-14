@@ -1,7 +1,7 @@
 import type { Meta, StoryObj } from "@storybook/react";
 import { fn } from "storybook/test";
 import Button from "./Button";
-import { Gps } from "../icons";
+import { Gps } from "../../icons";
 
 const meta = {
   title: "Components/Buttons/Button",

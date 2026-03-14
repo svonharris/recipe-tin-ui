@@ -1,7 +1,7 @@
 import type { Meta, StoryObj } from "@storybook/react";
 import Page from "./Page";
 import Image from "../Image/Image";
-import { Star, ClockCircle } from "../icons";
+import { Star, ClockCircle } from "../../icons";
 import styles from "./Page.module.css";
 
 const meta = {
