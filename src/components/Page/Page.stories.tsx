@@ -77,7 +77,15 @@ export const RecipeDetails: Story = {
           <div
             className={`${styles.nutritionProgress} ${styles.nutritionCalories}`}
           >
-            <progress id="calories" value="1134" max="2000"></progress>
+            <progress
+              id="calories"
+              value={1134}
+              max={2000}
+              style={{
+                "--p1": `${((64 / 1134) * 100).toFixed(1)}%`,
+                "--p2": `${(((64 + 260) / 1134) * 100).toFixed(1)}%`,
+              } as React.CSSProperties}
+            />
             <label htmlFor="calories">
               <p className={`text-lg-bold ${styles.nutritionAmount}`}>1134</p>
               <p className={`text-sm-regular ${styles.nutritionLabel}`}>

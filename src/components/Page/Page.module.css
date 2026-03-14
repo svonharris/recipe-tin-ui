@@ -161,12 +161,22 @@ progress[id="calories"]::-webkit-progress-bar { /* Background track */
   background-color: var(--color-gray-100);
   border-radius: 3px;
 }
-progress[id="calories"]::-webkit-progress-value { /* Filled value */
-  background-color: var(--color-gray-500);
+progress[id="calories"]::-webkit-progress-value { /* Filled value: protein | carb | fat */
+  background: linear-gradient(
+    to top,
+    var(--color-secondary-500) 0% var(--p1),
+    var(--color-information-500) var(--p1) var(--p2),
+    var(--color-warning-500) var(--p2) 100%
+  );
   border-radius: 3px;
 }
 progress[id="calories"]::-moz-progress-bar { /* Firefox */
-  background-color: var(--color-gray-500);
+  background: linear-gradient(
+    to top,
+    var(--color-secondary-500) 0% var(--p1),
+    var(--color-information-500) var(--p1) var(--p2),
+    var(--color-warning-500) var(--p2) 100%
+  );
   border-radius: 3px;
 }
 
