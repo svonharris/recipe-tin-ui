@@ -1,0 +1,5 @@
+.toggle {
+    color: var(--color-primary-700);
+    text-transform: capitalize;
+    cursor: pointer;
+}
