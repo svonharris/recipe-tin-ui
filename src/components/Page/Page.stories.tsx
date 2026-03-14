@@ -3,6 +3,7 @@ import Page from "./Page";
 import Image from "../Image/Image";
 import { ClockCircle } from "../../icons";
 import Ratings from "../Ratings/Ratings";
+import NutrientBar from "../NutrientBar/NutrientBar";
 import styles from "./Page.module.css";
 
 const meta = {
@@ -47,33 +48,9 @@ export const RecipeDetails: Story = {
           </p>
         </div>
         <div className={styles.nutrition}>
-          <div
-            className={`${styles.nutritionProgress} ${styles.nutritionProtein}`}
-          >
-            <progress id="protein" value="16" max="100"></progress>
-            <label htmlFor="protein">
-              <p className={`text-lg-bold ${styles.nutritionAmount}`}>16g</p>
-              <p className={`text-sm-regular ${styles.nutritionLabel}`}>
-                protein
-              </p>
-            </label>
-          </div>
-          <div
-            className={`${styles.nutritionProgress} ${styles.nutritionCarb}`}
-          >
-            <progress id="carb" value="65" max="100"></progress>
-            <label htmlFor="carb">
-              <p className={`text-lg-bold ${styles.nutritionAmount}`}>65g</p>
-              <p className={`text-sm-regular ${styles.nutritionLabel}`}>carb</p>
-            </label>
-          </div>
-          <div className={`${styles.nutritionProgress} ${styles.nutritionFat}`}>
-            <progress id="fat" value="90" max="100"></progress>
-            <label htmlFor="fat">
-              <p className={`text-lg-bold ${styles.nutritionAmount}`}>90g</p>
-              <p className={`text-sm-regular ${styles.nutritionLabel}`}>fat</p>
-            </label>
-          </div>
+          <NutrientBar value={16} macronutrient={"protein"} />
+          <NutrientBar value={65} macronutrient={"carb"} />
+          <NutrientBar value={90} macronutrient={"fat"} />
           <div
             className={`${styles.nutritionProgress} ${styles.nutritionCalories}`}
           >
@@ -81,10 +58,12 @@ export const RecipeDetails: Story = {
               id="calories"
               value={1134}
               max={2000}
-              style={{
-                "--p1": `${((64 / 1134) * 100).toFixed(1)}%`,
-                "--p2": `${(((64 + 260) / 1134) * 100).toFixed(1)}%`,
-              } as React.CSSProperties}
+              style={
+                {
+                  "--p1": `${((64 / 1134) * 100).toFixed(1)}%`,
+                  "--p2": `${(((64 + 260) / 1134) * 100).toFixed(1)}%`,
+                } as React.CSSProperties
+              }
             />
             <label htmlFor="calories">
               <p className={`text-lg-bold ${styles.nutritionAmount}`}>1134</p>
