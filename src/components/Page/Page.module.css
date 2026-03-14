@@ -40,13 +40,8 @@
     color: var(--color-dark-500);
     padding-bottom: 4px;
 }
-.recipeDescriptionContent {
+.recipeDescriptionText {
     color: var(--color-gray-700);
-}
-.recipeDescriptionReadMore {
-    color: var(--color-primary-500);
-    text-decoration: none;
-    text-transform: capitalize;
 }
 
 /* Ingredients */
