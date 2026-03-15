@@ -3,15 +3,14 @@ import React from "react";
 type InlineProps = {
   children: React.ReactNode;
   gap?: number;
-  align?: "top" | "center" | "bottom" | "between";
+  align?: "top" | "center" | "bottom";
   justify?: "between" | "around";
 };
 
-const ALIGN: Record<"top" | "center" | "bottom" | "between", string> = {
-  center: "center",
+const ALIGN: Record<"top" | "center" | "bottom", string> = {
   top: "flex-start",
+  center: "center",
   bottom: "baseline",
-  between: "space-between",
 };
 
 const JUSTIFY: Record<"between" | "around", string> = {
@@ -19,7 +18,12 @@ const JUSTIFY: Record<"between" | "around", string> = {
   around: "space-around",
 };
 
-const Inline = ({ children, gap = 16, align = "center", justify }: InlineProps) => (
+const Inline = ({
+  children,
+  gap = 16,
+  align = "center",
+  justify,
+}: InlineProps) => (
   <div
     style={{
       display: "flex",
