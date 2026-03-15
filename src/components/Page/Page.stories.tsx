@@ -8,6 +8,8 @@ import IngredientsItem from "../IngredientsItem/IngredientsItem";
 import ReadMore from "../ReadMore/ReadMore";
 import styles from "./Page.module.css";
 import Heading from "../Heading/Heading";
+import Inline from "../Inline/Inline";
+import Stack from "../Stack/Stack";
 
 const meta = {
   title: "Components/Page",
@@ -26,13 +28,13 @@ export const RecipeDetails: Story = {
           altText="Bruschetta with ricotta and pesto"
           borderRadius={"var(--image-border-bottom)"}
         />
-        <div className={styles.info}>
+        <Inline gap={0} justify="between">
           <Ratings rating={3} reviews={300} />
           <div className={`${styles.cookTime}`}>
             <ClockCircle size={16} color="var(--color-gray-800)" />
             <p className={`text-xs-regular ${styles.cookTimeText}`}>20 min</p>
           </div>
-        </div>
+        </Inline>
         <Heading
           htmlElement="h1"
           textClassName="text-xl-bold"
@@ -41,7 +43,8 @@ export const RecipeDetails: Story = {
           Bruschetta Ricotta Pesto
         </Heading>
         <hr className={styles.divider} />
-        <div className={styles.recipeDescription}>
+
+        <Stack gap={0}>
           <Heading
             htmlElement="h2"
             textClassName="text-lg-bold"
@@ -53,8 +56,8 @@ export const RecipeDetails: Story = {
             className={`text-md-regular ${styles.recipeDescriptionText}`}
             text="This bruschetta recipe is a delicious and easy appetizer that combines the flavors of fresh tomatoes, creamy ricotta cheese, and fragrant basil pesto. Perfect for entertaining or as a light snack, this dish is sure to impress your guests with its vibrant colors and bold flavors. Toast slices of crusty bread until golden, spread with creamy ricotta, top with a fresh tomato mixture, and finish with a drizzle of homemade basil pesto for a stunning and satisfying dish."
           />
-        </div>
-        <div className={styles.nutrition}>
+        </Stack>
+        <Inline gap={24}>
           <NutrientBar value={16} macronutrient={"protein"} />
           <NutrientBar value={65} macronutrient={"carb"} />
           <NutrientBar value={90} macronutrient={"fat"} />
@@ -77,8 +80,8 @@ export const RecipeDetails: Story = {
               </p>
             </label>
           </div>
-        </div>
-        <div className={styles.ingredients}>
+        </Inline>
+        <Stack gap={0}>
           <Heading
             htmlElement="h2"
             textClassName="text-lg-bold"
@@ -88,8 +91,8 @@ export const RecipeDetails: Story = {
           </Heading>
           <IngredientsItem name={"olive oil"} amount={"3 tbsp"} />
           <IngredientsItem name={"cherry tomatoes"} amount={"15 tomatoes"} />
-        </div>
-        <div className={styles.instructions}>
+        </Stack>
+        <Stack gap={0}>
           <Heading
             htmlElement="h2"
             textClassName="text-lg-bold"
@@ -100,7 +103,7 @@ export const RecipeDetails: Story = {
           <p className={`text-md-regular ${styles.instructionsContent}`}>
             Follow these steps to prepare the dish.
           </p>
-        </div>
+        </Stack>
       </div>
     ),
   },
