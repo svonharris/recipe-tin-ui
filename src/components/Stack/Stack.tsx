@@ -4,6 +4,7 @@ type StackProps = {
   children: React.ReactNode;
   gap?: number;
   align?: "top" | "center" | "bottom";
+  justify?: "between" | "around";
 };
 
 const ALIGN: Record<"top" | "center" | "bottom", string> = {
@@ -12,13 +13,19 @@ const ALIGN: Record<"top" | "center" | "bottom", string> = {
   bottom: "flex-end",
 };
 
-const Stack = ({ children, gap = 16, align = "top" }: StackProps) => (
+const JUSTIFY: Record<"between" | "around", string> = {
+  between: "space-between",
+  around: "space-around",
+};
+
+const Stack = ({ children, gap = 16, align = "top", justify }: StackProps) => (
   <div
     style={{
       display: "flex",
       flexDirection: "column",
       gap,
       alignItems: ALIGN[align],
+      ...(justify && { justifyContent: JUSTIFY[justify] }),
     }}
   >
     {children}
