@@ -30,12 +30,10 @@ export const Default: Story = {
           altText="Bruschetta with ricotta and pesto"
           width={"200px"}
         />
-        <div
-          className={`text-xs-regular`}
-          style={{ display: "flex", alignItems: "center", gap: "4px" }}
-        >
+        <div style={{ display: "flex", alignItems: "center", gap: "4px" }}>
           <ClockCircle size={16} color="var(--color-gray-800)" />
           <p
+            className={`text-xs-regular`}
             style={{
               color: "var(--color-gray-800)",
               textTransform: "capitalize",
