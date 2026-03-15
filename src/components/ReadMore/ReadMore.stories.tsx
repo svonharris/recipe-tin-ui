@@ -2,7 +2,7 @@ import type { Meta, StoryObj } from "@storybook/react";
 import ReadMore from "./ReadMore";
 
 const meta = {
-  title: "Components/Read More",
+  title: "Components/Layout/Read More",
   component: ReadMore,
 } satisfies Meta<typeof ReadMore>;
 
