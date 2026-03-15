@@ -28,9 +28,9 @@ export const RecipeDetails: Story = {
         />
         <div className={styles.info}>
           <Ratings rating={3} reviews={300} />
-          <div className={`text-xs-regular ${styles.cookTime}`}>
-            <ClockCircle size={16} color="var(--color-gray-500)" />
-            <p className={styles.cookTimeText}>20 min</p>
+          <div className={`${styles.cookTime}`}>
+            <ClockCircle size={16} color="var(--color-gray-800)" />
+            <p className={`text-xs-regular ${styles.cookTimeText}`}>20 min</p>
           </div>
         </div>
         <Heading
