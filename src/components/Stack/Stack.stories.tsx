@@ -7,6 +7,9 @@ import { ClockCircle } from "../../icons";
 const meta = {
   title: "Components/Layout/Stack",
   component: Stack,
+  args: {
+    align: "top",
+  },
   argTypes: {
     children: {
       control: false,
@@ -31,10 +34,10 @@ export const Default: Story = {
           className={`text-xs-regular`}
           style={{ display: "flex", alignItems: "center", gap: "4px" }}
         >
-          <ClockCircle size={16} color="var(--color-gray-500)" />
+          <ClockCircle size={16} color="var(--color-gray-800)" />
           <p
             style={{
-              color: "var(--color-gray-500)",
+              color: "var(--color-gray-800)",
               textTransform: "capitalize",
               paddingTop: "2px",
             }}
