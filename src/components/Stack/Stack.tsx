@@ -8,7 +8,7 @@ type StackProps = {
 };
 
 const ALIGN: Record<"top" | "center" | "bottom", string> = {
-  top: "flex-start",
+  top: "stretch",
   center: "center",
   bottom: "flex-end",
 };
