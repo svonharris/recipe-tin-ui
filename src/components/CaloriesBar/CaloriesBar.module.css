@@ -1,0 +1,54 @@
+.caloriesBar {
+    display: flex;
+    flex-direction: row;
+    gap: 8px;
+}
+
+.progress {
+    width: 6px;
+    height: 52px;
+    writing-mode: vertical-rl;
+    transform: rotate(180deg);
+    appearance: none;
+    -webkit-appearance: none;
+}
+
+.progress::-webkit-progress-bar {
+    background-color: var(--color-gray-100);
+    border-radius: 3px;
+}
+
+.progress::-webkit-progress-value {
+    background: linear-gradient(
+        to top,
+        var(--protein-color) 0% var(--p1),
+        var(--carb-color) var(--p1) var(--p2),
+        var(--fat-color) var(--p2) 100%
+    );
+    border-radius: 3px;
+}
+
+.progress::-moz-progress-bar {
+    background: linear-gradient(
+        to top,
+        var(--protein-color) 0% var(--p1),
+        var(--carb-color) var(--p1) var(--p2),
+        var(--fat-color) var(--p2) 100%
+    );
+    border-radius: 3px;
+}
+
+.label {
+    display: flex;
+    flex-direction: column;
+}
+
+.amount {
+    color: var(--color-dark-500);
+    margin-bottom: 4px;
+}
+
+.macronutrient {
+    color: var(--color-gray-800);
+    text-transform: capitalize;
+}
