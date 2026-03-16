@@ -20,4 +20,5 @@
 .formInput {
     border: none;
     color: inherit;
+    flex: 1;
 }
