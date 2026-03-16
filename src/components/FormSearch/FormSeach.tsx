@@ -1,3 +1,8 @@
+// Use RecipeGallery.tsx. in the parent alongside FormSearch:
+// const [recipes, setRecipes] = useState<any[]>([]);
+// <FormSearch onResults={setRecipes} />
+// <RecipeGallery recipes={recipes} />
+
 import React, { useEffect, useState } from "react";
 import FormInput from "../FormInput/FormInput";
 import { Search01 } from "../../icons";
@@ -32,7 +37,7 @@ const FormSearch = ({ onResults }: FormSearchProps) => {
   };
 
   return (
-    <form onSubmit={getSearch}>
+    <form onSubmit={getSearch} style={{ width: "100%" }}>
       <FormInput
         label="Search"
         id="search"
