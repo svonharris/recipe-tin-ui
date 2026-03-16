@@ -1,0 +1,90 @@
+.recipeCard {
+    background-color: var(--color-white);
+    border: 1px solid #333;
+    padding: 10px 20px;
+    border-radius: 10px;
+}
+.recipeContainer {
+    @media (min-width: 480px) {
+        display: grid;
+        grid-template-columns: .5fr 1fr;
+        grid-template-rows: auto;
+        column-gap: 30px;
+    }
+}
+.recipeMedia {
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 2;
+    grid-row-end: 3;
+}
+.recipeContent {
+    text-align: left;
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 2;
+    grid-row-end: 3;
+}
+.title {
+    font-size: 1.125em;
+    font-weight: 600;
+    font-style: normal;
+    color: #1c1b1b;
+    text-align: center;
+    letter-spacing: .2em;
+    text-transform: uppercase;
+    margin: 9px 0 30px;
+    grid-column-start: 1;
+    grid-column-end: 3;
+    grid-row-start: 1;
+    grid-row-end: 1;
+
+    &:after {
+        content: " ";
+        width: 80%;
+        border-bottom: 1px solid #333;
+        display: block;
+        margin: 0 auto;
+        padding-bottom: 15px;
+    }
+}
+.macroList {
+    padding: 0;
+    display: inline-block;
+    display: flex;
+    flex-direction: row;
+    list-style-type: none;
+    padding-right: 5px;
+}
+.macroList p {
+    padding-right: 5px;
+    margin: 0;
+    
+    &:after {
+        content: "|";
+    }
+}
+.macroList li:last-child p:after {
+    content: "";
+}
+.subheading {
+    font-size: 1.125em;
+    font-weight: 700;
+    margin: 0px;
+}
+.ingredientList {
+    list-style-type: none;
+    padding: 0;
+}
+.ingredientItem {
+    margin-bottom: 10px;
+}
+.img {
+    display: block;
+    max-width: 80%;
+    border-radius: 5px;
+    margin: 0 auto;
+    @media (min-width: 1024px) {
+        max-width: 300px;
+    }
+}
