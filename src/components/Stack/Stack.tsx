@@ -18,7 +18,7 @@ const JUSTIFY: Record<"between" | "around", string> = {
   around: "space-around",
 };
 
-const Stack = ({ children, gap = 16, align = "top", justify }: StackProps) => (
+const Stack = ({ children, gap = 0, align = "top", justify }: StackProps) => (
   <div
     style={{
       display: "flex",
