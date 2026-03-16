@@ -184,6 +184,29 @@
     --border-radius-lg: 12px;
     --border-radius-xl: 16px;
     --border-radius-2xl: 24px;
-    --image-border-bottom: 0 0 var(--border-radius-xl) var(--border-radius-xl);
+    --border-radius-round: 50%;
 
+    /* Space */
+    --space-z: 0;
+    --space-xs: 2px; /*yes*/
+    --space-sm: 4px; /*yes*/
+    --space-s: 6px;
+    --space-md: 8px; /*yes*/
+    --space-lg: 10px; /*yes*/
+    --space-xl: 12px; /*yes*/
+    --space-s: 14px;
+    --space-2xl: 16px; /*yes*/
+    --space-s: 18px;
+    --space-s: 20px;
+    --space-s: 22px;
+    --space-3xl: 24px; /*yes*/
+
+
+/* Semantic Tokens */
+
+    /* Forms */
+    --form-error-color: var(--color-error-500);
+
+    /* Images */
+    --image-border-bottom: 0 0 var(--border-radius-xl) var(--border-radius-xl);
 }
