@@ -1,0 +1,23 @@
+.inputContainer {
+    display: flex;
+    align-items: center;
+    border-radius: var(--border-radius-2xl);
+    border: 1px solid var(--color-gray-500);
+    color: var(--color-dark-500);
+    padding: 8px 16px;
+    gap: 8px;
+}
+.inputContainer:focus-within {
+    border-color: var(--color-primary-500);
+}
+.formInput:focus, .formInput:focus-visible, .formInput:active {
+    outline: none;
+}
+.formError {
+    color: var(--color-gray-800);
+    text-transform: capitalize;
+}
+.formInput {
+    border: none;
+    color: inherit;
+}
