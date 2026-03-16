@@ -1,3 +1,8 @@
+// Use RecipeGallery.tsx. in the parent alongside FormSearch:
+// const [recipes, setRecipes] = useState<any[]>([]);
+// <FormSearch onResults={setRecipes} />
+// <RecipeGallery recipes={recipes} />
+
 import RecipeCard from "../RecipeCard/RecipeCard";
 
 type Recipe = {
