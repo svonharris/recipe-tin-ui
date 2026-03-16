@@ -1,6 +1,5 @@
 import React from "react";
 import style from "./FormInput.module.css";
-import Stack from "../Stack/Stack";
 
 type FormInputProps = {
   icon?: React.ReactElement<{ size?: number; color?: string }>;
@@ -29,7 +28,7 @@ const FormInput = ({
   error,
   hideLabel = false,
 }: FormInputProps) => (
-  <Stack gap={8}>
+  <>
     {hideLabel === false && (
       <label htmlFor={id}>
         {label}
@@ -57,7 +56,7 @@ const FormInput = ({
       />
     </div>
     {error && <p className={`${style.formError} text-xs-regular`}>{error}</p>}
-  </Stack>
+  </>
 );
 
 export default FormInput;
