@@ -21,11 +21,14 @@ const RecipeCard = ({
 }: RecipeCardProps) => {
   return (
     <Stack gap={8}>
-      <Image
-        src={image}
-        altText={"Image of " + title}
-        borderRadius={"var(--border-radius-lg)"}
-      />
+      <div style={{ alignSelf: "center" }}>
+        <Image
+          src={image}
+          height="240px"
+          altText={"Image of " + title}
+          borderRadius={"var(--border-radius-lg)"}
+        />
+      </div>
       <h3>{title}</h3>
       <Inline gap={0} justify="between">
         <Ratings rating={ratings} reviews={reviews} />
