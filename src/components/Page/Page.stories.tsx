@@ -150,7 +150,7 @@ export const RecipeDetails: Story = {
             textClassName="text-lg-bold"
             color="var(--color-dark-500)"
           >
-            Description
+            Instructions
           </Heading>
           <p className={`text-md-regular ${styles.instructionsContent}`}>
             Follow these steps to prepare the dish.
