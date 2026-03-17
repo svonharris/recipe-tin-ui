@@ -5,6 +5,7 @@ type InlineProps = {
   gap?: number;
   align?: "top" | "center" | "bottom";
   justify?: "between" | "around";
+  overflowX?: "auto" | "scroll" | "hidden";
 };
 
 const ALIGN: Record<"top" | "center" | "bottom", string> = {
@@ -23,6 +24,7 @@ const Inline = ({
   gap = 16,
   align = "center",
   justify,
+  overflowX = "auto",
 }: InlineProps) => (
   <div
     style={{
@@ -30,6 +32,7 @@ const Inline = ({
       flexDirection: "row",
       gap,
       alignItems: ALIGN[align],
+      overflowX,
       ...(justify && { justifyContent: JUSTIFY[justify] }),
     }}
   >
