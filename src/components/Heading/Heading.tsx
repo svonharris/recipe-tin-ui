@@ -6,6 +6,7 @@ type HeadingProps = {
   htmlElement?: HeadingTag;
   textClassName?: string;
   color?: string;
+  align?: "left" | "center" | "right";
   children: React.ReactNode;
 };
 
@@ -13,9 +14,10 @@ const Heading = ({
   htmlElement: Tag = "h1",
   textClassName,
   color,
+  align = "left",
   children,
 }: HeadingProps) => (
-  <Tag className={textClassName} style={{ color }}>
+  <Tag className={textClassName} style={{ color, textAlign: align, flex: 1 }}>
     {children}
   </Tag>
 );
