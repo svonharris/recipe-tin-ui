@@ -4,7 +4,6 @@
 // <RecipeGallery recipes={recipes} />
 
 import RecipeCard from "../RecipeCard/RecipeCard";
-import Stack from "../Stack/Stack";
 
 type Recipe = {
   recipe: {
@@ -20,7 +19,7 @@ type RecipeGalleryProps = {
 
 const RecipeGallery = ({ recipes }: RecipeGalleryProps) => {
   return (
-    <Stack gap={16}>
+    <>
       {recipes.map((recipe, index) => (
         <RecipeCard
           key={index}
@@ -29,7 +28,7 @@ const RecipeGallery = ({ recipes }: RecipeGalleryProps) => {
           cookTime={recipe.recipe.totalTime}
         />
       ))}
-    </Stack>
+    </>
   );
 };
 
