@@ -35,7 +35,7 @@ const RecipeCard = ({
         <RecipeDuration duration={cookTime} />
       </Inline>
       <Heading
-        htmlElement="h2"
+        htmlElement="h3"
         textClassName="text-md-bold"
         color="var(--color-dark-500)"
       >
