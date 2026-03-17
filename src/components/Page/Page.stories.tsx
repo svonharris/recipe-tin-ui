@@ -66,11 +66,14 @@ export const RecipeDetails: Story = {
   args: {
     children: (
       <div style={{ maxWidth: "375px" }}>
-        <Image
-          src="../bruschetta.jpeg"
-          altText="Bruschetta with ricotta and pesto"
-          borderRadius={"var(--image-border-bottom)"}
-        />
+        <div style={{ textAlign: "center" }}>
+          <Image
+            src="../bruschetta.jpeg"
+            altText="Bruschetta with ricotta and pesto"
+            borderRadius={"var(--image-border-bottom)"}
+            width="100%"
+          />
+        </div>
         <Inline gap={0} justify="between">
           <Ratings rating={3} reviews={300} />
           <RecipeDuration duration={45} />
@@ -83,35 +86,36 @@ export const RecipeDetails: Story = {
           Bruschetta Ricotta Pesto
         </Heading>
         <hr className={styles.divider} />
-
-        <Inline gap={24}>
-          <NutrientBar value={16} macronutrient={"protein"} />
-          <NutrientBar value={65} macronutrient={"carb"} />
-          <NutrientBar value={90} macronutrient={"fat"} />
-        </Inline>
-        <Stack>
-          <Heading
-            htmlElement="h2"
-            textClassName="text-lg-bold"
-            color="var(--color-dark-500)"
-          >
-            Ingredients
-          </Heading>
-          <IngredientsItem name={"olive oil"} amount={"3 tbsp"} />
-          <IngredientsItem name={"cherry tomatoes"} amount={"15 tomatoes"} />
-        </Stack>
-        <Stack>
-          <Heading
-            htmlElement="h2"
-            textClassName="text-lg-bold"
-            color="var(--color-dark-500)"
-          >
-            Instructions
-          </Heading>
-          <p className={`text-md-regular ${styles.instructionsContent}`}>
-            Follow the url for detailed steps to prepare the dish.
-            <a>Click Here</a>
-          </p>
+        <Stack gap={24}>
+          <Inline gap={24}>
+            <NutrientBar value={16} macronutrient={"protein"} />
+            <NutrientBar value={65} macronutrient={"carb"} />
+            <NutrientBar value={90} macronutrient={"fat"} />
+          </Inline>
+          <Stack gap={16}>
+            <Heading
+              htmlElement="h2"
+              textClassName="text-lg-bold"
+              color="var(--color-dark-500)"
+            >
+              Ingredients
+            </Heading>
+            <IngredientsItem name={"olive oil"} amount={"3 tbsp"} />
+            <IngredientsItem name={"cherry tomatoes"} amount={"15 tomatoes"} />
+          </Stack>
+          <Stack>
+            <Heading
+              htmlElement="h2"
+              textClassName="text-lg-bold"
+              color="var(--color-dark-500)"
+            >
+              Instructions
+            </Heading>
+            <p className={`text-md-regular ${styles.instructionsContent}`}>
+              Follow the url for detailed steps to prepare the dish.
+              <a>Click Here</a>
+            </p>
+          </Stack>
         </Stack>
       </div>
     ),
@@ -150,13 +154,15 @@ export const RecipesResults: Story = {
               </Stack>
             </header>
             <Stack gap={24}>
-              <Heading
-                htmlElement="h2"
-                textClassName="text-lg-bold"
-                color="var(--color-dark-500)"
-              >
-                Search Results
-              </Heading>
+              {recipes.length > 0 ? (
+                <Heading
+                  htmlElement="h2"
+                  textClassName="text-lg-bold"
+                  color="var(--color-dark-500)"
+                >
+                  Search Results
+                </Heading>
+              ) : null}
               <RecipeGallery recipes={recipes} />
             </Stack>
           </Stack>
