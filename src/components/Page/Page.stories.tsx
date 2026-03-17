@@ -178,7 +178,7 @@ export const RecipesRecommended: Story = {
                 <Inline gap={8} align="center">
                   <Heading
                     htmlElement="h1"
-                    textClassName="text-md-bold"
+                    textClassName="text-lg-bold"
                     color="var(--color-dark-500)"
                     align="center"
                   >
