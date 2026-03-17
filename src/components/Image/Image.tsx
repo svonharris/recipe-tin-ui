@@ -21,7 +21,7 @@ const Image = ({
       width={width}
       height={height}
       alt={altText}
-      style={{ borderRadius, maxWidth: "100%" }}
+      style={{ borderRadius }}
     />
   );
 };
