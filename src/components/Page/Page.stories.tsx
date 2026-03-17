@@ -165,3 +165,39 @@ export const RecipesResults: Story = {
     );
   },
 };
+
+export const RecipesRecommended: Story = {
+  render: () => {
+    const [recipes, setRecipes] = useState<any[]>([]);
+    return (
+      <Page>
+        <div style={{ maxWidth: "375px" }}>
+          <Stack gap={24}>
+            <header>
+              <Stack gap={16}>
+                <Inline gap={8} align="center">
+                  <Heading
+                    htmlElement="h1"
+                    textClassName="text-md-bold"
+                    color="var(--color-dark-500)"
+                    align="center"
+                  >
+                    Recommended For You
+                  </Heading>
+                </Inline>
+                <FormSearch
+                  onResults={setRecipes}
+                  recommend={true}
+                  hide={true}
+                />
+              </Stack>
+            </header>
+            <Stack gap={24}>
+              <RecipeGallery recipes={recipes} />
+            </Stack>
+          </Stack>
+        </div>
+      </Page>
+    );
+  },
+};
