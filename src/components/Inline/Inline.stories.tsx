@@ -26,7 +26,7 @@ export const Default: Story = {
     children: (
       <>
         <Image
-          src="../Bruschetta-Ricotta-Pesto.jpg"
+          src="../bruschetta.jpeg"
           altText="Bruschetta with ricotta and pesto"
           width={"200px"}
         />
