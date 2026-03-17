@@ -58,9 +58,16 @@ export const RecipeHome: Story = {
             </header>
 
             {recipes.length > 0 ? (
-              <div>
+              <>
+                <Heading
+                  htmlElement="h2"
+                  textClassName="text-lg-bold"
+                  color="var(--color-dark-500)"
+                >
+                  Search Results
+                </Heading>
                 <RecipeGallery recipes={recipes} />
-              </div>
+              </>
             ) : (
               <>
                 <Heading
