@@ -14,6 +14,7 @@ import ButtonIcon from "../ButtonIcon/ButtonIcon";
 import FormSearch from "../FormSearch/FormSeach";
 import RecipeGallery from "../RecipeGallery/RecipeGallery";
 import RecipeDuration from "../RecipeDuration/RecipeDuration";
+import RecipeRecommend from "../RecipeRecommend/RecipeRecommend";
 
 const meta = {
   title: "Internal/Page",
@@ -122,49 +123,63 @@ export const RecipeDetails: Story = {
   },
 };
 
-export const RecipesResults: Story = {
+export const RecipesSearch: Story = {
   render: () => {
-    const [recipes, setRecipes] = useState<any[]>([]);
+    const [searchResults, setSearchResults] = useState<any[]>([]);
+    const [recommendedRecipes, setRecommendedRecipes] = useState<any[]>([]);
     return (
       <Page>
         <div style={{ maxWidth: "375px" }}>
-          <Stack gap={24}>
-            <header>
-              <Stack gap={16}>
-                <Inline gap={8} align="center">
-                  <ButtonIcon
-                    size={"sm"}
-                    outline={true}
-                    onClick={() => {}}
-                    title="Menu"
-                    colorBackground="var(--color-dark-500)"
-                    colorHover="var(--color-dark-600)"
-                    borderRadius="var(--border-radius-round)"
-                    icon={<MenuLineHorizontal01 />}
-                  />
+          <Stack gap={16}>
+            <Stack gap={24}>
+              <header>
+                <Stack gap={16}>
+                  <Inline gap={8} align="center">
+                    <ButtonIcon
+                      size={"sm"}
+                      outline={true}
+                      onClick={() => {}}
+                      title="Menu"
+                      colorBackground="var(--color-dark-500)"
+                      colorHover="var(--color-dark-600)"
+                      borderRadius="var(--border-radius-round)"
+                      icon={<MenuLineHorizontal01 />}
+                    />
+                    <Heading
+                      htmlElement="h1"
+                      textClassName="text-md-bold"
+                      color="var(--color-dark-500)"
+                    >
+                      Got A Tasty Dish In Mind?
+                    </Heading>
+                  </Inline>
+                  <FormSearch onResults={setSearchResults} />
+                </Stack>
+              </header>
+              {searchResults.length > 0 && (
+                <>
                   <Heading
-                    htmlElement="h1"
-                    textClassName="text-md-bold"
+                    htmlElement="h2"
+                    textClassName="text-lg-bold"
                     color="var(--color-dark-500)"
                   >
-                    Got A Tasty Dish In Mind?
+                    Search Results
                   </Heading>
-                </Inline>
-                <FormSearch onResults={setRecipes} />
-              </Stack>
-            </header>
-            <Stack gap={24}>
-              {recipes.length > 0 ? (
-                <Heading
-                  htmlElement="h2"
-                  textClassName="text-lg-bold"
-                  color="var(--color-dark-500)"
-                >
-                  Search Results
-                </Heading>
-              ) : null}
-              <RecipeGallery recipes={recipes} />
+                  <RecipeGallery recipes={searchResults} />
+                </>
+              )}
             </Stack>
+            <Heading
+              htmlElement="h2"
+              textClassName="text-lg-bold"
+              color="var(--color-dark-500)"
+            >
+              Recommended For You
+            </Heading>
+            <Inline gap={24} align="top">
+              <RecipeRecommend onResults={setRecommendedRecipes} limit={6} />
+              <RecipeGallery recipes={recommendedRecipes} />
+            </Inline>
           </Stack>
         </div>
       </Page>
@@ -191,14 +206,10 @@ export const RecipesRecommended: Story = {
                     Recommended For You
                   </Heading>
                 </Inline>
-                <FormSearch
-                  onResults={setRecipes}
-                  recommend={true}
-                  hide={true}
-                />
               </Stack>
             </header>
             <Stack gap={24}>
+              <RecipeRecommend onResults={setRecipes} limit={6} />
               <RecipeGallery recipes={recipes} />
             </Stack>
           </Stack>
