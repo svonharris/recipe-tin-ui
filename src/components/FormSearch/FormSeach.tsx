@@ -27,6 +27,7 @@ const FormSearch = ({ onResults }: FormSearchProps) => {
       `https://api.edamam.com/api/recipes/v2?type=public&q=${query}&app_id=${ID}&app_key=${KEY}`,
     );
     const data = await response.json();
+    // console.log("FormSearch results:", data.hits);
     onResults(data.hits);
   };
 
