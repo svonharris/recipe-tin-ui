@@ -10,7 +10,7 @@ type ImageProps = {
 
 const Image = ({
   src,
-  width = "100%",
+  width = "auto",
   height = "auto",
   altText,
   borderRadius = "none",
@@ -21,7 +21,7 @@ const Image = ({
       width={width}
       height={height}
       alt={altText}
-      style={{ borderRadius }}
+      style={{ borderRadius, maxWidth: "100%" }}
     />
   );
 };
