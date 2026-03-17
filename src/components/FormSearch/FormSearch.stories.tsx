@@ -6,6 +6,9 @@ import RecipeGallery from "../RecipeGallery/RecipeGallery";
 const meta = {
   title: "Components/FormSearch",
   component: FormSearch,
+  argTypes: {
+    onResults: { control: false },
+  },
 } satisfies Meta<typeof FormSearch>;
 
 export default meta;
