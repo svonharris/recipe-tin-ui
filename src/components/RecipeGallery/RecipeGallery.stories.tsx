@@ -4,6 +4,11 @@ import RecipeGallery from "./RecipeGallery";
 const meta = {
   title: "Components/RecipeGallery",
   component: RecipeGallery,
+  argTypes: {
+    recipes: {
+      control: false,
+    },
+  },
 } satisfies Meta<typeof RecipeGallery>;
 
 export default meta;
