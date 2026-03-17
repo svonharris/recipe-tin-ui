@@ -27,36 +27,59 @@ type Story = StoryObj<typeof Page>;
 export const RecipeHome: Story = {
   render: () => {
     const [recipes, setRecipes] = useState<any[]>([]);
+    const [recommendedRecipes, setRecommendedRecipes] = useState<any[]>([]);
     return (
       <Page>
         <div style={{ maxWidth: "375px" }}>
-          <header>
-            <Stack gap={16}>
-              <Inline gap={8} align="center">
-                <ButtonIcon
-                  size={"sm"}
-                  outline={true}
-                  onClick={() => {}}
-                  title="Menu"
-                  colorBackground="var(--color-dark-500)"
-                  colorHover="var(--color-dark-600)"
-                  borderRadius="var(--border-radius-round)"
-                  icon={<MenuLineHorizontal01 />}
-                />
+          <Stack gap={16}>
+            <header>
+              <Stack gap={16}>
+                <Inline gap={8} align="center">
+                  <ButtonIcon
+                    size={"sm"}
+                    outline={true}
+                    onClick={() => {}}
+                    title="Menu"
+                    colorBackground="var(--color-dark-500)"
+                    colorHover="var(--color-dark-600)"
+                    borderRadius="var(--border-radius-round)"
+                    icon={<MenuLineHorizontal01 />}
+                  />
+                  <Heading
+                    htmlElement="h1"
+                    textClassName="text-md-bold"
+                    color="var(--color-dark-500)"
+                  >
+                    Got A Tasty Dish In Mind?
+                  </Heading>
+                </Inline>
+                <FormSearch onResults={setRecipes} />
+              </Stack>
+            </header>
+
+            {recipes.length > 0 ? (
+              <div>
+                <RecipeGallery recipes={recipes} />
+              </div>
+            ) : (
+              <>
                 <Heading
-                  htmlElement="h1"
-                  textClassName="text-md-bold"
+                  htmlElement="h2"
+                  textClassName="text-lg-bold"
                   color="var(--color-dark-500)"
                 >
-                  Got A Tasty Dish In Mind?
+                  Recommended For You
                 </Heading>
-              </Inline>
-              <FormSearch onResults={setRecipes} />
-            </Stack>
-          </header>
-          <div>
-            <RecipeGallery recipes={recipes} />
-          </div>
+                <Inline gap={24} align="top">
+                  <RecipeRecommend
+                    onResults={setRecommendedRecipes}
+                    limit={6}
+                  />
+                  <RecipeGallery recipes={recommendedRecipes} />
+                </Inline>
+              </>
+            )}
+          </Stack>
         </div>
       </Page>
     );
