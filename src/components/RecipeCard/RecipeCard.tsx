@@ -1,4 +1,3 @@
-// import style from "./RecipeCard.module.css";
 import Ratings from "../Ratings/Ratings";
 import RecipeDuration from "../RecipeDuration/RecipeDuration";
 import Inline from "../Inline/Inline";
