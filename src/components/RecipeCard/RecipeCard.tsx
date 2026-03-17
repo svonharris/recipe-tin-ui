@@ -3,6 +3,7 @@ import RecipeDuration from "../RecipeDuration/RecipeDuration";
 import Inline from "../Inline/Inline";
 import Image from "../Image/Image";
 import Stack from "../Stack/Stack";
+import Heading from "../Heading/Heading";
 
 type RecipeCardProps = {
   title: string;
@@ -29,7 +30,13 @@ const RecipeCard = ({
           borderRadius={"var(--border-radius-lg)"}
         />
       </div>
-      <h3>{title}</h3>
+      <Heading
+        htmlElement="h2"
+        textClassName="text-xl-bold"
+        color="var(--color-dark-500)"
+      >
+        {title}
+      </Heading>
       <Inline gap={0} justify="between">
         <Ratings rating={ratings} reviews={reviews} />
         <RecipeDuration duration={cookTime} />
