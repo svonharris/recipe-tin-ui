@@ -30,37 +30,28 @@ export const RecipeHome: Story = {
       <Page>
         <div style={{ maxWidth: "375px" }}>
           <header>
-            <Inline gap={8} align="center">
-              <ButtonIcon
-                size={"sm"}
-                outline={true}
-                onClick={() => {}}
-                title="Menu"
-                colorBackground="var(--color-dark-500)"
-                colorHover="var(--color-dark-600)"
-                borderRadius="var(--border-radius-round)"
-                icon={<MenuLineHorizontal01 />}
-              />
-              <Heading
-                htmlElement="h1"
-                textClassName="text-md-bold"
-                color="var(--color-dark-500)"
-              >
-                Got A Tasty Dish In Mind?
-              </Heading>
-            </Inline>
-            <Inline gap={8} align="top">
+            <Stack gap={16}>
+              <Inline gap={8} align="center">
+                <ButtonIcon
+                  size={"sm"}
+                  outline={true}
+                  onClick={() => {}}
+                  title="Menu"
+                  colorBackground="var(--color-dark-500)"
+                  colorHover="var(--color-dark-600)"
+                  borderRadius="var(--border-radius-round)"
+                  icon={<MenuLineHorizontal01 />}
+                />
+                <Heading
+                  htmlElement="h1"
+                  textClassName="text-md-bold"
+                  color="var(--color-dark-500)"
+                >
+                  Got A Tasty Dish In Mind?
+                </Heading>
+              </Inline>
               <FormSearch onResults={setRecipes} />
-              <ButtonIcon
-                size={"md"}
-                onClick={() => {}}
-                title="Menu"
-                colorBackground="var(--color-primary-500)"
-                colorHover="var(--color-primary-600)"
-                borderRadius="var(--border-radius-round)"
-                icon={<Filter01 />}
-              />
-            </Inline>
+            </Stack>
           </header>
           <div>
             <RecipeGallery recipes={recipes} />
@@ -124,5 +115,53 @@ export const RecipeDetails: Story = {
         </Stack>
       </div>
     ),
+  },
+};
+
+export const RecipesResults: Story = {
+  render: () => {
+    const [recipes, setRecipes] = useState<any[]>([]);
+    return (
+      <Page>
+        <div style={{ maxWidth: "375px" }}>
+          <Stack gap={24}>
+            <header>
+              <Stack gap={16}>
+                <Inline gap={8} align="center">
+                  <ButtonIcon
+                    size={"sm"}
+                    outline={true}
+                    onClick={() => {}}
+                    title="Menu"
+                    colorBackground="var(--color-dark-500)"
+                    colorHover="var(--color-dark-600)"
+                    borderRadius="var(--border-radius-round)"
+                    icon={<MenuLineHorizontal01 />}
+                  />
+                  <Heading
+                    htmlElement="h1"
+                    textClassName="text-md-bold"
+                    color="var(--color-dark-500)"
+                  >
+                    Got A Tasty Dish In Mind?
+                  </Heading>
+                </Inline>
+                <FormSearch onResults={setRecipes} />
+              </Stack>
+            </header>
+            <Stack gap={24}>
+              <Heading
+                htmlElement="h2"
+                textClassName="text-lg-bold"
+                color="var(--color-dark-500)"
+              >
+                Search Results
+              </Heading>
+              <RecipeGallery recipes={recipes} />
+            </Stack>
+          </Stack>
+        </div>
+      </Page>
+    );
   },
 };
