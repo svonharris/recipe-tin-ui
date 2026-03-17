@@ -12,9 +12,14 @@ type Story = StoryObj<typeof RecipeCard>;
 export const Default: Story = {
   args: {
     title: "Bruschetta Ricotta Pesto",
-    image: "../Bruschetta-Ricotta-Pesto.jpg",
+    image: "../bruschetta.jpeg",
     cookTime: 30,
     ratings: 4.5,
     reviews: 120,
   },
+  render: (args) => (
+    <div style={{ maxWidth: "375px" }}>
+      <RecipeCard {...args} />
+    </div>
+  ),
 };
