@@ -30,17 +30,17 @@ const RecipeCard = ({
           borderRadius={"var(--border-radius-lg)"}
         />
       </div>
-      <Heading
-        htmlElement="h2"
-        textClassName="text-xl-bold"
-        color="var(--color-dark-500)"
-      >
-        {title}
-      </Heading>
       <Inline gap={0} justify="between">
         <Ratings rating={ratings} reviews={reviews} />
         <RecipeDuration duration={cookTime} />
       </Inline>
+      <Heading
+        htmlElement="h2"
+        textClassName="text-md-bold"
+        color="var(--color-dark-500)"
+      >
+        {title}
+      </Heading>
     </Stack>
   );
 };
