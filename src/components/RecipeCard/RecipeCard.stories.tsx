@@ -13,5 +13,8 @@ export const Default: Story = {
   args: {
     title: "Bruschetta Ricotta Pesto",
     image: "../Bruschetta-Ricotta-Pesto.jpg",
+    cookTime: 30,
+    ratings: 4.5,
+    reviews: 120,
   },
 };
