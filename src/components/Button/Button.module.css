@@ -1,0 +1,55 @@
+.baseButton {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Disabled styles */
+.disabled {
+    color: var(--disabled-color);
+    background-color: var(--color-gray-200);
+    cursor: default;
+}
+.disabledIconColor {
+    color: var(--disabled-color);
+}
+
+/* Sizes */
+.sizeLg { /* Large */
+    min-height: 56px;
+    padding: 16px 24px;
+    gap: 10px;
+}
+.sizeMd { /* Medium */
+    min-height: 48px;
+    padding: 12px 20px;
+    gap: 8px;
+}
+.sizeSm { /* Small */
+    min-height: 40px;
+    padding: 10px 16px;
+    gap: 8px;
+}
+
+
+
+/* Variant Styles */
+.rounded {
+    border-radius: 50%;
+}
+.primaryButton {
+    color: var(--color-white);
+    background-color: var(--color-primary-500);
+}
+.primaryButton:hover {
+    background-color: var(--color-primary-600);
+}
+.primaryOutline {
+    color: var(--color-primary-500);
+    background-color: var(--color-white);
+    border: 1px solid var(--color-primary-500);
+}
+.primaryOutline:hover {
+    color: var(--color-primary-600);
+    border: 1px solid var(--color-primary-600);
+}
