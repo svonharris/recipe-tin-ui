@@ -1,0 +1,20 @@
+.iconLg { /* Large */
+    padding: 12px;
+    width: 48px;
+    height: 48px;
+}
+.iconMd { /* Medium */
+    padding: 10px;
+    width: 40px;
+    height: 40px;
+}
+.iconSm { /* Small */
+    padding: 7px;
+    width: 32px;
+    height: 32px;
+}
+.disabled {
+    background-color: var(--color-gray-200);
+    cursor: default;
+}
+
