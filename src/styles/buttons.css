@@ -7,7 +7,9 @@ button {
 button, [type='button'], [type='reset'] {
   border: 0;
   cursor: pointer;
+  background-color: transparent;
 }
+
 
 .baseButton {
     display: flex;
@@ -23,51 +25,6 @@ button.baseButton:disabled {
 button.baseButton:disabled:hover {
     cursor: default;
 }
-button.textOutline:disabled,
-button.iconWTextOutline:disabled,
-button.iconOnlyOutline:disabled {
-    color: var(--color-gray-300);
-    border: 1px solid var(--color-gray-200);
-    background-color: var(--color-transparent);
-}
-
-/* Icon Only -- Base */
-.iconOnlyFillLg_background { /* Large */
-    padding: 12px;
-    min-width: 48px;
-    min-height: 48px;
-}
-.iconOnlyFillMd_background { /* Medium */
-    padding: 10px;
-    min-width: 40px;
-    min-height: 40px;
-}
-.iconOnlyFillSm_background { /* Small */
-    padding: 7px;
-    min-width: 32px;
-    min-height: 32px;
-}
-
-/* Icon Only -- Filled */
-.iconOnlyFilled {
-    color: var(--color-white);
-    background-color: var(--color-primary-500);
-}
-.iconOnlyFilled:hover {
-    background-color: var(--color-primary-600);
-}
-
-/* Icon Only -- Outline */
-.iconOnlyOutline {
-    color: var(--color-primary-500);
-    background-color: var(--color-transparent);
-    border: 1px solid var(--color-primary-500);
-}
-.iconOnlyOutline:hover {
-    color: var(--color-primary-600);
-    border: 1px solid var(--color-primary-600);
-}
-
 
 /* Text Only -- Filled */
 .textFilled {
@@ -115,3 +72,7 @@ button.iconOnlyOutline:disabled {
     color: var(--color-primary-600);
     border: 1px solid var(--color-primary-600);
 }
+
+
+/* test */
+
