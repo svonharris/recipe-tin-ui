@@ -123,6 +123,8 @@
     --color-information-900: #1E3A8A;
     --color-information-950: #172E54;
 
+    --disabled-color: var(--color-gray-400);
+
     /* Font Family */
     --font-primary: "Roboto",sans-serif;
 
@@ -210,6 +212,4 @@
     /* Images */
     --image-border-bottom: 0 0 var(--border-radius-xl) var(--border-radius-xl);
 
-    /* Icons */
-    --icon-disabled-color: var(--color-gray-400);
 }
