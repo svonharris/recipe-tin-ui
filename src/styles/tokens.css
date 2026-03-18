@@ -209,4 +209,7 @@
 
     /* Images */
     --image-border-bottom: 0 0 var(--border-radius-xl) var(--border-radius-xl);
+
+    /* Icons */
+    --icon-disabled-color: var(--color-gray-400);
 }
