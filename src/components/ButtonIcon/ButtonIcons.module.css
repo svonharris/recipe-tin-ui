@@ -1,20 +1,61 @@
+
+.baseIconColor {
+    color: var(--color-white);
+}
+
+.icon { /* Base styles for all icons */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+}
+
+/* Sizes */
 .iconLg { /* Large */
-    padding: 12px;
+    width: 56px;
+    height: 56px;
+}
+.iconMd { /* Medium */
     width: 48px;
     height: 48px;
 }
-.iconMd { /* Medium */
-    padding: 10px;
+.iconSm { /* Small */
     width: 40px;
     height: 40px;
 }
-.iconSm { /* Small */
-    padding: 7px;
-    width: 32px;
-    height: 32px;
-}
+
+/* Disabled styles */
 .disabled {
     background-color: var(--color-gray-200);
     cursor: default;
 }
+.disabledIconColor {
+    color: var(--color-gray-400);
+}
 
+/* Variant Styles */
+.rounded {
+    border-radius: 50%;
+}
+.primaryButton {
+    color: var(--color-white);
+    background-color: var(--color-primary-500);
+}
+.primaryButton:hover {
+    background-color: var(--color-primary-600);
+}
+.secondaryButton {
+    color: var(--color-dark-500);
+    background-color: color-mix(in srgb, var(--color-white) 80%, var(--color-transparent));
+}
+.secondaryButton:hover {
+    background-color: var(--color-gray-50);
+}
+.primaryOutline {
+    color: var(--color-dark-500);
+    background-color: transparent;
+    border: 1px solid var(--color-gray-200);
+}
+.primaryOutline:hover {
+    border: 1px solid var(--color-gray-300);
+}
