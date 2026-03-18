@@ -49,7 +49,7 @@ const ButtonIcon = ({
     >
       {React.cloneElement(icon, {
         size: SIZE[size].px,
-        color: disabled ? "var(--icon-disabled-color)" : "inherit",
+        color: "inherit",
       })}
     </button>
   );
