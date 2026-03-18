@@ -1,54 +1,60 @@
 import React from "react";
+import style from "./Button.module.css";
 
 type ButtonProps = {
   children: React.ReactNode;
+  icon?: React.ReactElement<{ size?: number; color?: string }>;
   onClick: () => void;
   title?: string;
   type?: "button" | "submit";
   disabled?: boolean;
-  variant?: "filled" | "outline";
-  withIcon?: boolean;
-  icon?: React.ReactNode;
+  rounded?: boolean;
+  size?: "lg" | "md" | "sm";
+  variant?: "primary" | "secondary" | "primaryOutline";
 };
 
-const VARIANT_CLASSES: Record<
-  "filled" | "outline",
-  Record<"withIcon" | "textOnly", string>
+const SIZE: Record<"lg" | "md" | "sm", { className: string; px: number }> = {
+  lg: { className: `${style.sizeLg}`, px: 28 },
+  md: { className: `${style.sizeMd}`, px: 24 },
+  sm: { className: `${style.sizeSm}`, px: 20 },
+};
+
+const VARIANT_STYLES: Record<
+  "primary" | "secondary" | "primaryOutline",
+  string
 > = {
-  filled: {
-    withIcon: "iconWText",
-    textOnly: "textFilled",
-  },
-  outline: {
-    withIcon: "iconWTextOutline",
-    textOnly: "textOutline",
-  },
+  primary: style.primaryButton,
+  secondary: style.secondaryButton,
+  primaryOutline: style.primaryOutline,
 };
 
 const Button = ({
   children,
+  icon,
   onClick,
   title,
   type = "button",
   disabled = false,
-  variant = "filled",
-  withIcon = false,
-  icon,
-}: ButtonProps) => {
-  const variantClass =
-    VARIANT_CLASSES[variant][withIcon ? "withIcon" : "textOnly"];
-
-  return (
-    <button
-      className={`baseButton ${variantClass}`}
-      onClick={onClick}
-      type={type}
-      disabled={disabled}
-      title={title}
-    >
-      {withIcon && icon} <span className="text-md-regular">{children}</span>
-    </button>
-  );
-};
+  rounded = false,
+  size = "lg",
+  variant = "primary",
+}: ButtonProps) => (
+  <button
+    className={`${style.baseButton} ${SIZE[size].className} ${
+      rounded ? style.rounded : ""
+    } ${disabled ? style.disabled : `${VARIANT_STYLES[variant]}`}`}
+    onClick={onClick}
+    type={type}
+    disabled={disabled}
+    title={title}
+  >
+    {icon &&
+      React.cloneElement(icon, {
+        size: SIZE[size].px,
+        color: "inherit",
+      })}
+    <span className="text-md-regular">{children}</span>
+  </button>
+);
 
 export default Button;
