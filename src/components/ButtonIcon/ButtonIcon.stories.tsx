@@ -1,11 +1,11 @@
 import type { Meta, StoryObj } from "@storybook/react";
 import { fn } from "storybook/test";
-import ButtonIcons from "./ButtonIcons";
+import ButtonIcon from "./ButtonIcon";
 import { Gps } from "../../icons";
 
 const meta = {
   title: "Components/Buttons/Icon Buttons",
-  component: ButtonIcons,
+  component: ButtonIcon,
   args: { onClick: fn(), size: "lg" },
   argTypes: {
     title: {
@@ -28,10 +28,10 @@ const meta = {
       options: ["primary", "secondary", "primaryOutline"],
     },
   },
-} satisfies Meta<typeof ButtonIcons>;
+} satisfies Meta<typeof ButtonIcon>;
 
 export default meta;
-type Story = StoryObj<typeof ButtonIcons>;
+type Story = StoryObj<typeof ButtonIcon>;
 
 export const Default: Story = {
   args: {

@@ -1,5 +1,5 @@
 import React from "react";
-import style from "./ButtonIcons.module.css";
+import style from "./ButtonIcon.module.css";
 
 type ButtonIconProps = {
   icon: React.ReactElement<{ size?: number; color?: string }>;
@@ -27,7 +27,7 @@ const VARIANT_STYLES: Record<
   primaryOutline: style.primaryOutline,
 };
 
-const ButtonIcons = ({
+const ButtonIcon = ({
   icon,
   onClick,
   title,
@@ -55,4 +55,4 @@ const ButtonIcons = ({
   );
 };
 
-export default ButtonIcons;
+export default ButtonIcon;
