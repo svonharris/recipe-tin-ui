@@ -26,11 +26,12 @@
 
 /* Disabled styles */
 .disabled {
+    color: var(--disabled-color);
     background-color: var(--color-gray-200);
     cursor: default;
 }
 .disabledIconColor {
-    color: var(--color-gray-400);
+    color: var(--disabled-color);
 }
 
 /* Variant Styles */
