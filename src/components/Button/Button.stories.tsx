@@ -20,9 +20,6 @@ const meta = {
     type: {
       table: { disable: true },
     },
-    withIcon: {
-      table: { disable: true },
-    },
     icon: {
       table: { disable: true },
     },
@@ -35,31 +32,29 @@ type Story = StoryObj<typeof Button>;
 export const IconTextFilled: Story = {
   args: {
     children: "Button",
-    variant: "filled",
-    withIcon: true,
     icon: <Gps />,
+    variant: "primary",
   },
 };
 
 export const IconTextOutline: Story = {
   args: {
     children: "Button",
-    variant: "outline",
-    withIcon: true,
     icon: <Gps />,
+    variant: "primaryOutline",
   },
 };
 
 export const TextFilled: Story = {
   args: {
     ...IconTextFilled.args,
-    withIcon: false,
+    icon: undefined,
   },
 };
 
 export const TextOutline: Story = {
   args: {
     ...IconTextOutline.args,
-    withIcon: false,
+    icon: undefined,
   },
 };
