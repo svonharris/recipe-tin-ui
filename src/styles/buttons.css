@@ -7,15 +7,10 @@ button {
 button, [type='button'], [type='reset'] {
   border: 0;
   cursor: pointer;
-  background-color: transparent;
 }
 
 
-.baseButton {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
+
 
 /* Disabled */
 button.baseButton:disabled {
