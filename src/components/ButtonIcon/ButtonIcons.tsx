@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import style from "./ButtonIcons.module.css";
 
 type ButtonIconProps = {
@@ -7,16 +7,24 @@ type ButtonIconProps = {
   title?: string;
   type?: "button" | "submit";
   disabled?: boolean;
+  rounded?: boolean;
   size?: "lg" | "md" | "sm";
-  iconColor?: string;
-  buttonColor?: string;
-  buttonColorHover?: string;
+  variant?: "primary" | "secondary" | "primaryOutline";
 };
 
 const SIZE: Record<"lg" | "md" | "sm", { className: string; px: number }> = {
-  lg: { className: `${style.iconLg}`, px: 24 },
-  md: { className: `${style.iconMd}`, px: 20 },
-  sm: { className: `${style.iconSm}`, px: 18 },
+  lg: { className: `${style.icon} ${style.iconLg}`, px: 28 },
+  md: { className: `${style.icon} ${style.iconMd}`, px: 24 },
+  sm: { className: `${style.icon} ${style.iconSm}`, px: 20 },
+};
+
+const VARIANT_STYLES: Record<
+  "primary" | "secondary" | "primaryOutline",
+  string
+> = {
+  primary: style.primaryButton,
+  secondary: style.secondaryButton,
+  primaryOutline: style.primaryOutline,
 };
 
 const ButtonIcons = ({
@@ -25,33 +33,23 @@ const ButtonIcons = ({
   title,
   type = "button",
   disabled = false,
+  rounded = false,
   size = "lg",
-  iconColor,
-  buttonColor,
-  buttonColorHover,
+  variant = "primary",
 }: ButtonIconProps) => {
-  const [isHovered, setIsHovered] = useState(false);
-
   return (
     <button
-      className={`${SIZE[size].className} ${disabled ? style.disabled : ""}`}
-      style={{
-        backgroundColor: disabled
-          ? undefined
-          : isHovered && buttonColorHover
-          ? buttonColorHover
-          : buttonColor,
-      }}
+      className={`${SIZE[size].className} ${rounded ? style.rounded : ""} ${
+        disabled ? style.disabled : `${VARIANT_STYLES[variant]}`
+      }`}
       onClick={onClick}
       type={type}
       disabled={disabled}
       title={title}
-      onMouseEnter={() => setIsHovered(true)}
-      onMouseLeave={() => setIsHovered(false)}
     >
       {React.cloneElement(icon, {
         size: SIZE[size].px,
-        color: disabled ? "var(--color-gray-400)" : `${iconColor}`,
+        color: disabled ? "var(--icon-disabled-color)" : "inherit",
       })}
     </button>
   );
