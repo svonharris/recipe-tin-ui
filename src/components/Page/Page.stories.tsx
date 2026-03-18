@@ -77,13 +77,13 @@ export const RecipeHome: Story = {
                 >
                   Recommended For You
                 </Heading>
-                <Inline gap={24} align="top">
+                {/* <Inline gap={24} align="top">
                   <RecipeRecommend
                     onResults={setRecommendedRecipes}
                     limit={6}
                   />
                   <RecipeGallery recipes={recommendedRecipes} />
-                </Inline>
+                </Inline> */}
               </>
             )}
           </Stack>
@@ -206,10 +206,10 @@ export const RecipesSearch: Story = {
             >
               Recommended For You
             </Heading>
-            <Inline gap={24} align="top">
+            {/* <Inline gap={24} align="top">
               <RecipeRecommend onResults={setRecommendedRecipes} limit={6} />
               <RecipeGallery recipes={recommendedRecipes} />
-            </Inline>
+            </Inline> */}
           </Stack>
         </div>
       </Page>
