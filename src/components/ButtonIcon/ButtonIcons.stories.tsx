@@ -20,6 +20,13 @@ const meta = {
     disabled: {
       control: false,
     },
+    rounded: {
+      control: false,
+    },
+    variant: {
+      control: "select",
+      options: ["primary", "secondary", "primaryOutline"],
+    },
   },
 } satisfies Meta<typeof ButtonIcons>;
 
@@ -30,13 +37,34 @@ export const Default: Story = {
   args: {
     icon: <Gps />,
     title: "GPS Icon Button",
-    iconColor: "var(--color-white)",
-    buttonColor: "var(--color-primary-500)",
-    buttonColorHover: "var(--color-primary-600)",
+    variant: "primary",
+  },
+};
+
+export const Outline: Story = {
+  argTypes: {
+    variant: { control: false },
+  },
+  args: {
+    ...Default.args,
+    variant: "primaryOutline",
+  },
+};
+
+export const Rounded: Story = {
+  argTypes: {
+    variant: { control: false },
+  },
+  args: {
+    ...Default.args,
+    rounded: true,
   },
 };
 
 export const Disabled: Story = {
+  argTypes: {
+    variant: { control: false },
+  },
   args: {
     ...Default.args,
     disabled: true,
