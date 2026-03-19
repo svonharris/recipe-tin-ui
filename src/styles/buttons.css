@@ -1,73 +1,42 @@
-button {
-  color: inherit;
-  font: inherit;
-  margin: 0;
-  overflow: visible;
-}
+/* General styles */
 button, [type='button'], [type='reset'] {
   border: 0;
   cursor: pointer;
 }
-
-
-
-
-/* Disabled */
-button.baseButton:disabled {
-    color: var(--color-gray-400);
-    background-color: var(--color-gray-200);
+.buttonBase {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
-button.baseButton:disabled:hover {
+
+/* Disabled styles */
+.disabledFilled {
+    color: var(--disabled-color);
+    background-color: var(--color-gray-200);
+    cursor: default;
+}
+.disabledOutline {
+    color: var(--disabled-color);
+    background-color: var(--color-transparent);
+    border: 1px solid var(--disabled-color);
     cursor: default;
 }
 
-/* Text Only -- Filled */
-.textFilled {
-    padding: 16px 24px;
-    background-color: var(--color-primary-500);
+/* Variant Styles */
+.primaryButton {
     color: var(--color-white);
+    background-color: var(--color-primary-500);
 }
-.textFilled:hover {
+.primaryButton:hover {
     background-color: var(--color-primary-600);
 }
-
-/* Text with Icon -- Filled */
-.iconWText {
-    gap: 10px;
-    padding: 16px 24px;
-    background-color: var(--color-primary-500);
-    color: var(--color-white);
+.primaryGhost {
+    color: var(--color-dark-500);
+    background-color: transparent;
+    border: 1px solid var(--color-dark-500);
 }
-.iconWText:hover {
-    background-color: var(--color-primary-600);
+.primaryGhost:hover {
+    color: var(--color-dark-50);
+    border: 1px solid var(--color-dark-50);
 }
-
-
-/* Text Only -- Outline */
-.textOutline {
-    padding: 16px 24px;
-    color: var(--color-primary-500);
-    background-color: var(--color-white);
-    border: 1px solid var(--color-primary-500);
-}
-.textOutline:hover {
-    color: var(--color-primary-600);
-    border: 1px solid var(--color-primary-600);
-}
-
-/* Text with Icon -- Outline */
-.iconWTextOutline {
-    gap: 10px;
-    padding: 16px 24px;
-    color: var(--color-primary-500);
-    background-color: var(--color-white);
-    border: 1px solid var(--color-primary-500);
-}
-.iconWTextOutline:hover {
-    color: var(--color-primary-600);
-    border: 1px solid var(--color-primary-600);
-}
-
-
-/* test */
 
