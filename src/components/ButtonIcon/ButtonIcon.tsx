@@ -1,5 +1,6 @@
 import React from "react";
 import style from "./ButtonIcon.module.css";
+import "../../styles/buttons.css";
 
 type ButtonIconProps = {
   icon: React.ReactElement<{ size?: number; color?: string }>;
@@ -9,7 +10,7 @@ type ButtonIconProps = {
   disabled?: boolean;
   rounded?: boolean;
   size?: "lg" | "md" | "sm";
-  variant?: "primary" | "secondary" | "primaryGhost";
+  variant?: "primary" | "primaryGhost";
 };
 
 const SIZE: Record<"lg" | "md" | "sm", { className: string; px: number }> = {
@@ -18,16 +19,14 @@ const SIZE: Record<"lg" | "md" | "sm", { className: string; px: number }> = {
   sm: { className: `${style.icon} ${style.iconSm}`, px: 20 },
 };
 
-const VARIANT_STYLES: Record<"primary" | "secondary" | "primaryGhost", string> =
-  {
-    primary: style.primaryButton,
-    secondary: style.secondaryButton,
-    primaryGhost: style.primaryGhost,
-  };
+const VARIANT_STYLES: Record<"primary" | "primaryGhost", string> = {
+  primary: "primaryButton",
+  primaryGhost: "primaryGhost",
+};
 
 const DISABLED_STYLES: Record<"outline" | "filled", string> = {
-  outline: style.disabledOutline,
-  filled: style.disabledFilled,
+  outline: "disabledOutline",
+  filled: "disabledFilled",
 };
 
 const ButtonIcon = ({
@@ -44,7 +43,7 @@ const ButtonIcon = ({
 
   return (
     <button
-      className={`${SIZE[size].className} 
+      className={`buttonBase ${SIZE[size].className}  
       ${rounded ? style.rounded : ""} 
       ${
         disabled
