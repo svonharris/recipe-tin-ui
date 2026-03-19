@@ -17,15 +17,12 @@ const meta = {
     icon: {
       control: false,
     },
-    disabled: {
-      control: false,
-    },
     rounded: {
       control: false,
     },
     variant: {
       control: "select",
-      options: ["primary", "secondary", "primaryOutline"],
+      options: ["primary", "secondary", "primaryGhost"],
     },
   },
 } satisfies Meta<typeof ButtonIcon>;
@@ -34,6 +31,9 @@ export default meta;
 type Story = StoryObj<typeof ButtonIcon>;
 
 export const Default: Story = {
+  argTypes: {
+    disabled: { control: false },
+  },
   args: {
     icon: <Gps />,
     title: "GPS Icon Button",
@@ -41,32 +41,48 @@ export const Default: Story = {
   },
 };
 
-export const Outline: Story = {
+export const Ghost: Story = {
   argTypes: {
     variant: { control: false },
+    disabled: { control: false },
   },
   args: {
     ...Default.args,
-    variant: "primaryOutline",
+    variant: "primaryGhost",
   },
 };
 
 export const Rounded: Story = {
   argTypes: {
     variant: { control: false },
+    disabled: { control: "boolean" },
   },
   args: {
     ...Default.args,
     rounded: true,
+    disabled: false,
   },
 };
 
-export const Disabled: Story = {
+export const DisabledDefault: Story = {
   argTypes: {
     variant: { control: false },
+    disabled: { control: false },
   },
   args: {
     ...Default.args,
     disabled: true,
+  },
+};
+
+export const DisabledGhost: Story = {
+  argTypes: {
+    variant: { control: false },
+    disabled: { control: false },
+  },
+  args: {
+    ...Default.args,
+    disabled: true,
+    variant: "primaryGhost",
   },
 };
