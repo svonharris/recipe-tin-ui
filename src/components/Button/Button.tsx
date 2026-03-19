@@ -1,5 +1,6 @@
 import React from "react";
 import style from "./Button.module.css";
+import "../../styles/buttons.css";
 
 type ButtonProps = {
   children: React.ReactNode;
@@ -21,14 +22,14 @@ const SIZE: Record<"lg" | "md" | "sm", { className: string; px: number }> = {
 
 const VARIANT_STYLES: Record<"primary" | "secondary" | "primaryGhost", string> =
   {
-    primary: style.primaryButton,
+    primary: "primaryButton",
     secondary: style.secondaryButton,
-    primaryGhost: style.primaryGhost,
+    primaryGhost: "primaryGhost",
   };
 
 const DISABLED_STYLES: Record<"outline" | "filled", string> = {
-  outline: style.disabledOutline,
-  filled: style.disabledFilled,
+  outline: "disabledOutline",
+  filled: "disabledFilled",
 };
 
 const Button = ({
@@ -46,7 +47,7 @@ const Button = ({
 
   return (
     <button
-      className={`${style.baseButton} ${SIZE[size].className} 
+      className={`buttonBase ${SIZE[size].className} 
       ${rounded ? style.rounded : ""} 
       ${
         disabled
