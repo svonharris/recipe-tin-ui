@@ -2,12 +2,19 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    padding: 0;
 }
 
 /* Disabled styles */
-.disabled {
+.disabledFilled {
     color: var(--disabled-color);
     background-color: var(--color-gray-200);
+    cursor: default;
+}
+.disabledOutline {
+    color: var(--disabled-color);
+    background-color: var(--color-transparent);
+    border: 1px solid var(--disabled-color);
     cursor: default;
 }
 .disabledIconColor {
@@ -35,7 +42,7 @@
 
 /* Variant Styles */
 .rounded {
-    border-radius: 50%;
+    border-radius: 30px;
 }
 .primaryButton {
     color: var(--color-white);
@@ -44,12 +51,12 @@
 .primaryButton:hover {
     background-color: var(--color-primary-600);
 }
-.primaryOutline {
-    color: var(--color-primary-500);
-    background-color: var(--color-white);
-    border: 1px solid var(--color-primary-500);
+.primaryGhost {
+    color: var(--color-dark-500);
+    background-color: transparent;
+    border: 1px solid var(--color-dark-500);
 }
-.primaryOutline:hover {
-    color: var(--color-primary-600);
-    border: 1px solid var(--color-primary-600);
+.primaryGhost:hover {
+    color: var(--color-dark-50);
+    border: 1px solid var(--color-dark-50);
 }
