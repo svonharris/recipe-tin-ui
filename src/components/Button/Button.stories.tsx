@@ -6,12 +6,15 @@ import { Gps } from "../../icons";
 const meta = {
   title: "Components/Buttons/Button",
   component: Button,
-  args: { onClick: fn(), disabled: false },
+  args: { onClick: fn(), size: "lg" },
   argTypes: {
     variant: {
       control: false, //renders prop documentation without a control
     },
     disabled: {
+      control: "boolean",
+    },
+    rounded: {
       control: "boolean",
     },
     title: {
@@ -29,32 +32,39 @@ const meta = {
 export default meta;
 type Story = StoryObj<typeof Button>;
 
-export const IconTextFilled: Story = {
+export const DefaultText: Story = {
   args: {
     children: "Button",
+    icon: undefined,
+    title: "Text Button",
+    variant: "primary",
+    disabled: false,
+    rounded: false,
+  },
+};
+
+export const GhostText: Story = {
+  args: {
+    ...DefaultText.args,
+    icon: undefined,
+    variant: "primaryGhost",
+  },
+};
+
+export const DefaultTextWithIcon: Story = {
+  args: {
+    ...DefaultText.args,
     icon: <Gps />,
+    title: "GPS Icon with text Button",
     variant: "primary",
   },
 };
 
-export const IconTextOutline: Story = {
+export const GhostTextWithIcon: Story = {
   args: {
-    children: "Button",
+    ...DefaultText.args,
     icon: <Gps />,
-    variant: "primaryOutline",
-  },
-};
-
-export const TextFilled: Story = {
-  args: {
-    ...IconTextFilled.args,
-    icon: undefined,
-  },
-};
-
-export const TextOutline: Story = {
-  args: {
-    ...IconTextOutline.args,
-    icon: undefined,
+    title: "GPS Icon with text Button",
+    variant: "primaryGhost",
   },
 };
