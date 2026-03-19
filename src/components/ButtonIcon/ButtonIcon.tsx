@@ -3,13 +3,13 @@ import style from "./ButtonIcon.module.css";
 
 type ButtonIconProps = {
   icon: React.ReactElement<{ size?: number; color?: string }>;
-  onClick: () => void;
+  onClick?: () => void;
   title?: string;
   type?: "button" | "submit";
   disabled?: boolean;
   rounded?: boolean;
   size?: "lg" | "md" | "sm";
-  variant?: "primary" | "secondary" | "primaryOutline";
+  variant?: "primary" | "secondary" | "primaryGhost";
 };
 
 const SIZE: Record<"lg" | "md" | "sm", { className: string; px: number }> = {
@@ -18,13 +18,16 @@ const SIZE: Record<"lg" | "md" | "sm", { className: string; px: number }> = {
   sm: { className: `${style.icon} ${style.iconSm}`, px: 20 },
 };
 
-const VARIANT_STYLES: Record<
-  "primary" | "secondary" | "primaryOutline",
-  string
-> = {
-  primary: style.primaryButton,
-  secondary: style.secondaryButton,
-  primaryOutline: style.primaryOutline,
+const VARIANT_STYLES: Record<"primary" | "secondary" | "primaryGhost", string> =
+  {
+    primary: style.primaryButton,
+    secondary: style.secondaryButton,
+    primaryGhost: style.primaryGhost,
+  };
+
+const DISABLED_STYLES: Record<"outline" | "filled", string> = {
+  outline: style.disabledOutline,
+  filled: style.disabledFilled,
 };
 
 const ButtonIcon = ({
@@ -37,10 +40,16 @@ const ButtonIcon = ({
   size = "lg",
   variant = "primary",
 }: ButtonIconProps) => {
+  const isFilled = variant !== "primaryGhost"; // or a Set if variants grow
+
   return (
     <button
-      className={`${SIZE[size].className} ${rounded ? style.rounded : ""} ${
-        disabled ? style.disabled : `${VARIANT_STYLES[variant]}`
+      className={`${SIZE[size].className} 
+      ${rounded ? style.rounded : ""} 
+      ${
+        disabled
+          ? DISABLED_STYLES[isFilled ? "filled" : "outline"]
+          : VARIANT_STYLES[variant]
       }`}
       onClick={onClick}
       type={type}
