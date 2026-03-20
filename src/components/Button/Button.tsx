@@ -64,7 +64,7 @@ const Button = ({
           size: SIZE[size].px,
           color: "inherit",
         })}
-      <span className="text-md-regular">{children}</span>
+      <p className="text-md-regular">{children}</p>
     </button>
   );
 };
