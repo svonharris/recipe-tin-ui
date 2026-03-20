@@ -1,14 +1,111 @@
-# The Recipe Tin
+<p align="center">
+  <img src="public/the-recipe-tin-showcase.png" alt="The Recipe Tin" />
+</p>
 
-## Project Image
+<h1 align="center">The Recipe Tin Design System</h1>
 
-![The Recipe Tin showcase](public/the-recipe-tin-showcase.png)
+The Recipe Tin Design System provides reusable UI components, design tokens, and foundations that help build a consistent, accessible, and scalable digital recipe box. Inspired by the classic kitchen tin filled with handwritten recipe cards, it keeps all the building blocks for discovering, saving, and sharing recipes in one place.
 
-## Project Description
+This guide walks you through installing and using the design system in your project.
 
-The Recipe Tin is a digital recipe box where you can discover new dishes, save your favorites, and add your own recipes. Inspired by the classic kitchen tin filled with handwritten recipe cards, it keeps all your cooking ideas organized in one simple place. Browse recipes from others, upload your own creations, and build a collection you can return to anytime you need inspiration in the kitchen.
+<hr size="4" color="#ededed">
 
-## How to run
+What this includes:
 
-1. npm install
-2. npm run storybook
+- Reusable React components (buttons, cards, forms, navigation, ratings, and more)
+- Design foundations (color, typography, spacing, layout, and border radius)
+- Accessibility-first patterns and implementation guidance
+- Storybook documentation with examples and usage notes
+
+Using shared standards helps teams:
+
+- Build faster with less duplication
+- Maintain visual and behavioral consistency
+- Improve onboarding for designers and developers
+- Deliver predictable, confidence-inspiring product experiences
+
+The system is built on:
+
+- Design tokens
+- Accessibility standards
+- Interaction principles
+- Responsive layout rules
+
+## Get Started
+
+```
+npm install github:svonharris/the-recipe-tin
+```
+
+### Peer Dependencies
+
+<hr width="50%" align="left">
+
+Make sure your project includes the required peer dependencies:
+
+```
+npm install react react-dom
+```
+
+If you're using TypeScript:
+
+```
+npm install -D typescript @types/react @types/react-dom
+```
+
+### Using Components
+
+<hr width="50%" align="left">
+
+Import components directly:
+
+```
+import { Button } from 'the-recipe-tin';
+
+export function Example() {
+    return <Button variant="primary">Browse Recipes</Button>;
+}
+```
+
+### Using Design Tokens
+
+<hr width="50%" align="left">
+
+Design tokens are available for direct use in CSS.
+
+```
+.my-card {
+  background: var(--color-surface-primary);
+  border-radius: var(--border-radius-md);
+}
+```
+
+<hr size="4" color="#ededed">
+
+## Documentation
+
+Interactive documentation and live examples are published via [Chromatic](https://www.chromatic.com). There you can:
+
+- Explore components
+- View accessibility notes
+- Inspect props and variants
+- Review usage guidelines
+
+> The Chromatic link will be added here once published.
+
+### Run Storybook locally
+
+```
+npm install
+npm run storybook
+```
+
+Opens at [http://localhost:6006](http://localhost:6006).
+
+### Regenerate icons
+
+SVG icons are generated from source files in `design/icons/`:
+
+```
+npm run icons:export
+```
