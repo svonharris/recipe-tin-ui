@@ -3,7 +3,7 @@ import path from 'path';
 import { fileURLToPath } from 'url';
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
-const iconsDir = path.join(__dirname, '../src/components/icons');
+const iconsDir = path.join(__dirname, '../src/icons');
 const files = fs.readdirSync(iconsDir).filter(f => f.endsWith('.jsx') || f.endsWith('.tsx'));
 
 const exports = files
