@@ -6,7 +6,7 @@ type IconProps = SVGProps<SVGSVGElement> & {
   title?: string,
   titleId?: string,
 };
-const SvgUndo = React.forwardRef(
+const SvgHeart = React.forwardRef(
   (
     { size = 24, color = "currentColor", title, titleId, ...props }: IconProps,
     ref: React.Ref<SVGSVGElement>
@@ -31,10 +31,9 @@ const SvgUndo = React.forwardRef(
       >
         {title ? <title id={titleId}>{title}</title> : null}
         <path
-          d="M3 12C3 16.9706 7.02944 21 12 21C16.9706 21 21 16.9706 21 12C21 7.02944 16.9706 3 12 3C8.66873 3 5.76018 4.80989 4.20404 7.5M4.20404 7.5V3M4.20404 7.5H8.625"
+          d="M12.765 4.70229L12 5.52422L11.235 4.70229C9.12233 2.43257 5.69709 2.43257 3.58447 4.70229C1.47184 6.972 1.47184 10.6519 3.58447 12.9217L10.4699 20.3191C11.315 21.227 12.685 21.227 13.5301 20.3191L20.4155 12.9217C22.5282 10.6519 22.5282 6.972 20.4155 4.70229C18.3029 2.43257 14.8777 2.43257 12.765 4.70229Z"
           stroke="currentColor"
           strokeWidth={1.5}
-          strokeLinecap="round"
           strokeLinejoin="round"
         />
       </svg>
@@ -42,5 +41,5 @@ const SvgUndo = React.forwardRef(
     return React.cloneElement(inner, svgProps);
   }
 );
-SvgUndo.displayName = "SvgUndo";
-export default SvgUndo;
+SvgHeart.displayName = "SvgHeart";
+export default SvgHeart;
