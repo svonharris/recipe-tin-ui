@@ -30,6 +30,13 @@ button, [type='button'], [type='reset'] {
 .primaryButton:hover {
     background-color: var(--color-primary-600);
 }
+.tertiaryButton {
+    background-color: var(--color-gray-50);
+    border-radius: 12px;
+}
+.tertiaryButton:hover {
+    background-color: var(--color-gray-100);
+}
 .primaryGhost {
     color: var(--color-dark-500);
     background-color: transparent;
@@ -39,4 +46,3 @@ button, [type='button'], [type='reset'] {
     color: var(--color-dark-50);
     border: 1px solid var(--color-dark-50);
 }
-
