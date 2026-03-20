@@ -60,7 +60,7 @@ npm install -D typescript @types/react @types/react-dom
 Import components directly:
 
 ```
-import { Button } from 'the-recipe-tin';
+import { Button } from 'recipe-tin-ui';
 
 export function Example() {
     return <Button variant="primary">Browse Recipes</Button>;
