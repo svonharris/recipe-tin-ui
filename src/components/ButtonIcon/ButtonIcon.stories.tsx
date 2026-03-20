@@ -52,6 +52,18 @@ export const Ghost: Story = {
   },
 };
 
+export const Categories: Story = {
+  argTypes: {
+    disabled: { control: false },
+  },
+  args: {
+    icon: <Gps />,
+    title: "GPS Icon Button",
+    variant: "tertiary",
+    children: "Category Name",
+  },
+};
+
 export const Rounded: Story = {
   argTypes: {
     variant: { control: false },
