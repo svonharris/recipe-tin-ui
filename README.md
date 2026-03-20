@@ -34,7 +34,7 @@ The system is built on:
 ## Get Started
 
 ```
-npm install github:svonharris/the-recipe-tin
+npm install github:svonharris/recipe-tin-ui
 ```
 
 ### Peer Dependencies
