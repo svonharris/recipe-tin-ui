@@ -1,6 +1,6 @@
 import { useState } from "react";
 import type { Meta, StoryObj } from "@storybook/react";
-import { MenuLineHorizontal01, Filter01 } from "../../icons";
+import { Heart, MenuLineHorizontal01 } from "../../icons";
 import Page from "./Page";
 import Image from "../Image/Image";
 import Ratings from "../Ratings/Ratings";
@@ -27,7 +27,7 @@ type Story = StoryObj<typeof Page>;
 export const RecipeHome: Story = {
   render: () => {
     const [recipes, setRecipes] = useState<any[]>([]);
-    const [recommendedRecipes, setRecommendedRecipes] = useState<any[]>([]);
+    // const [recommendedRecipes, setRecommendedRecipes] = useState<any[]>([]);
     return (
       <Page>
         <div style={{ maxWidth: "375px" }}>
@@ -35,16 +35,7 @@ export const RecipeHome: Story = {
             <header>
               <Stack gap={16}>
                 <Inline gap={8} align="center">
-                  <ButtonIcon
-                    size={"sm"}
-                    outline={true}
-                    onClick={() => {}}
-                    title="Menu"
-                    colorBackground="var(--color-dark-500)"
-                    colorHover="var(--color-dark-600)"
-                    borderRadius="var(--border-radius-round)"
-                    icon={<MenuLineHorizontal01 />}
-                  />
+                  {/* App Logo */}
                   <Heading
                     htmlElement="h1"
                     textClassName="text-md-bold"
@@ -70,6 +61,47 @@ export const RecipeHome: Story = {
               </>
             ) : (
               <>
+                <Heading
+                  htmlElement="h2"
+                  textClassName="text-lg-bold"
+                  color="var(--color-dark-500)"
+                >
+                  Recipe Categories
+                </Heading>
+                <Inline gap={12} align="top">
+                  <ButtonIcon
+                    children="Breakfast"
+                    icon={<Heart />}
+                    onClick={() => {}}
+                    title="Food category: Breakfast"
+                    size={"xl"}
+                    variant={"tertiary"}
+                  />
+                  <ButtonIcon
+                    children="Salad"
+                    icon={<MenuLineHorizontal01 />}
+                    onClick={() => {}}
+                    title="Food category: Salad"
+                    size={"xl"}
+                    variant={"tertiary"}
+                  />
+                  <ButtonIcon
+                    children="Pizza"
+                    icon={<Heart />}
+                    onClick={() => {}}
+                    title="Food category: Pizza"
+                    size={"xl"}
+                    variant={"tertiary"}
+                  />
+                  <ButtonIcon
+                    children="Dessert"
+                    icon={<Heart />}
+                    onClick={() => {}}
+                    title="Food category: Dessert"
+                    size={"xl"}
+                    variant={"tertiary"}
+                  />
+                </Inline>
                 <Heading
                   htmlElement="h2"
                   textClassName="text-lg-bold"
