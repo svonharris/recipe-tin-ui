@@ -1,0 +1,28 @@
+.navList {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.navLink {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2px;
+    color: var(--color-gray-800);
+    text-decoration: none;
+    border-top: 2px solid var(--color-transparent);
+    padding-top: 14px;
+    &:active, &:focus, &:focus-visible {
+        color: var(--color-primary-700);
+        outline-color: var(--color-transparent);
+        border-color: var(--color-primary-700);
+    }
+    &:hover {
+        color: var(--color-primary-700);
+        border-color: var(--color-primary-700);
+    }
+}
