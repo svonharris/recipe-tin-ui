@@ -1,0 +1,23 @@
+import { Meta } from "@storybook/addon-docs/blocks";
+import { IconGallery } from "./Icons";
+
+<Meta title="Brand/Iconography" />
+
+# Iconography
+
+Recipe Tin UI includes a set of SVG icons available as React components. Each icon accepts a `size` prop (defaults to `24`) and a `color` prop (defaults to `currentColor`), making them easy to scale and theme inline.
+
+## Usage
+
+Import icons individually from the icons package.
+
+```jsx
+import { Heart, Star } from "../../icons";
+
+<Heart size={28} />
+<Star size={28} color="var(--color-primary-500)" />
+```
+
+## Gallery
+
+<IconGallery />

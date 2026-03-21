@@ -1,0 +1,31 @@
+import { Meta } from "@storybook/addon-docs/blocks";
+
+<Meta title="Brand/Typography" />
+
+# Typography
+
+Recipe Tin UI uses a structured type system built on CSS utility classes and design tokens. Styles are organized into a heading scale and a text scale, each available in three weights: regular, medium, and bold.
+
+## Usage
+
+Typography styles are defined in [typography.css](src/styles/typography.css) and applied as class names directly on elements. Always use the utility classes rather than setting font properties manually.
+
+```jsx
+/* Do */
+<p className="text-lg-bold">Recipe description</p>
+<p className={`text-lg-bold ${styles.subTitle}`}>Recipe description</p>
+
+/* Don't */
+font-family: var(--text-lg-bold);
+<p style={{ fontFamily: "var(--text-lg-bold)" }}>Recipe description</p>
+```
+
+## Font Family
+
+`--font-primary`: `"Roboto", sans-serif`
+
+---
+
+## Font Scale
+
+<img src="../brand-typography.png" alt="Recipe Tin UI Brand Typography" />

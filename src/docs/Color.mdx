@@ -1,0 +1,201 @@
+import { Meta } from "@storybook/addon-docs/blocks";
+
+<Meta title="Brand/Color" />
+
+# Color
+
+Recipe Tin UI is built on a structured color system using CSS custom properties (design tokens). Colors are organized into brand palettes, neutral palettes, and semantic palettes — each with a scale from `50` (lightest) to `950` (darkest). These are the core colors that define the Recipe Tin UI visual identity.
+
+## Usage
+
+All colors are defined as CSS custom properties in [tokens.css](src/styles/tokens.css) and are available globally. Always reference colors via their token rather than hardcoding hex values directly.
+
+```css
+/* Do */
+color: var(--color-primary-500);
+
+/* Don't */
+color: #26ae60;
+```
+
+---
+
+<img src="../brand-colors.png" alt="Recipe Tin UI Brand Colors" />
+
+---
+
+## Brand Colors
+
+These are the core colors that define the Recipe Tin UI visual identity.
+
+### Primary — Green
+
+The primary brand color, evoking freshness and nature. Used for key actions, links, and active states.
+
+| Token                 | Hex       | Swatch                                                                                                                   |
+| --------------------- | --------- | ------------------------------------------------------------------------------------------------------------------------ |
+| `--color-primary-50`  | `#F1FCF5` | <span style={{display:"inline-block",width:24,height:24,background:"#F1FCF5",border:"1px solid #ccc",borderRadius:4}} /> |
+| `--color-primary-100` | `#DDFBE9` | <span style={{display:"inline-block",width:24,height:24,background:"#DDFBE9",border:"1px solid #ccc",borderRadius:4}} /> |
+| `--color-primary-200` | `#BEF4D4` | <span style={{display:"inline-block",width:24,height:24,background:"#BEF4D4",border:"1px solid #ccc",borderRadius:4}} /> |
+| `--color-primary-400` | `#51D78A` | <span style={{display:"inline-block",width:24,height:24,background:"#51D78A",borderRadius:4}} />                         |
+| `--color-primary-500` | `#26AE60` | <span style={{display:"inline-block",width:24,height:24,background:"#26AE60",borderRadius:4}} />                         |
+| `--color-primary-600` | `#1C9D54` | <span style={{display:"inline-block",width:24,height:24,background:"#1C9D54",borderRadius:4}} />                         |
+| `--color-primary-700` | `#1A7B44` | <span style={{display:"inline-block",width:24,height:24,background:"#1A7B44",borderRadius:4}} />                         |
+| `--color-primary-800` | `#1A6139` | <span style={{display:"inline-block",width:24,height:24,background:"#1A6139",borderRadius:4}} />                         |
+| `--color-primary-900` | `#175031` | <span style={{display:"inline-block",width:24,height:24,background:"#175031",borderRadius:4}} />                         |
+| `--color-primary-950` | `#072C18` | <span style={{display:"inline-block",width:24,height:24,background:"#072C18",borderRadius:4}} />                         |
+
+### Secondary — Teal
+
+A complementary brand color used for accents and supporting UI elements.
+
+| Token                   | Hex       | Swatch                                                                                                                   |
+| ----------------------- | --------- | ------------------------------------------------------------------------------------------------------------------------ |
+| `--color-secondary-50`  | `#F0FDFA` | <span style={{display:"inline-block",width:24,height:24,background:"#F0FDFA",border:"1px solid #ccc",borderRadius:4}} /> |
+| `--color-secondary-100` | `#CCFBF1` | <span style={{display:"inline-block",width:24,height:24,background:"#CCFBF1",border:"1px solid #ccc",borderRadius:4}} /> |
+| `--color-secondary-200` | `#99F6E4` | <span style={{display:"inline-block",width:24,height:24,background:"#99F6E4",border:"1px solid #ccc",borderRadius:4}} /> |
+| `--color-secondary-300` | `#5EEAD4` | <span style={{display:"inline-block",width:24,height:24,background:"#5EEAD4",borderRadius:4}} />                         |
+| `--color-secondary-400` | `#2DD4BF` | <span style={{display:"inline-block",width:24,height:24,background:"#2DD4BF",borderRadius:4}} />                         |
+| `--color-secondary-500` | `#14B8A6` | <span style={{display:"inline-block",width:24,height:24,background:"#14B8A6",borderRadius:4}} />                         |
+| `--color-secondary-600` | `#0D9488` | <span style={{display:"inline-block",width:24,height:24,background:"#0D9488",borderRadius:4}} />                         |
+| `--color-secondary-700` | `#0F766E` | <span style={{display:"inline-block",width:24,height:24,background:"#0F766E",borderRadius:4}} />                         |
+| `--color-secondary-800` | `#115E59` | <span style={{display:"inline-block",width:24,height:24,background:"#115E59",borderRadius:4}} />                         |
+| `--color-secondary-900` | `#134E4A` | <span style={{display:"inline-block",width:24,height:24,background:"#134E4A",borderRadius:4}} />                         |
+
+### Tertiary — Indigo
+
+Used sparingly for tertiary UI elements and decorative accents.
+
+| Token                  | Hex       | Swatch                                                                                                                   |
+| ---------------------- | --------- | ------------------------------------------------------------------------------------------------------------------------ |
+| `--color-tertiary-50`  | `#EEF2FF` | <span style={{display:"inline-block",width:24,height:24,background:"#EEF2FF",border:"1px solid #ccc",borderRadius:4}} /> |
+| `--color-tertiary-100` | `#E0E7FF` | <span style={{display:"inline-block",width:24,height:24,background:"#E0E7FF",border:"1px solid #ccc",borderRadius:4}} /> |
+| `--color-tertiary-200` | `#C7D2FE` | <span style={{display:"inline-block",width:24,height:24,background:"#C7D2FE",border:"1px solid #ccc",borderRadius:4}} /> |
+| `--color-tertiary-300` | `#A5B4FC` | <span style={{display:"inline-block",width:24,height:24,background:"#A5B4FC",borderRadius:4}} />                         |
+| `--color-tertiary-600` | `#4F46E5` | <span style={{display:"inline-block",width:24,height:24,background:"#4F46E5",borderRadius:4}} />                         |
+| `--color-tertiary-800` | `#3730A3` | <span style={{display:"inline-block",width:24,height:24,background:"#3730A3",borderRadius:4}} />                         |
+| `--color-tertiary-900` | `#312E81` | <span style={{display:"inline-block",width:24,height:24,background:"#312E81",borderRadius:4}} />                         |
+| `--color-tertiary-950` | `#172554` | <span style={{display:"inline-block",width:24,height:24,background:"#172554",borderRadius:4}} />                         |
+
+---
+
+## Neutral Colors
+
+Neutral palettes are used for text, backgrounds, borders, and surfaces.
+
+### Dark
+
+Deep, dark-green-tinted tones. Used for primary body text and high-contrast surfaces.
+
+| Token              | Hex       | Swatch                                                                                           |
+| ------------------ | --------- | ------------------------------------------------------------------------------------------------ |
+| `--color-dark-50`  | `#154528` | <span style={{display:"inline-block",width:24,height:24,background:"#154528",borderRadius:4}} /> |
+| `--color-dark-100` | `#123A22` | <span style={{display:"inline-block",width:24,height:24,background:"#123A22",borderRadius:4}} /> |
+| `--color-dark-300` | `#0B2114` | <span style={{display:"inline-block",width:24,height:24,background:"#0B2114",borderRadius:4}} /> |
+| `--color-dark-500` | `#050D08` | <span style={{display:"inline-block",width:24,height:24,background:"#050D08",borderRadius:4}} /> |
+| `--color-dark-600` | `#030A06` | <span style={{display:"inline-block",width:24,height:24,background:"#030A06",borderRadius:4}} /> |
+| `--color-dark-900` | `#000000` | <span style={{display:"inline-block",width:24,height:24,background:"#000000",borderRadius:4}} /> |
+
+### Gray
+
+Cool, neutral grays for borders, secondary text, and disabled states.
+
+| Token              | Hex       | Swatch                                                                                                                   |
+| ------------------ | --------- | ------------------------------------------------------------------------------------------------------------------------ |
+| `--color-gray-50`  | `#F7F7F7` | <span style={{display:"inline-block",width:24,height:24,background:"#F7F7F7",border:"1px solid #ccc",borderRadius:4}} /> |
+| `--color-gray-100` | `#EDEDED` | <span style={{display:"inline-block",width:24,height:24,background:"#EDEDED",border:"1px solid #ccc",borderRadius:4}} /> |
+| `--color-gray-200` | `#DFDFDF` | <span style={{display:"inline-block",width:24,height:24,background:"#DFDFDF",border:"1px solid #ccc",borderRadius:4}} /> |
+| `--color-gray-300` | `#C8C8C8` | <span style={{display:"inline-block",width:24,height:24,background:"#C8C8C8",borderRadius:4}} />                         |
+| `--color-gray-400` | `#ADADAD` | <span style={{display:"inline-block",width:24,height:24,background:"#ADADAD",borderRadius:4}} />                         |
+| `--color-gray-500` | `#A1A1A1` | <span style={{display:"inline-block",width:24,height:24,background:"#A1A1A1",borderRadius:4}} />                         |
+| `--color-gray-600` | `#888888` | <span style={{display:"inline-block",width:24,height:24,background:"#888888",borderRadius:4}} />                         |
+| `--color-gray-700` | `#7B7B7B` | <span style={{display:"inline-block",width:24,height:24,background:"#7B7B7B",borderRadius:4}} />                         |
+| `--color-gray-800` | `#676767` | <span style={{display:"inline-block",width:24,height:24,background:"#676767",borderRadius:4}} />                         |
+| `--color-gray-900` | `#545454` | <span style={{display:"inline-block",width:24,height:24,background:"#545454",borderRadius:4}} />                         |
+| `--color-gray-950` | `#363636` | <span style={{display:"inline-block",width:24,height:24,background:"#363636",borderRadius:4}} />                         |
+
+### Light
+
+Slightly warm light tones for surfaces, muted text, and subtle UI layering.
+
+| Token               | Hex       | Swatch                                                                                                                   |
+| ------------------- | --------- | ------------------------------------------------------------------------------------------------------------------------ |
+| `--color-light-50`  | `#F5F5F6` | <span style={{display:"inline-block",width:24,height:24,background:"#F5F5F6",border:"1px solid #ccc",borderRadius:4}} /> |
+| `--color-light-100` | `#E5E6E8` | <span style={{display:"inline-block",width:24,height:24,background:"#E5E6E8",border:"1px solid #ccc",borderRadius:4}} /> |
+| `--color-light-200` | `#CDCFD4` | <span style={{display:"inline-block",width:24,height:24,background:"#CDCFD4",border:"1px solid #ccc",borderRadius:4}} /> |
+| `--color-light-300` | `#ABAFB5` | <span style={{display:"inline-block",width:24,height:24,background:"#ABAFB5",borderRadius:4}} />                         |
+| `--color-light-400` | `#81858F` | <span style={{display:"inline-block",width:24,height:24,background:"#81858F",borderRadius:4}} />                         |
+| `--color-light-500` | `#6D727D` | <span style={{display:"inline-block",width:24,height:24,background:"#6D727D",borderRadius:4}} />                         |
+| `--color-light-600` | `#575A63` | <span style={{display:"inline-block",width:24,height:24,background:"#575A63",borderRadius:4}} />                         |
+| `--color-light-700` | `#4A4D54` | <span style={{display:"inline-block",width:24,height:24,background:"#4A4D54",borderRadius:4}} />                         |
+| `--color-light-800` | `#424448` | <span style={{display:"inline-block",width:24,height:24,background:"#424448",borderRadius:4}} />                         |
+| `--color-light-900` | `#3A3B3F` | <span style={{display:"inline-block",width:24,height:24,background:"#3A3B3F",borderRadius:4}} />                         |
+| `--color-light-950` | `#242528` | <span style={{display:"inline-block",width:24,height:24,background:"#242528",borderRadius:4}} />                         |
+
+---
+
+## Semantic Colors
+
+Semantic colors communicate meaning and system feedback to the user.
+
+### Success
+
+| Token                 | Hex       | Swatch                                                                                                                   |
+| --------------------- | --------- | ------------------------------------------------------------------------------------------------------------------------ |
+| `--color-success-50`  | `#F0FDF4` | <span style={{display:"inline-block",width:24,height:24,background:"#F0FDF4",border:"1px solid #ccc",borderRadius:4}} /> |
+| `--color-success-100` | `#DCFCE7` | <span style={{display:"inline-block",width:24,height:24,background:"#DCFCE7",border:"1px solid #ccc",borderRadius:4}} /> |
+| `--color-success-200` | `#BBF7D0` | <span style={{display:"inline-block",width:24,height:24,background:"#BBF7D0",border:"1px solid #ccc",borderRadius:4}} /> |
+| `--color-success-500` | `#22C55E` | <span style={{display:"inline-block",width:24,height:24,background:"#22C55E",borderRadius:4}} />                         |
+| `--color-success-600` | `#16A34A` | <span style={{display:"inline-block",width:24,height:24,background:"#16A34A",borderRadius:4}} />                         |
+| `--color-success-700` | `#15803D` | <span style={{display:"inline-block",width:24,height:24,background:"#15803D",borderRadius:4}} />                         |
+| `--color-success-800` | `#166534` | <span style={{display:"inline-block",width:24,height:24,background:"#166534",borderRadius:4}} />                         |
+| `--color-success-900` | `#14532D` | <span style={{display:"inline-block",width:24,height:24,background:"#14532D",borderRadius:4}} />                         |
+| `--color-success-950` | `#052E14` | <span style={{display:"inline-block",width:24,height:24,background:"#052E14",borderRadius:4}} />                         |
+
+### Warning
+
+| Token                 | Hex       | Swatch                                                                                                                   |
+| --------------------- | --------- | ------------------------------------------------------------------------------------------------------------------------ |
+| `--color-warning-50`  | `#FEFCE8` | <span style={{display:"inline-block",width:24,height:24,background:"#FEFCE8",border:"1px solid #ccc",borderRadius:4}} /> |
+| `--color-warning-100` | `#FEF9C3` | <span style={{display:"inline-block",width:24,height:24,background:"#FEF9C3",border:"1px solid #ccc",borderRadius:4}} /> |
+| `--color-warning-200` | `#FEF08A` | <span style={{display:"inline-block",width:24,height:24,background:"#FEF08A",border:"1px solid #ccc",borderRadius:4}} /> |
+| `--color-warning-300` | `#FDE047` | <span style={{display:"inline-block",width:24,height:24,background:"#FDE047",borderRadius:4}} />                         |
+| `--color-warning-400` | `#FACC15` | <span style={{display:"inline-block",width:24,height:24,background:"#FACC15",borderRadius:4}} />                         |
+| `--color-warning-500` | `#EAB308` | <span style={{display:"inline-block",width:24,height:24,background:"#EAB308",borderRadius:4}} />                         |
+| `--color-warning-600` | `#CA8A04` | <span style={{display:"inline-block",width:24,height:24,background:"#CA8A04",borderRadius:4}} />                         |
+| `--color-warning-700` | `#A16207` | <span style={{display:"inline-block",width:24,height:24,background:"#A16207",borderRadius:4}} />                         |
+| `--color-warning-800` | `#854D0E` | <span style={{display:"inline-block",width:24,height:24,background:"#854D0E",borderRadius:4}} />                         |
+| `--color-warning-900` | `#713F12` | <span style={{display:"inline-block",width:24,height:24,background:"#713F12",borderRadius:4}} />                         |
+| `--color-warning-950` | `#423306` | <span style={{display:"inline-block",width:24,height:24,background:"#423306",borderRadius:4}} />                         |
+
+### Error
+
+| Token               | Hex       | Swatch                                                                                                                   |
+| ------------------- | --------- | ------------------------------------------------------------------------------------------------------------------------ |
+| `--color-error-50`  | `#FEF2F2` | <span style={{display:"inline-block",width:24,height:24,background:"#FEF2F2",border:"1px solid #ccc",borderRadius:4}} /> |
+| `--color-error-100` | `#FEE2E2` | <span style={{display:"inline-block",width:24,height:24,background:"#FEE2E2",border:"1px solid #ccc",borderRadius:4}} /> |
+| `--color-error-200` | `#FECACA` | <span style={{display:"inline-block",width:24,height:24,background:"#FECACA",border:"1px solid #ccc",borderRadius:4}} /> |
+| `--color-error-300` | `#FCA5A5` | <span style={{display:"inline-block",width:24,height:24,background:"#FCA5A5",borderRadius:4}} />                         |
+| `--color-error-400` | `#F87171` | <span style={{display:"inline-block",width:24,height:24,background:"#F87171",borderRadius:4}} />                         |
+| `--color-error-500` | `#EF4444` | <span style={{display:"inline-block",width:24,height:24,background:"#EF4444",borderRadius:4}} />                         |
+| `--color-error-600` | `#DC2626` | <span style={{display:"inline-block",width:24,height:24,background:"#DC2626",borderRadius:4}} />                         |
+| `--color-error-700` | `#B91C1C` | <span style={{display:"inline-block",width:24,height:24,background:"#B91C1C",borderRadius:4}} />                         |
+| `--color-error-800` | `#991B1B` | <span style={{display:"inline-block",width:24,height:24,background:"#991B1B",borderRadius:4}} />                         |
+| `--color-error-900` | `#7F1D1D` | <span style={{display:"inline-block",width:24,height:24,background:"#7F1D1D",borderRadius:4}} />                         |
+| `--color-error-950` | `#450A0A` | <span style={{display:"inline-block",width:24,height:24,background:"#450A0A",borderRadius:4}} />                         |
+
+### Information
+
+| Token                     | Hex       | Swatch                                                                                                                   |
+| ------------------------- | --------- | ------------------------------------------------------------------------------------------------------------------------ |
+| `--color-information-50`  | `#EFF6FF` | <span style={{display:"inline-block",width:24,height:24,background:"#EFF6FF",border:"1px solid #ccc",borderRadius:4}} /> |
+| `--color-information-100` | `#DBEAFE` | <span style={{display:"inline-block",width:24,height:24,background:"#DBEAFE",border:"1px solid #ccc",borderRadius:4}} /> |
+| `--color-information-200` | `#BFDBFE` | <span style={{display:"inline-block",width:24,height:24,background:"#BFDBFE",border:"1px solid #ccc",borderRadius:4}} /> |
+| `--color-information-300` | `#93C5FD` | <span style={{display:"inline-block",width:24,height:24,background:"#93C5FD",borderRadius:4}} />                         |
+| `--color-information-400` | `#60A5FA` | <span style={{display:"inline-block",width:24,height:24,background:"#60A5FA",borderRadius:4}} />                         |
+| `--color-information-500` | `#3B82F6` | <span style={{display:"inline-block",width:24,height:24,background:"#3B82F6",borderRadius:4}} />                         |
+| `--color-information-600` | `#2563EB` | <span style={{display:"inline-block",width:24,height:24,background:"#2563EB",borderRadius:4}} />                         |
+| `--color-information-700` | `#1D4ED8` | <span style={{display:"inline-block",width:24,height:24,background:"#1D4ED8",borderRadius:4}} />                         |
+| `--color-information-800` | `#1E40AF` | <span style={{display:"inline-block",width:24,height:24,background:"#1E40AF",borderRadius:4}} />                         |
+| `--color-information-900` | `#1E3A8A` | <span style={{display:"inline-block",width:24,height:24,background:"#1E3A8A",borderRadius:4}} />                         |
+| `--color-information-950` | `#172E54` | <span style={{display:"inline-block",width:24,height:24,background:"#172E54",borderRadius:4}} />                         |
