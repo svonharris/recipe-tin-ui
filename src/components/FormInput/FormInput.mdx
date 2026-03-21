@@ -20,22 +20,6 @@ A controlled text input with an associated label, optional icon, error message, 
 <Canvas of={FormInputStories.Default} />
 <Controls of={FormInputStories.Default} />
 
-### Prop reference
-
-| Prop | Type | Default | Description |
-|---|---|---|---|
-| `id` | `string` | — | Links the `<label>` to the `<input>` via `htmlFor` |
-| `label` | `string` | — | Visible label text for the input |
-| `value` | `string` | — | Controlled value of the input |
-| `onChange` | `(e: ChangeEvent) => void` | — | Change handler for the controlled input |
-| `type` | `"text" \| "email" \| "password" \| "number" \| "search" \| "tel" \| "url"` | `"text"` | HTML input type |
-| `placeholder` | `string` | `undefined` | Placeholder text shown when the input is empty |
-| `icon` | `ReactElement` | `undefined` | Optional icon rendered inside the input at size 18 |
-| `error` | `string` | `undefined` | Inline error message displayed below the input |
-| `required` | `boolean` | `false` | Marks the field as required and appends an asterisk to the label |
-| `disabled` | `boolean` | `false` | Prevents interaction with the input |
-| `hideLabel` | `boolean` | `false` | Visually hides the label while keeping it accessible |
-
 ---
 
 ## Examples
@@ -62,7 +46,7 @@ Use `required` to mark a field as mandatory. An asterisk is appended to the labe
 
 Use the `error` prop to display a validation message below the input.
 
-<Canvas of={FormInputStories.WithError} />
+<Canvas of={FormInputStories.ErrorMessage} />
 
 ### Hidden Label
 
