@@ -1,7 +1,6 @@
 import React from "react";
 import style from "./ButtonIcon.module.css";
 import "../../styles/buttons.css";
-import Stack from "../Stack/Stack";
 
 type ButtonIconProps = {
   children?: React.ReactNode;
@@ -55,7 +54,15 @@ const ButtonIcon = ({
   const isFilled = variant !== "primaryGhost"; // or a Set if variants grow
 
   return (
-    <Stack gap={8} align="center">
+    <div
+      style={{
+        display: "flex",
+        flexDirection: "column",
+        gap: 8,
+        alignItems: "center",
+        width: "fit-content",
+      }}
+    >
       <button
         className={`buttonBase ${SIZE[size].className}  
       ${rounded ? style.rounded : ""} 
@@ -75,7 +82,7 @@ const ButtonIcon = ({
         })}
       </button>
       {children && <p className="text-md-regular">{children}</p>}
-    </Stack>
+    </div>
   );
 };
 
