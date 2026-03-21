@@ -4,7 +4,7 @@ import FormSearch from "./FormSeach";
 import RecipeGallery from "../RecipeGallery/RecipeGallery";
 
 const meta = {
-  title: "Components/FormSearch",
+  title: "Components/Forms/FormSearch",
   component: FormSearch,
   argTypes: {
     onResults: { control: false },
