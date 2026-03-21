@@ -1,0 +1,56 @@
+import { Canvas, Meta, Controls } from "@storybook/addon-docs/blocks";
+
+import * as ButtonIconStories from "./ButtonIcon.stories";
+
+<Meta of={ButtonIconStories} />
+
+# Icon Button
+
+An icon-only button that allows the user to perform an action. Optionally supports a label beneath the icon.
+
+## Guidelines
+
+- Always provide a `title` prop for accessibility — this is used as the button's tooltip and screen reader label.
+- Use an icon button when space is limited and the icon clearly communicates the action without a text label.
+- Add a `children` label beneath the icon when the action may not be immediately obvious from the icon alone.
+- Use only one primary icon button per group of related actions.
+
+## Props
+
+<Canvas of={ButtonIconStories.Default} />
+<Controls of={ButtonIconStories.Default} />
+
+---
+
+## Examples
+
+### Primary
+
+The default icon button style. Use for the most important action in a group.
+
+<Canvas of={ButtonIconStories.Default} />
+
+### Ghost
+
+Use a ghost icon button for secondary actions, or when a lighter visual weight is needed.
+
+<Canvas of={ButtonIconStories.Ghost} />
+
+### With Label
+
+The `children` prop adds a label beneath the icon. Use this for category selectors or navigation items where the icon alone may be unclear.
+
+<Canvas of={ButtonIconStories.Categories} />
+
+### Rounded
+
+Apply the `rounded` prop to give the button a circular shape. Commonly used for floating or overlay actions such as save or favourite.
+
+<Canvas of={ButtonIconStories.Rounded} />
+
+### Disabled
+
+Use a disabled icon button to indicate an action is currently unavailable. Provide nearby context so the user understands why.
+
+<Canvas of={ButtonIconStories.DisabledDefault} />
+<Canvas of={ButtonIconStories.DisabledGhost} />
