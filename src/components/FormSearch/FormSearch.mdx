@@ -1,0 +1,55 @@
+import { Canvas, Meta, Controls } from "@storybook/addon-docs/blocks";
+
+import * as FormSearchStories from "./FormSearch.stories";
+
+<Meta of={FormSearchStories} />
+
+# Form Search
+
+A generic, reusable search form. Renders a search input and calls `onSubmit` with the trimmed query string when the form is submitted. It has no knowledge of any API — the parent is responsible for handling the query.
+
+## Guidelines
+
+- Always provide an `onSubmit` handler — this is how the parent receives the query and decides what to do with it.
+- Use `hideLabel` to visually hide the label when the search icon provides enough context, while keeping it accessible to screen readers.
+- Empty or whitespace-only submissions are ignored — no need to guard against them in the parent.
+- To connect to an API, pair this component with a data-fetching hook (e.g. `useEdamamSearch`) in the parent. The form and the fetch logic should stay separate.
+
+## Props
+
+<Canvas of={FormSearchStories.Default} />
+<Controls of={FormSearchStories.Default} />
+
+## Usage
+
+`FormSearch` is API-agnostic — it only handles the input and submission. Connect it to a data source by pairing it with a hook in the parent.
+
+```tsx
+import FormSearch from "../Forms/FormSearch";
+import useEdamamSearch from "../../hooks/useEdamamSearch";
+import RecipeGallery from "../RecipeGallery/RecipeGallery";
+
+const [recipes, setRecipes] = useState<any[]>([]);
+const { search } = useEdamamSearch(setRecipes);
+
+<FormSearch onSubmit={search} />
+<RecipeGallery recipes={recipes} />
+```
+
+`useEdamamSearch` takes the `setRecipes` state setter as its `onResults` callback. When a search completes it updates `recipes`, which `RecipeGallery` renders. `FormSearch` is unaware of either — it simply calls `onSubmit` with the query string.
+
+---
+
+## Examples
+
+### Default
+
+A search input with a hidden label and placeholder text.
+
+<Canvas of={FormSearchStories.Default} />
+
+### With Results
+
+Shows how `FormSearch` wires up to a results component in the parent. Submitting the form passes the query to `onSubmit`, which triggers the data fetch and updates the displayed results.
+
+<Canvas of={FormSearchStories.WithResults} />
