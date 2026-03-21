@@ -11,6 +11,7 @@ const meta = {
     variant: {
       control: false, //renders prop documentation without a control
     },
+    children: { control: "text" },
     disabled: {
       control: "boolean",
     },
