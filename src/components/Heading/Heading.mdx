@@ -1,0 +1,26 @@
+import { Canvas, Meta, Controls } from "@storybook/addon-docs/blocks";
+
+import * as HeadingStories from "./Heading.stories";
+
+<Meta of={HeadingStories} />
+
+# Heading
+
+A flexible heading component that renders any HTML heading element (`h1`–`h6`). It decouples the semantic element from the visual style, allowing the correct heading level for document structure to be used independently of how it looks.
+
+## Guidelines
+
+- Always choose `htmlElement` based on document hierarchy, not visual size. Use `h1` for the page title, `h2` for sections, `h3` for subsections, and so on.
+- Use `textClassName` to apply a typography utility class from the type scale (e.g. `text-xl-bold`, `heading-xs-medium`). Do not style font size or weight inline.
+- Use `color` to apply a color token. Prefer CSS custom properties (e.g. `var(--color-dark-500)`) over hardcoded hex values.
+
+## Props
+
+<Canvas of={HeadingStories.Default} />
+<Controls of={HeadingStories.Default} />
+
+## Examples
+
+### Default
+
+<Canvas of={HeadingStories.Default} />
