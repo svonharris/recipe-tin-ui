@@ -1,5 +1,6 @@
 import React from "react";
 import style from "./FormInput.module.css";
+import Stack from "../Stack/Stack";
 
 type FormInputProps = {
   icon?: React.ReactElement<{ size?: number; color?: string }>;
@@ -28,14 +29,23 @@ const FormInput = ({
   error,
   hideLabel = false,
 }: FormInputProps) => (
-  <>
+  <Stack gap={8}>
     {hideLabel === false && (
-      <label htmlFor={id}>
-        {label}
+      <label htmlFor={id} style={{ display: "flex", gap: "4px" }}>
+        <div
+          className="text-md-regular"
+          style={disabled ? { color: "var(--color-gray-800)" } : undefined}
+        >
+          {label}
+        </div>
         {required && <span aria-hidden="true"> *</span>}
       </label>
     )}
-    <div className={style.inputContainer}>
+    <div
+      className={`${style.inputContainer} ${
+        error ? style.formErrorIndicator : ""
+      }`}
+    >
       {icon && (
         <>
           {React.cloneElement(icon, {
@@ -55,8 +65,10 @@ const FormInput = ({
         className={`text-md-regular ${style.formInput}`}
       />
     </div>
-    {error && <p className={`${style.formError} text-xs-regular`}>{error}</p>}
-  </>
+    {error && (
+      <p className={`${style.formErrorMessage} text-xs-regular`}>{error}</p>
+    )}
+  </Stack>
 );
 
 export default FormInput;
