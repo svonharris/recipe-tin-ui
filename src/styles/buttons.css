@@ -25,10 +25,10 @@ button, [type='button'], [type='reset'] {
 /* Variant Styles */
 .primaryButton {
     color: var(--color-white);
-    background-color: var(--color-primary-500);
+    background-color: var(--color-primary-700);
 }
 .primaryButton:hover {
-    background-color: var(--color-primary-600);
+    background-color: var(--color-primary-800);
 }
 .tertiaryButton {
     background-color: var(--color-gray-50);
