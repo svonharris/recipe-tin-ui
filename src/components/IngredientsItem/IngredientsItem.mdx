@@ -1,0 +1,26 @@
+import { Canvas, Meta, Controls } from "@storybook/addon-docs/blocks";
+
+import * as IngredientsItemStories from "./IngredientsItem.stories";
+
+<Meta of={IngredientsItemStories} />
+
+# Ingredients Item
+
+Displays a single ingredient as a row with the ingredient name on the left and its amount on the right. Intended to be rendered in a list alongside other `IngredientsItem` components.
+
+## Guidelines
+
+- Use `name` for the ingredient and `amount` for the quantity and unit (e.g. `"3tbsp"`, `"200g"`).
+- The name is automatically capitalised via CSS — pass the raw lowercase value from the API or data source.
+- Render multiple `IngredientsItem` components inside a layout component such as `Stack` to build a full ingredients list.
+
+## Props
+
+<Canvas of={IngredientsItemStories.Default} />
+<Controls of={IngredientsItemStories.Default} />
+
+## Examples
+
+### Default
+
+<Canvas of={IngredientsItemStories.Default} />
