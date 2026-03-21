@@ -4,13 +4,13 @@ import CaloriesBar from "./CaloriesBar";
 const meta = {
   title: "Components/Charts/CaloriesBar",
   component: CaloriesBar,
+  tags: ["!dev"],
 } satisfies Meta<typeof CaloriesBar>;
 
 export default meta;
 type Story = StoryObj<typeof CaloriesBar>;
 
 export const Default: Story = {
-  tags: ["!dev"],
   args: {
     calories: 1134,
     protein: 16,
