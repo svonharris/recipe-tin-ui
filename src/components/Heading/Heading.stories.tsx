@@ -2,13 +2,15 @@ import type { Meta, StoryObj } from "@storybook/react";
 import Heading from "./Heading";
 
 const meta = {
-  title: "Components/Typography/Heading",
+  title: "Components/Heading",
   component: Heading,
+  args: { align: "left" },
   argTypes: {
     htmlElement: {
       options: ["h1", "h2", "h3", "h4", "h5", "h6"],
       control: { type: "select" },
     },
+    children: { control: "text" },
   },
 } satisfies Meta<typeof Heading>;
 
