@@ -8,6 +8,7 @@ const meta = {
   component: ButtonIcon,
   args: { onClick: fn(), size: "lg" },
   argTypes: {
+    children: { control: false },
     title: {
       table: { disable: true },
     },
@@ -22,7 +23,7 @@ const meta = {
     },
     variant: {
       control: "select",
-      options: ["primary", "secondary", "primaryGhost"],
+      options: ["primary", "secondary", "tertiary", "primaryGhost"],
     },
   },
 } satisfies Meta<typeof ButtonIcon>;
@@ -52,7 +53,7 @@ export const Ghost: Story = {
   },
 };
 
-export const Categories: Story = {
+export const WithLabel: Story = {
   argTypes: {
     disabled: { control: false },
   },
@@ -60,7 +61,7 @@ export const Categories: Story = {
     icon: <Gps />,
     title: "GPS Icon Button",
     variant: "tertiary",
-    children: "Category Name",
+    children: "Discover Recipes",
   },
 };
 
