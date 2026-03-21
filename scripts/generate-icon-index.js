@@ -13,5 +13,5 @@ const exports = files
   })
   .join('\n');
 
-fs.writeFileSync(path.join(iconsDir, 'index.js'), exports);
+fs.writeFileSync(path.join(iconsDir, 'index.ts'), exports);
 console.log(`Generated index with ${files.length} icons`);
