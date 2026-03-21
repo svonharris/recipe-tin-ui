@@ -3,7 +3,7 @@ import { fn } from "storybook/test";
 import FormSearch from "./FormSearch";
 
 const meta = {
-  title: "Components/FormSearch",
+  title: "Components/Forms/FormSearch",
   component: FormSearch,
   args: { onSubmit: fn() },
   argTypes: {

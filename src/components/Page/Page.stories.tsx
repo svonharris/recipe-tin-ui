@@ -14,7 +14,7 @@ import ButtonIcon from "../ButtonIcon/ButtonIcon";
 import RecipeGallery from "../RecipeGallery/RecipeGallery";
 import RecipeDuration from "../RecipeDuration/RecipeDuration";
 import RecipeRecommend from "../RecipeRecommend/RecipeRecommend";
-import FormSearch from "../Forms/FormSearch";
+import FormSearch from "../FormSearch/FormSearch";
 import useEdamamSearch from "../../hooks/useEdamamSearch";
 
 const meta = {
