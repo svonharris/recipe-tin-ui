@@ -10,6 +10,7 @@ export default meta;
 type Story = StoryObj<typeof CaloriesBar>;
 
 export const Default: Story = {
+  tags: ["!dev"],
   args: {
     calories: 1134,
     protein: 16,
