@@ -1,0 +1,30 @@
+import { Canvas, Meta, Controls } from "@storybook/addon-docs/blocks";
+
+import * as FooterStories from "./Footer.stories";
+
+<Meta of={FooterStories} />
+
+# Footer
+
+A layout container that sits at the bottom of a page. It renders a semantic `<footer>` element with a top border and accepts any content via `children`.
+
+## Guidelines
+
+- Place the Footer at the bottom of the page, outside of any scrollable content areas.
+- Use `children` to compose footer content — copyright notices, links, or secondary navigation.
+- Keep footer content minimal and secondary in importance to the main page content.
+
+## Props
+
+<Canvas of={FooterStories.Default} />
+<Controls of={FooterStories.Default} />
+
+---
+
+## Examples
+
+### Default
+
+A footer with a copyright notice.
+
+<Canvas of={FooterStories.Default} />
