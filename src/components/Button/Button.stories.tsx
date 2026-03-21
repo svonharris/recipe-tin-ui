@@ -68,3 +68,23 @@ export const GhostTextWithIcon: Story = {
     variant: "primaryGhost",
   },
 };
+
+export const DisabledPrimary: Story = {
+  args: {
+    ...DefaultText.args,
+    icon: <Gps />,
+    title: "GPS Icon with text Button",
+    variant: "primary",
+    disabled: true,
+  },
+};
+
+export const DisabledSecondary: Story = {
+  args: {
+    ...DefaultText.args,
+    icon: <Gps />,
+    title: "GPS Icon with text Button",
+    variant: "primaryGhost",
+    disabled: true,
+  },
+};

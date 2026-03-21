@@ -1,7 +1,6 @@
 import { Canvas, Meta, Controls } from "@storybook/addon-docs/blocks";
 
 import * as ButtonStories from "./Button.stories";
-import * as PlaygroundStories from "./Button.playground.stories";
 
 <Meta of={ButtonStories} />
 
@@ -11,30 +10,45 @@ Allows the user to perform an action.
 
 ## Guidelines
 
-- Do not use a Button to link to another page. Use a [Standalone Link](/story/components-link--navigation) or a [Call to Action Link](/story/components-link--arrow) instead, or an [inline Link](/story/components-link--default) in the running text.
-- Describe the Button’s function through a short label.
+- Do not use a Button to link to another page. Use a Standalone Link or an inline Link in the running text instead.
+- Describe the Button's function through a short, clear label.
+- Use only one primary button per view. Multiple primary buttons compete for attention and reduce clarity.
+- Pair a primary button with a ghost button when two actions are needed.
 
 ## Props
 
-<Canvas of={PlaygroundStories.PlaygroundDocs} />
-<Controls of={PlaygroundStories.PlaygroundDocs} />
+<Canvas of={ButtonStories.DefaultText} />
+<Controls of={ButtonStories.DefaultText} />
+
+---
 
 ## Examples
 
 ### Primary
 
-A primary button draws attention to the most important call to action.
+A primary button draws attention to the most important call to action on the page.
 
-<Canvas of={ButtonStories.Primary} />
+<Canvas of={ButtonStories.DefaultText} />
 
-### Secondary
+### Ghost
 
-Use a secondary button for other actions.
+Use a ghost button for secondary actions, or alongside a primary button when two actions are present.
 
-<Canvas of={ButtonStories.Secondary} />
+<Canvas of={ButtonStories.GhostText} />
+
+### Primary with Icon
+
+An icon can be added to reinforce the button's action. The icon scales automatically with the `size` prop.
+
+<Canvas of={ButtonStories.DefaultTextWithIcon} />
+
+### Ghost with Icon
+
+<Canvas of={ButtonStories.GhostTextWithIcon} />
 
 ### Disabled
 
-Use a Disabled button to inform the user no actions can be taken.
+Use a disabled button to indicate that an action is currently unavailable. Provide additional context nearby so the user understands why.
 
-<Canvas of={ButtonStories.Disabled} />
+<Canvas of={ButtonStories.DisabledPrimary} />
+<Canvas of={ButtonStories.DisabledSecondary} />
