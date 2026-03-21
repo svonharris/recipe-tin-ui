@@ -85,5 +85,6 @@ export const Disabled: Story = {
     ...Default.args,
     id: "disabled",
     disabled: true,
+    hideLabel: true,
   },
 };
