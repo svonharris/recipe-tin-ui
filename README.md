@@ -2,9 +2,9 @@
   <img src="public/the-recipe-tin-showcase.png" alt="The Recipe Tin" />
 </p>
 
-<h1 align="center">The Recipe Tin Design System</h1>
+<h1 align="center">Recipe Tin UI Design System</h1>
 
-The Recipe Tin Design System provides reusable UI components, design tokens, and foundations that help build a consistent, accessible, and scalable digital recipe box. Inspired by the classic kitchen tin filled with handwritten recipe cards, it keeps all the building blocks for discovering, saving, and sharing recipes in one place.
+Recipe Tin UI Design System provides reusable UI components, design tokens, and foundations that help build a consistent, accessible, and scalable digital recipe box. Inspired by the classic kitchen tin filled with handwritten recipe cards, it keeps all the building blocks for discovering, saving, and sharing recipes in one place.
 
 This guide walks you through installing and using the design system in your project.
 
