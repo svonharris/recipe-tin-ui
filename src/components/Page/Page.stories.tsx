@@ -19,6 +19,7 @@ import RecipeRecommend from "../RecipeRecommend/RecipeRecommend";
 const meta = {
   title: "Internal/Page",
   component: Page,
+  tags: ["!dev"],
 } satisfies Meta<typeof Page>;
 
 export default meta;
