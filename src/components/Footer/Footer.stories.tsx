@@ -2,10 +2,10 @@ import type { Meta, StoryObj } from "@storybook/react";
 import Footer from "./Footer";
 
 const meta = {
-  title: "Components/Containers/Footer",
+  title: "Components/Footer",
   component: Footer,
   argTypes: {
-    children: { control: "text" },
+    children: { control: false },
   },
 } satisfies Meta<typeof Footer>;
 
@@ -19,7 +19,7 @@ export const Default: Story = {
         className="text-sm-regular"
         style={{ color: "var(--color-gray-800)", paddingTop: "16px" }}
       >
-        &copy; 2024 The Recipe Tin. All rights reserved.
+        &copy; 2024 Recipe Tin UI. All rights reserved.
       </p>
     ),
   },
