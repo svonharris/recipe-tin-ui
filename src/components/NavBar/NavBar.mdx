@@ -1,0 +1,29 @@
+import { Canvas, Meta, Controls } from "@storybook/addon-docs/blocks";
+
+import * as NavBarStories from "./NavBar.stories";
+
+<Meta of={NavBarStories} />
+
+# NavBar
+
+A navigation bar that provides links to key areas of the application.
+
+## Guidelines
+
+- Provide a clear, concise `name` for each nav item so users can quickly identify destinations.
+- Use a recognisable icon alongside each label to reinforce meaning at a glance.
+- Keep the number of nav items small — typically three to five — to avoid overwhelming the user.
+- Ensure each `href` points to a distinct, meaningful route.
+
+## Props
+
+<Canvas of={NavBarStories.Default} />
+<Controls of={NavBarStories.Default} />
+
+---
+
+## Examples
+
+### Default
+
+<Canvas of={NavBarStories.Default} />
