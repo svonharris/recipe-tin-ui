@@ -10,10 +10,22 @@ const meta = {
   component: FormSearch,
   args: { onSubmit: fn() },
   argTypes: {
-    onSubmit: { control: false },
-    placeholder: { control: "text" },
-    label: { control: "text" },
-    hideLabel: { control: "boolean" },
+    onSubmit: {
+      control: false,
+      description: "Callback fired on form submission with the trimmed query string. Empty submissions are ignored.",
+    },
+    placeholder: {
+      control: "text",
+      description: "Placeholder text shown inside the search input when empty.",
+    },
+    label: {
+      control: "text",
+      description: "Accessible label for the search input.",
+    },
+    hideLabel: {
+      control: "boolean",
+      description: "When `true`, visually hides the label while keeping it accessible to screen readers.",
+    },
   },
 } satisfies Meta<typeof FormSearch>;
 

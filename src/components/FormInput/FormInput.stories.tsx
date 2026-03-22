@@ -7,14 +7,44 @@ const meta = {
   title: "Components/Forms/FormInput",
   component: FormInput,
   argTypes: {
-    id: { control: false },
+    id: {
+      control: false,
+      description: "Unique identifier that links the input to its label for accessibility.",
+    },
     icon: { table: { disable: true } },
-    onChange: { control: false },
-    value: { control: false },
-    type: { control: false },
-    required: { control: false },
-    error: { control: false },
-    hideLabel: { control: false },
+    onChange: {
+      control: false,
+      description: "Callback fired on every keystroke with the change event.",
+    },
+    value: {
+      control: false,
+      description: "The controlled value of the input.",
+    },
+    type: {
+      control: false,
+      description: "The HTML input type (e.g. `text`, `email`, `password`, `search`).",
+    },
+    required: {
+      control: false,
+      description: "When `true`, marks the field as required and displays an asterisk next to the label.",
+    },
+    error: {
+      control: false,
+      description: "Error message displayed below the input. Also applies an error style to the input border.",
+    },
+    hideLabel: {
+      control: false,
+      description: "When `true`, visually hides the label while keeping it accessible to screen readers.",
+    },
+    label: {
+      description: "Visible label text displayed above the input.",
+    },
+    placeholder: {
+      description: "Hint text shown inside the input when it has no value.",
+    },
+    disabled: {
+      description: "When `true`, the input is non-interactive and styled to appear unavailable.",
+    },
   },
   render: (args) => {
     const [value, setValue] = useState(args.value ?? "");

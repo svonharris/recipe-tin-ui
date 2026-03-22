@@ -8,7 +8,10 @@ const meta = {
   component: ButtonIcon,
   args: { onClick: fn(), size: "lg" },
   argTypes: {
-    children: { control: false },
+    children: {
+      control: false,
+      description: "Optional label rendered below the icon button.",
+    },
     title: {
       table: { disable: true },
     },
@@ -17,13 +20,22 @@ const meta = {
     },
     icon: {
       control: false,
+      description: "The icon element to display inside the button. Scales automatically with the `size` prop.",
     },
     rounded: {
       control: false,
+      description: "When `true`, applies fully rounded corners to the button.",
     },
     variant: {
       control: "select",
       options: ["primary", "secondary", "tertiary", "primaryGhost"],
+      description: "Controls the visual style of the button.",
+    },
+    onClick: {
+      description: "Callback fired when the button is clicked.",
+    },
+    size: {
+      description: "Controls the size of the button and scales the icon to match.",
     },
   },
 } satisfies Meta<typeof ButtonIcon>;

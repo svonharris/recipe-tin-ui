@@ -5,7 +5,10 @@ const meta = {
   title: "Components/Footer",
   component: Footer,
   argTypes: {
-    children: { control: false },
+    children: {
+      control: false,
+      description: "Content rendered inside the footer, such as copyright text or links.",
+    },
   },
 } satisfies Meta<typeof Footer>;
 

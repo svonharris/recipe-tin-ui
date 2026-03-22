@@ -10,13 +10,26 @@ const meta = {
   argTypes: {
     variant: {
       control: false, //renders prop documentation without a control
+      description: "Controls the visual style of the button.",
     },
-    children: { control: "text" },
+    children: {
+      control: "text",
+      description: "The content to be displayed inside the button.",
+    },
     disabled: {
       control: "boolean",
+      description:
+        "When `true`, the button is non-interactive and styled to appear unavailable.",
     },
     rounded: {
       control: "boolean",
+      description: "When `true`, applies fully rounded corners to the button.",
+    },
+    size: {
+      description: "Controls the size of the button and scales the icon to match.",
+    },
+    onClick: {
+      description: "Callback fired when the button is clicked.",
     },
     title: {
       table: { disable: true }, //removes prop control
