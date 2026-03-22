@@ -1,4 +1,4 @@
-const mockRecipes = [
+export const pastaRecipes = [
   {
     recipe: {
       label: "Pasta Primavera",
@@ -22,11 +22,9 @@ const mockRecipes = [
   },
   {
     recipe: {
-      label: "Eggplant Rollitini Pasta.",
+      label: "Eggplant Rollitini Pasta",
       images: { REGULAR: { url: "../Eggplant-Rollitini-Pasta.jpg" } },
       totalTime: 20,
     },
   },
 ];
-
-export default mockRecipes;

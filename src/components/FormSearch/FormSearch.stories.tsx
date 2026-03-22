@@ -3,7 +3,7 @@ import { fn } from "storybook/test";
 import { useState } from "react";
 import FormSearch from "./FormSearch";
 import RecipeGallery from "../RecipeGallery/RecipeGallery";
-import mockRecipes from "../../mocks/mockRecipes";
+import { pastaRecipes } from "../../mocks/mockRecipes";
 
 const meta = {
   title: "Components/Forms/FormSearch",
@@ -38,7 +38,7 @@ export const WithResults: Story = {
     placeholder: "pasta",
   },
   render: (args) => {
-    const [results, setResults] = useState(mockRecipes);
+    const [results, setResults] = useState(pastaRecipes);
     return (
       <div
         style={{
@@ -48,7 +48,7 @@ export const WithResults: Story = {
           width: "375px",
         }}
       >
-        <FormSearch {...args} onSubmit={() => setResults(mockRecipes)} />
+        <FormSearch {...args} onSubmit={() => setResults(pastaRecipes)} />
         <RecipeGallery recipes={results} />
       </div>
     );
