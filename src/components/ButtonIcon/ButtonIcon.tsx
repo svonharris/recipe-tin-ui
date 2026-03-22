@@ -3,7 +3,7 @@ import style from "./ButtonIcon.module.css";
 import "../../styles/buttons.css";
 
 type ButtonIconProps = {
-  children?: React.ReactNode;
+  children?: string;
   icon: React.ReactElement<{ size?: number; color?: string }>;
   onClick?: () => void;
   title?: string;
@@ -19,10 +19,10 @@ const SIZE: Record<
   "xl" | "lg" | "md" | "sm",
   { className: string; px: number }
 > = {
-  xl: { className: `${style.icon} ${style.iconXl}`, px: 48 },
-  lg: { className: `${style.icon} ${style.iconLg}`, px: 28 },
-  md: { className: `${style.icon} ${style.iconMd}`, px: 24 },
-  sm: { className: `${style.icon} ${style.iconSm}`, px: 20 },
+  xl: { className: `${style.iconXl}`, px: 48 },
+  lg: { className: `${style.iconLg}`, px: 28 },
+  md: { className: `${style.iconMd}`, px: 24 },
+  sm: { className: `${style.iconSm}`, px: 20 },
 };
 
 const VARIANT_STYLES: Record<
@@ -81,7 +81,14 @@ const ButtonIcon = ({
           color: "inherit",
         })}
       </button>
-      {children && <p className="text-md-regular">{children}</p>}
+      {children && (
+        <p
+          className="text-md-regular"
+          style={disabled ? { color: "var(--disabled-color)" } : undefined}
+        >
+          {children}
+        </p>
+      )}
     </div>
   );
 };
