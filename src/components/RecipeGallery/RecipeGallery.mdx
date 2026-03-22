@@ -16,5 +16,42 @@ Renders a collection of RecipeCards from an array of recipe data.
 
 ## Props
 
-<Canvas of={RecipeGalleryStories.Default} />
 <Controls of={RecipeGalleryStories.Default} />
+
+## Usage
+
+`RecipeGallery` is display-only — it has no knowledge of where the data comes from. Pair it with a data source in the parent.
+
+```tsx
+import RecipeGallery from "../RecipeGallery/RecipeGallery";
+import RecipeRecommend from "../RecipeRecommend/RecipeRecommend";
+
+const [recipes, setRecipes] = useState<any[]>([]);
+
+<RecipeRecommend onResults={setRecipes} limit={6} />
+<RecipeGallery recipes={recipes} />
+```
+
+`RecipeRecommend` fetches recipes on mount and passes them to `setRecipes`. `RecipeGallery` renders whatever is in `recipes` — the two components are fully decoupled.
+
+Alternatively, pair it with `FormSearch` and `useEdamamSearch` for user-driven search:
+
+```tsx
+import FormSearch from "../Forms/FormSearch";
+import useEdamamSearch from "../../hooks/useEdamamSearch";
+import RecipeGallery from "../RecipeGallery/RecipeGallery";
+
+const [recipes, setRecipes] = useState<any[]>([]);
+const { search } = useEdamamSearch(setRecipes);
+
+<FormSearch onSubmit={search} />
+<RecipeGallery recipes={recipes} />
+```
+
+---
+
+## Examples
+
+### Default
+
+<Canvas of={RecipeGalleryStories.Default} />
