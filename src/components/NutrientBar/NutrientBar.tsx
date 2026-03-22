@@ -36,12 +36,12 @@ const NutrientBar = ({ value, macronutrient }: NutrientBarProps) => {
         trackColor={colors.track}
         valueColor={colors.value}
       />
-      <label className={styles.label}>
+      <div className={styles.label}>
         <p className={`text-lg-bold ${styles.amount}`}>{`${value}g`}</p>
         <p className={`text-sm-regular ${styles.macronutrient}`}>
           {macronutrient}
         </p>
-      </label>
+      </div>
     </div>
   );
 };
