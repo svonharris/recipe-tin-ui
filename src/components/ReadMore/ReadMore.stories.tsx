@@ -2,7 +2,7 @@ import type { Meta, StoryObj } from "@storybook/react";
 import ReadMore from "./ReadMore";
 
 const meta = {
-  title: "Components/Containers/Read More",
+  title: "Components/Read More",
   component: ReadMore,
 } satisfies Meta<typeof ReadMore>;
 
@@ -17,6 +17,11 @@ export const LongText: Story = {
 };
 
 export const ShortText: Story = {
+  argTypes: {
+    text: {
+      control: false,
+    },
+  },
   args: {
     text: "Fresh mozzarella, ripe tomatoes, and basil layered on crusty bread with olive oil and balsamic drizzle.",
     className: "text-md-regular",
