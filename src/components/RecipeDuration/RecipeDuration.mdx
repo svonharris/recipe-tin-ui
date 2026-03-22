@@ -1,0 +1,42 @@
+import { Canvas, Meta, Controls } from "@storybook/addon-docs/blocks";
+
+import * as RecipeDurationStories from "./RecipeDuration.stories";
+
+<Meta of={RecipeDurationStories} />
+
+# Recipe Duration
+
+Displays a recipe's cook time alongside a clock icon.
+
+## Guidelines
+
+- Pass `duration` in minutes.
+- Durations over 60 minutes are automatically formatted as hours and minutes (e.g. `1h 15min`).
+- A `duration` of `0` or less displays `"n/a"` to indicate the time is unavailable.
+
+## Props
+
+<Canvas of={RecipeDurationStories.Minutes} />
+<Controls of={RecipeDurationStories.Minutes} />
+
+---
+
+## Examples
+
+### Minutes
+
+Durations of 60 minutes or fewer are displayed in minutes.
+
+<Canvas of={RecipeDurationStories.Minutes} />
+
+### Hours
+
+Durations over 60 minutes are formatted as hours and minutes.
+
+<Canvas of={RecipeDurationStories.Hours} />
+
+### No Time
+
+When duration is `0`, "n/a" is displayed.
+
+<Canvas of={RecipeDurationStories.NoTime} />

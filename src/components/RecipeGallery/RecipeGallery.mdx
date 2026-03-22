@@ -1,0 +1,20 @@
+import { Canvas, Meta, Controls } from "@storybook/addon-docs/blocks";
+
+import * as RecipeGalleryStories from "./RecipeGallery.stories";
+
+<Meta of={RecipeGalleryStories} />
+
+# Recipe Gallery
+
+Renders a collection of RecipeCards from an array of recipe data.
+
+## Guidelines
+
+- Pass an array of recipe objects via the `recipes` prop, each containing a `label`, `images.REGULAR.url`, and `totalTime`.
+- The gallery renders each recipe as a RecipeCard in the order provided.
+- A `totalTime` of `0` will display "n/a" in the RecipeCard's duration field.
+
+## Props
+
+<Canvas of={RecipeGalleryStories.Default} />
+<Controls of={RecipeGalleryStories.Default} />
