@@ -7,7 +7,8 @@ const meta = {
   argTypes: {
     children: {
       control: false,
-      description: "Content rendered inside the footer, such as copyright text or links.",
+      description:
+        "Content rendered inside the footer, such as copyright text or links.",
     },
   },
 } satisfies Meta<typeof Footer>;
@@ -22,7 +23,7 @@ export const Default: Story = {
         className="text-sm-regular"
         style={{ color: "var(--color-gray-800)", paddingTop: "16px" }}
       >
-        &copy; 2024 Recipe Tin UI. All rights reserved.
+        &copy; {new Date().getFullYear()} Recipe Tin UI. All rights reserved.
       </p>
     ),
   },
