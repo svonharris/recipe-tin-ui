@@ -1,0 +1,36 @@
+import { Canvas, Meta, Controls } from "@storybook/addon-docs/blocks";
+
+import * as ReadMoreStories from "./ReadMore.stories";
+
+<Meta of={ReadMoreStories} />
+
+# Read More
+
+Truncates long text at 150 characters and lets the user expand or collapse it.
+
+## Guidelines
+
+- Use ReadMore when text content may be too long to display in full by default.
+- Text shorter than 150 characters is displayed in full with no toggle shown.
+- Use the `className` prop to apply a typography class consistent with surrounding text.
+
+## Props
+
+<Canvas of={ReadMoreStories.LongText} />
+<Controls of={ReadMoreStories.LongText} />
+
+---
+
+## Examples
+
+### Long Text
+
+Text longer than 150 characters is truncated and a "read more" toggle is shown.
+
+<Canvas of={ReadMoreStories.LongText} />
+
+### Short Text
+
+Text shorter than 150 characters is displayed in full with no toggle.
+
+<Canvas of={ReadMoreStories.ShortText} />

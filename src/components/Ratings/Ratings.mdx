@@ -1,0 +1,36 @@
+import { Canvas, Meta, Controls } from "@storybook/addon-docs/blocks";
+
+import * as RatingsStories from "./Ratings.stories";
+
+<Meta of={RatingsStories} />
+
+# Ratings
+
+Displays a star rating alongside a review count.
+
+## Guidelines
+
+- Pass a `rating` between `0` and `5`. Values outside this range are clamped automatically.
+- The rating is rounded to the nearest whole number to determine how many stars are filled.
+- Use `reviews` to show the total number of reviews alongside the numeric rating.
+
+## Props
+
+<Canvas of={RatingsStories.FiveStars} />
+<Controls of={RatingsStories.FiveStars} />
+
+---
+
+## Examples
+
+### Zero Stars
+
+<Canvas of={RatingsStories.ZeroStars} />
+
+### One Star
+
+<Canvas of={RatingsStories.OneStars} />
+
+### Five Stars
+
+<Canvas of={RatingsStories.FiveStars} />

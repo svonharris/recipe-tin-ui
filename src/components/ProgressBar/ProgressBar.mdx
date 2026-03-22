@@ -1,0 +1,29 @@
+import { Canvas, Meta, Controls } from "@storybook/addon-docs/blocks";
+
+import * as ProgressBarStories from "./ProgressBar.stories";
+
+<Meta of={ProgressBarStories} />
+
+# Progress Bar
+
+Displays a value as a filled bar relative to a maximum of 100.
+
+## Guidelines
+
+- Use `value` to set the filled amount, between `0` and `100`.
+- Use `trackColor` to set the background colour of the unfilled track.
+- Use `valueColor` to set the colour of the filled portion.
+- Prefer design token CSS variables for colours to stay consistent with the design system.
+
+## Props
+
+<Canvas of={ProgressBarStories.Default} />
+<Controls of={ProgressBarStories.Default} />
+
+---
+
+## Examples
+
+### Default
+
+<Canvas of={ProgressBarStories.Default} />

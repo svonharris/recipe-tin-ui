@@ -1,0 +1,29 @@
+import { Canvas, Meta, Controls } from "@storybook/addon-docs/blocks";
+
+import * as RecipeCardStories from "./RecipeCard.stories";
+
+<Meta of={RecipeCardStories} />
+
+# Recipe Card
+
+Displays a summary of a recipe including its image, title, cook time, and ratings.
+
+## Guidelines
+
+- Provide a descriptive `title` so the user can immediately identify the recipe.
+- Use `cookTime` to show the total cook time in minutes.
+- `ratings` and `reviews` are optional — they default to `0` when not provided.
+- Pair RecipeCard with a consistent image aspect ratio to keep card layouts uniform.
+
+## Props
+
+<Canvas of={RecipeCardStories.Default} />
+<Controls of={RecipeCardStories.Default} />
+
+---
+
+## Examples
+
+### Default
+
+<Canvas of={RecipeCardStories.Default} />

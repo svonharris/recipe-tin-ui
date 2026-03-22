@@ -1,0 +1,33 @@
+import { Canvas, Meta, Controls } from "@storybook/addon-docs/blocks";
+
+import * as NutrientBarStories from "./NutrientBar.stories";
+
+<Meta of={NutrientBarStories} />
+
+# Nutrient Bar
+
+Displays the amount of a macronutrient as a labelled progress bar.
+
+## Guidelines
+
+- Use NutrientBar to visualise a single macronutrient value at a time.
+- The `macronutrient` prop accepts `"protein"`, `"carb"`, or `"fat"` — each renders with a distinct colour.
+- Unrecognised macronutrient values fall back to a neutral grey colour scheme.
+- The `value` prop represents the amount in grams and is displayed as a label alongside the bar.
+
+## Props
+
+<Canvas of={NutrientBarStories.Default} />
+<Controls of={NutrientBarStories.Default} />
+
+---
+
+## Examples
+
+### Default
+
+<Canvas of={NutrientBarStories.Default} />
+
+### Unrecognised/Custom Macronutrient
+
+<Canvas of={NutrientBarStories.CustomMacronutrient} />
