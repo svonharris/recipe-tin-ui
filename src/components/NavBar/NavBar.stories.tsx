@@ -3,7 +3,7 @@ import NavBar from "../NavBar/NavBar";
 import { Home04, Compass, Search01 } from "../../icons";
 
 const meta = {
-  title: "Components/Containers/NavBar",
+  title: "Components/Navigation",
   component: NavBar,
   argTypes: {
     navItems: { control: false },
