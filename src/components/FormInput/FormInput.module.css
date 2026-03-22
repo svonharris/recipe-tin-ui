@@ -1,3 +1,10 @@
+input {
+    background-color: inherit;
+}
+input:disabled::-webkit-input-placeholder {
+    color: var(--disabled-color);
+}
+
 .inputContainer {
     display: flex;
     align-items: center;
