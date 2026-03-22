@@ -26,7 +26,8 @@ const meta = {
       description: "When `true`, applies fully rounded corners to the button.",
     },
     size: {
-      description: "Controls the size of the button and scales the icon to match.",
+      description:
+        "Controls the size of the button and scales the icon to match.",
     },
     onClick: {
       description: "Callback fired when the button is clicked.",

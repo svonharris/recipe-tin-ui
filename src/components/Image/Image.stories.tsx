@@ -5,10 +5,25 @@ const meta = {
   title: "Components/Image",
   component: Image,
   argTypes: {
-    borderRadius: { control: "text" },
-    width: { control: "text" },
-    height: { control: "text" },
-    altText: { control: false },
+    src: {
+      description: "URL or path to the image source.",
+    },
+    borderRadius: {
+      control: "text",
+      description: "CSS border-radius value applied to the image (e.g. `8px`, `10px 50px`).",
+    },
+    width: {
+      control: "text",
+      description: "CSS width of the image (e.g. `200px`, `auto`, `100%`).",
+    },
+    height: {
+      control: "text",
+      description: "CSS height of the image (e.g. `240px`, `auto`).",
+    },
+    altText: {
+      control: false,
+      description: "Accessible alt text describing the image for screen readers.",
+    },
   },
 } satisfies Meta<typeof Image>;
 

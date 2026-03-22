@@ -13,6 +13,16 @@ const meta = {
   argTypes: {
     children: {
       control: false,
+      description: "The elements to stack vertically.",
+    },
+    align: {
+      description: "Horizontal alignment of children along the cross axis.",
+    },
+    justify: {
+      description: "Vertical distribution of children along the main axis (`between` or `around`). Omit to use default flow.",
+    },
+    gap: {
+      description: "Spacing between children in pixels.",
     },
   },
 } satisfies Meta<typeof Stack>;

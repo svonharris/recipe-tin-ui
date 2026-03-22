@@ -4,6 +4,14 @@ import ReadMore from "./ReadMore";
 const meta = {
   title: "Components/Read More",
   component: ReadMore,
+  argTypes: {
+    text: {
+      description: "The full text to display. Texts over 150 characters are truncated with a 'read more' toggle.",
+    },
+    className: {
+      description: "CSS class name applied to the text for typography styling (e.g. `text-md-regular`).",
+    },
+  },
 } satisfies Meta<typeof ReadMore>;
 
 export default meta;

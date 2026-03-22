@@ -8,6 +8,7 @@ const meta = {
   argTypes: {
     recipes: {
       control: false,
+      description: "Array of recipe objects to render as RecipeCards. Each item requires `label`, `images.REGULAR.url`, and `totalTime`.",
     },
   },
 } satisfies Meta<typeof RecipeGallery>;

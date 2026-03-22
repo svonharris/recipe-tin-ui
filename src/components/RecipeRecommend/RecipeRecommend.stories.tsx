@@ -13,6 +13,10 @@ const meta = {
   argTypes: {
     limit: {
       control: false,
+      description: "Caps the number of recipes passed to `onResults`. If omitted, all results from the API are returned.",
+    },
+    onResults: {
+      description: "Callback fired with the fetched recipes array. Pass a state setter to forward results to a display component.",
     },
   },
 } satisfies Meta<typeof RecipeRecommend>;

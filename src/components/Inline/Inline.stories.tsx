@@ -15,6 +15,19 @@ const meta = {
   argTypes: {
     children: {
       control: false,
+      description: "The elements to lay out horizontally.",
+    },
+    align: {
+      description: "Vertical alignment of children along the cross axis.",
+    },
+    justify: {
+      description: "Horizontal distribution of children along the main axis (`between` or `around`). Omit to use default flow.",
+    },
+    overflowX: {
+      description: "Controls horizontal overflow behaviour when children exceed the container width.",
+    },
+    gap: {
+      description: "Spacing between children in pixels.",
     },
   },
 } satisfies Meta<typeof Inline>;

@@ -4,6 +4,23 @@ import RecipeCard from "./RecipeCard";
 const meta = {
   title: "Components/RecipeCard",
   component: RecipeCard,
+  argTypes: {
+    title: {
+      description: "The recipe name displayed as a heading on the card.",
+    },
+    image: {
+      description: "URL of the recipe image.",
+    },
+    cookTime: {
+      description: "Cook time in minutes. Displayed via `RecipeDuration` — values over 60 are formatted as hours and minutes, `0` displays `n/a`.",
+    },
+    ratings: {
+      description: "The recipe's average rating between 0 and 5. Displayed as filled stars.",
+    },
+    reviews: {
+      description: "The total number of reviews displayed alongside the star rating.",
+    },
+  },
 } satisfies Meta<typeof RecipeCard>;
 
 export default meta;

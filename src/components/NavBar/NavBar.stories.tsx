@@ -6,7 +6,10 @@ const meta = {
   title: "Components/Navigation",
   component: NavBar,
   argTypes: {
-    navItems: { control: false },
+    navItems: {
+      control: false,
+      description: "Array of navigation items, each with a `name`, `icon`, and `href`.",
+    },
   },
 } satisfies Meta<typeof NavBar>;
 

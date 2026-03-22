@@ -4,6 +4,14 @@ import Ratings from "./Ratings";
 const meta = {
   title: "Components/Ratings",
   component: Ratings,
+  argTypes: {
+    rating: {
+      description: "The rating value between 0 and 5. Rounded to the nearest whole number to determine the number of filled stars.",
+    },
+    reviews: {
+      description: "The total number of reviews displayed alongside the star rating.",
+    },
+  },
 } satisfies Meta<typeof Ratings>;
 
 export default meta;

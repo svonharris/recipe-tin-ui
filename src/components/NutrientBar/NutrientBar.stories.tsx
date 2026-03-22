@@ -8,6 +8,10 @@ const meta = {
     macronutrient: {
       options: ["protein", "carb", "fat"],
       control: { type: "select" },
+      description: "The macronutrient type. Determines the bar colour. Use `protein`, `carb`, or `fat` for themed colours; any other string renders a default colour.",
+    },
+    value: {
+      description: "The amount of the macronutrient in grams displayed on the bar.",
     },
   },
 } satisfies Meta<typeof NutrientBar>;

@@ -4,6 +4,14 @@ import IngredientsItem from "./IngredientsItem";
 const meta = {
   title: "Components/Ingredients Item",
   component: IngredientsItem,
+  argTypes: {
+    name: {
+      description: "The name of the ingredient.",
+    },
+    amount: {
+      description: "The quantity or measurement of the ingredient (e.g. `3tbsp`, `200g`).",
+    },
+  },
 } satisfies Meta<typeof IngredientsItem>;
 
 export default meta;
