@@ -9,7 +9,6 @@ const meta = {
   args: { onClick: fn(), size: "lg" },
   argTypes: {
     children: {
-      control: false,
       description: "Optional label rendered below the icon button.",
     },
     title: {
@@ -20,7 +19,8 @@ const meta = {
     },
     icon: {
       control: false,
-      description: "The icon element to display inside the button. Scales automatically with the `size` prop.",
+      description:
+        "The icon element to display inside the button. Scales automatically with the `size` prop.",
     },
     rounded: {
       control: false,
@@ -35,7 +35,8 @@ const meta = {
       description: "Callback fired when the button is clicked.",
     },
     size: {
-      description: "Controls the size of the button and scales the icon to match.",
+      description:
+        "Controls the size of the button and scales the icon to match.",
     },
   },
 } satisfies Meta<typeof ButtonIcon>;
@@ -45,6 +46,9 @@ type Story = StoryObj<typeof ButtonIcon>;
 
 export const Default: Story = {
   argTypes: {
+    children: {
+      control: false,
+    },
     disabled: { control: false },
   },
   args: {
@@ -56,8 +60,8 @@ export const Default: Story = {
 
 export const Ghost: Story = {
   argTypes: {
+    ...Default.argTypes,
     variant: { control: false },
-    disabled: { control: false },
   },
   args: {
     ...Default.args,
@@ -79,6 +83,7 @@ export const WithLabel: Story = {
 
 export const Rounded: Story = {
   argTypes: {
+    ...Default.argTypes,
     variant: { control: false },
     disabled: { control: "boolean" },
   },
@@ -91,8 +96,8 @@ export const Rounded: Story = {
 
 export const DisabledDefault: Story = {
   argTypes: {
+    ...Default.argTypes,
     variant: { control: false },
-    disabled: { control: false },
   },
   args: {
     ...Default.args,
@@ -102,8 +107,8 @@ export const DisabledDefault: Story = {
 
 export const DisabledGhost: Story = {
   argTypes: {
+    ...Default.argTypes,
     variant: { control: false },
-    disabled: { control: false },
   },
   args: {
     ...Default.args,
