@@ -1,0 +1,32 @@
+import { Canvas, Meta, Controls } from "@storybook/addon-docs/blocks";
+
+import * as InlineStories from "./Inline.stories";
+
+<Meta of={InlineStories} />
+
+# Inline
+
+A layout component that arranges children horizontally in a row.
+
+## Guidelines
+
+- Use Inline to align items side by side with consistent spacing.
+- Use the `gap` prop to control the space between children.
+- Use the `align` prop to control vertical alignment of children within the row.
+- Use the `justify` prop to distribute children across the available space.
+- Use `overflowX` to control scrolling behaviour when content exceeds the container width.
+
+## Props
+
+<Canvas of={InlineStories.Default} />
+<Controls of={InlineStories.Default} />
+
+---
+
+## Examples
+
+### Default
+
+Arranges children in a row with a default gap of `16px` and centered vertical alignment.
+
+<Canvas of={InlineStories.Default} />
