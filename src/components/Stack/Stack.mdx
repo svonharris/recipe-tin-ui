@@ -1,0 +1,31 @@
+import { Canvas, Meta, Controls } from "@storybook/addon-docs/blocks";
+
+import * as StackStories from "./Stack.stories";
+
+<Meta of={StackStories} />
+
+# Stack
+
+A layout component that arranges children vertically in a column.
+
+## Guidelines
+
+- Use Stack to group elements that should flow from top to bottom.
+- Use the `gap` prop to control the space between children.
+- Use the `align` prop to control horizontal alignment of children within the column.
+- Use the `justify` prop to distribute children across the available vertical space.
+
+## Props
+
+<Canvas of={StackStories.Default} />
+<Controls of={StackStories.Default} />
+
+---
+
+## Examples
+
+### Default
+
+Arranges children in a column with a default gap of `0px` and top alignment.
+
+<Canvas of={StackStories.Default} />
