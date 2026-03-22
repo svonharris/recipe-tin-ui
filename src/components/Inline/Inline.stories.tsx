@@ -9,6 +9,8 @@ const meta = {
   component: Inline,
   args: {
     align: "center",
+    justify: undefined,
+    overflowX: "auto",
   },
   argTypes: {
     children: {
