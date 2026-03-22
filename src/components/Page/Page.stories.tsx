@@ -20,7 +20,7 @@ import useEdamamSearch from "../../hooks/useEdamamSearch";
 const meta = {
   title: "Internal/Page",
   component: Page,
-  // tags: ["!dev"],
+  tags: ["!dev"],
 } satisfies Meta<typeof Page>;
 
 export default meta;
