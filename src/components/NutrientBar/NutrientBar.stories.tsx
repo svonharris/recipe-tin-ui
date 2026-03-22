@@ -7,7 +7,7 @@ const meta = {
   argTypes: {
     macronutrient: {
       options: ["protein", "carb", "fat"],
-      control: { type: "radio" },
+      control: { type: "select" },
     },
   },
 } satisfies Meta<typeof NutrientBar>;
@@ -19,5 +19,12 @@ export const Default: Story = {
   args: {
     value: 65,
     macronutrient: "protein",
+  },
+};
+
+export const CustomMacronutrient: Story = {
+  args: {
+    value: 50,
+    macronutrient: "fiber",
   },
 };
