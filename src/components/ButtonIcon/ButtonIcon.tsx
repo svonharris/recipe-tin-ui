@@ -2,7 +2,7 @@ import React from "react";
 import style from "./ButtonIcon.module.css";
 import "../../styles/buttons.css";
 
-type ButtonIconProps = {
+export type ButtonIconProps = {
   children?: string;
   icon: React.ReactElement<{ size?: number; color?: string }>;
   onClick?: () => void;
@@ -93,4 +93,5 @@ const ButtonIcon = ({
   );
 };
 
+export { ButtonIcon };
 export default ButtonIcon;

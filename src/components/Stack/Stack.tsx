@@ -1,6 +1,6 @@
 import React from "react";
 
-type StackProps = {
+export type StackProps = {
   children: React.ReactNode;
   gap?: number;
   align?: "top" | "center" | "bottom";
@@ -32,4 +32,5 @@ const Stack = ({ children, gap = 0, align = "top", justify }: StackProps) => (
   </div>
 );
 
+export { Stack };
 export default Stack;

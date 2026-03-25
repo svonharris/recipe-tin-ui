@@ -1,7 +1,7 @@
 import { Star } from "../../icons";
 import styles from "./Ratings.module.css";
 
-type RatingsProps = {
+export type RatingsProps = {
   rating: number;
   reviews: number;
 };
@@ -27,4 +27,5 @@ const Ratings = ({ rating, reviews }: RatingsProps) => {
   );
 };
 
+export { Ratings };
 export default Ratings;

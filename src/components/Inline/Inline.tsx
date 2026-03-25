@@ -1,6 +1,6 @@
 import React from "react";
 
-type InlineProps = {
+export type InlineProps = {
   children: React.ReactNode;
   gap?: number;
   align?: "top" | "center" | "bottom";
@@ -40,4 +40,5 @@ const Inline = ({
   </div>
 );
 
+export { Inline };
 export default Inline;

@@ -1,6 +1,6 @@
 import styles from "./ProgressBar.module.css";
 
-type ProgressBarProps = {
+export type ProgressBarProps = {
   value: number;
   trackColor: string;
   valueColor: string;
@@ -20,4 +20,5 @@ const ProgressBar = ({ value, trackColor, valueColor }: ProgressBarProps) => (
   />
 );
 
+export { ProgressBar };
 export default ProgressBar;

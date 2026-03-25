@@ -5,7 +5,7 @@ import Image from "../Image/Image";
 import Stack from "../Stack/Stack";
 import Heading from "../Heading/Heading";
 
-type RecipeCardProps = {
+export type RecipeCardProps = {
   title: string;
   image: string;
   cookTime: number;
@@ -45,4 +45,5 @@ const RecipeCard = ({
   );
 };
 
+export { RecipeCard };
 export default RecipeCard;

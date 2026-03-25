@@ -1,7 +1,7 @@
 import ProgressBar from "../ProgressBar/ProgressBar";
 import styles from "./NutrientBar.module.css";
 
-type NutrientBarProps = {
+export type NutrientBarProps = {
   value: number;
   macronutrient: string;
 };
@@ -46,4 +46,5 @@ const NutrientBar = ({ value, macronutrient }: NutrientBarProps) => {
   );
 };
 
+export { NutrientBar };
 export default NutrientBar;

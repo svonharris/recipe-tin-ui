@@ -1,6 +1,6 @@
 import React from "react";
 
-type FooterProps = {
+export type FooterProps = {
   children?: React.ReactNode;
 };
 
@@ -12,4 +12,5 @@ const Footer = ({ children }: FooterProps) => {
   );
 };
 
+export { Footer };
 export default Footer;

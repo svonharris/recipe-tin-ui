@@ -1,7 +1,7 @@
 import { ClockCircle } from "../../icons";
 import Inline from "../Inline/Inline";
 
-type RecipeDurationProps = {
+export type RecipeDurationProps = {
   duration: number;
 };
 
@@ -25,4 +25,5 @@ const RecipeDuration = ({ duration }: RecipeDurationProps) => (
   </Inline>
 );
 
+export { RecipeDuration };
 export default RecipeDuration;

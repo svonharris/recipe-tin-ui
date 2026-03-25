@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import FormInput from "../FormInput/FormInput";
 import { Search01 } from "../../icons";
 
-type FormSearchProps = {
+export type FormSearchProps = {
   onSubmit: (query: string) => void;
   placeholder?: string;
   label?: string;
@@ -41,4 +41,5 @@ const FormSearch = ({
   );
 };
 
+export { FormSearch };
 export default FormSearch;

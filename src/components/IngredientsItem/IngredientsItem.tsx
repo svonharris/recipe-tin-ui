@@ -1,6 +1,6 @@
 import styles from "./IngredientsItem.module.css";
 
-type IngredientsItemProps = {
+export type IngredientsItemProps = {
   name: string;
   amount: string;
 };
@@ -12,4 +12,5 @@ const IngredientsItem = ({ name, amount }: IngredientsItemProps) => (
   </div>
 );
 
+export { IngredientsItem };
 export default IngredientsItem;

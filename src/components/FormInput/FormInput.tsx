@@ -2,7 +2,7 @@ import React from "react";
 import style from "./FormInput.module.css";
 import Stack from "../Stack/Stack";
 
-type FormInputProps = {
+export type FormInputProps = {
   icon?: React.ReactElement<{ size?: number; color?: string }>;
   id: string;
   label: string;
@@ -71,4 +71,5 @@ const FormInput = ({
   </Stack>
 );
 
+export { FormInput };
 export default FormInput;

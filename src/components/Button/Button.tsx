@@ -2,7 +2,7 @@ import React from "react";
 import style from "./Button.module.css";
 import "../../styles/buttons.css";
 
-type ButtonProps = {
+export type ButtonProps = {
   children: React.ReactNode;
   icon?: React.ReactElement<{ size?: number; color?: string }>;
   onClick?: () => void;
@@ -69,4 +69,5 @@ const Button = ({
   );
 };
 
+export { Button };
 export default Button;

@@ -7,7 +7,7 @@ type NavItem = {
   href: string;
 };
 
-type NavBarProps = {
+export type NavBarProps = {
   navItems: NavItem[];
 };
 
@@ -31,4 +31,5 @@ const NavBar = ({ navItems }: NavBarProps) => {
   );
 };
 
+export { NavBar };
 export default NavBar;

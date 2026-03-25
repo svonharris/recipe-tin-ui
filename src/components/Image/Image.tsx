@@ -1,6 +1,6 @@
 import React from "react";
 
-type ImageProps = {
+export type ImageProps = {
   src: string;
   width?: string;
   height?: string;
@@ -26,4 +26,5 @@ const Image = ({
   );
 };
 
+export { Image };
 export default Image;

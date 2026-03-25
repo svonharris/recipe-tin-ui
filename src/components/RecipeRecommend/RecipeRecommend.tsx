@@ -5,7 +5,7 @@ const foodCategories = ["chicken", "pasta", "salad", "beef", "fish", "soup"];
 
 const random = (arr: string[]) => arr[Math.floor(Math.random() * arr.length)];
 
-type RecipeRecommendProps = {
+export type RecipeRecommendProps = {
   onResults: (recipes: any[]) => void;
   limit?: number;
 };
@@ -22,4 +22,5 @@ const RecipeRecommend = ({ onResults, limit }: RecipeRecommendProps) => {
   return null;
 };
 
+export { RecipeRecommend };
 export default RecipeRecommend;

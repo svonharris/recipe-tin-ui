@@ -1,7 +1,7 @@
 import { useState } from "react";
 import styles from "./ReadMore.module.css";
 
-type ReadMoreProps = {
+export type ReadMoreProps = {
   text: string;
   className?: string;
 };
@@ -25,4 +25,5 @@ const ReadMore = ({ text, className }: ReadMoreProps) => {
   );
 };
 
+export { ReadMore };
 export default ReadMore;

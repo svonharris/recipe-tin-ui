@@ -8,7 +8,7 @@ type Recipe = {
   };
 };
 
-type RecipeGalleryProps = {
+export type RecipeGalleryProps = {
   recipes: Recipe[];
 };
 
@@ -27,4 +27,5 @@ const RecipeGallery = ({ recipes }: RecipeGalleryProps) => {
   );
 };
 
+export { RecipeGallery };
 export default RecipeGallery;
