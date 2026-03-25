@@ -30,6 +30,33 @@ Each component is documented with usage guidance, states, accessibility notes, a
 
 ---
 
+## Usage
+
+### Using Components
+
+Import components directly:
+
+```tsx
+import { Button } from "recipe-tin-ui";
+
+export function Example() {
+  return <Button variant="primary">Browse Recipes</Button>;
+}
+```
+
+### Using Design Tokens
+
+Design tokens are available for direct use in CSS.
+
+```css
+.my-card {
+  background: var(--color-surface-primary);
+  border-radius: var(--border-radius-md);
+}
+```
+
+---
+
 ### Design Foundations
 
 The system is built on a clear set of foundations:
