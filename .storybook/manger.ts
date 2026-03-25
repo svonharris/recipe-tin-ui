@@ -6,6 +6,6 @@ addons.setConfig({
     base: 'light',
     brandTitle: '',
     brandUrl: './',
-    brandImage: './favicon-96x96.png',
+    brandImage: './apple-touch-icon.png',
   }),
 });
