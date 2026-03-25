@@ -81,10 +81,10 @@ Design tokens are available for direct use in CSS.
 ```
 
 <hr size="4" color="#ededed">
-
+ 
 ## Documentation
 
-Interactive documentation and live examples are published via [GitHub](https://svonharris.github.io/recipe-tin-ui/?path=/docs/docs-introduction--docs). There you can:
+Interactive documentation and live examples are published via [GitHub](https://svonharris.github.io/recipe-tin-ui/?path=/docs/docs-introduction--docs) . There you can:
 
 - Explore components
 - View accessibility notes
