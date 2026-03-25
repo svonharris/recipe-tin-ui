@@ -4,8 +4,8 @@ import { create } from 'storybook/theming';
 addons.setConfig({
   theme: create({
     base: 'light',
-    brandTitle: '',
+    brandTitle: 'Recipe Tin UI',
     brandUrl: './',
-    brandImage: './apple-touch-icon.png',
+    brandImage: '/apple-touch-icon.png',
   }),
 });
