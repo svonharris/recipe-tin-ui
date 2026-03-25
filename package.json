@@ -1,19 +1,31 @@
 {
   "name": "recipe-tin-ui",
-  "private": true,
-  "version": "0.0.0",
-  "type": "module",
+  "version": "1.0.0",
+  "description": "A shared React component library for the Recipe Tin project, providing reusable UI components to ensure consistency and efficiency across the application.",
+  "main": "dist/index.cjs.js",
+  "module": "dist/index.es.js",
+  "types": "dist/index.d.ts",
   "scripts": {
     "dev": "vite",
-    "build": "tsc -b && vite build",
+    "build": "vite build && tsc --project tsconfig.build.json",
+    "prepare": "npm run build",
     "lint": "eslint .",
     "preview": "vite preview",
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build",
     "icons:export": "npx @svgr/cli --no-index --config-file svgr.config.cjs --out-dir src/icons ./design/icons && node scripts/generate-icon-index.js",
-    "chromatic": "npx chromatic --project-token=chpt_d1b050cd66c6dcd"
+    "typecheck": "tsc --noEmit"
   },
-  "dependencies": {
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.es.js",
+      "require": "./dist/index.cjs.js"
+    }
+  },
+  "files": ["dist"],
+  "sideEffects": false,
+  "peerDependencies": {
     "react": "^19.2.0",
     "react-dom": "^19.2.0"
   },
@@ -29,7 +41,7 @@
     "@types/node": "^24.10.1",
     "@types/react": "^19.2.7",
     "@types/react-dom": "^19.2.3",
-    "@vitejs/plugin-react": "^5.1.1",
+    "@vitejs/plugin-react": "^5.2.0",
     "@vitest/browser-playwright": "^4.0.18",
     "@vitest/coverage-v8": "^4.0.18",
     "chromatic": "^15.3.0",
@@ -44,6 +56,7 @@
     "typescript": "~5.9.3",
     "typescript-eslint": "^8.48.0",
     "vite": "^7.3.1",
+    "vite-plugin-css-injected-by-js": "^4.0.1",
     "vitest": "^4.0.18"
   }
 }
