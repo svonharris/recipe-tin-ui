@@ -1,0 +1,12 @@
+{
+  "extends": "./tsconfig.app.json",
+  "compilerOptions": {
+    "noEmit": false,                  // override tsconfig.app.json's noEmit: true
+    "allowImportingTsExtensions": false, // incompatible with emit, must be disabled
+    "declaration": true,
+    "declarationDir": "dist",
+    "emitDeclarationOnly": true,
+    "types": ["vite/client"],
+    "outDir": "dist"
+  },
+}
