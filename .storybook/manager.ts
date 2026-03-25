@@ -6,6 +6,6 @@ addons.setConfig({
     base: 'light',
     brandTitle: 'Recipe Tin UI',
     brandUrl: './',
-    brandImage: '/apple-touch-icon.png',
+    brandImage: './apple-touch-icon.png',
   }),
 });
