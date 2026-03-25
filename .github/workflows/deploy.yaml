@@ -1,3 +1,5 @@
+name: Storybook Documentation
+
 on:
   push:
     branches:
