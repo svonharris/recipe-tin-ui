@@ -84,14 +84,12 @@ Design tokens are available for direct use in CSS.
 
 ## Documentation
 
-Interactive documentation and live examples are published via [Chromatic](https://www.chromatic.com). There you can:
+Interactive documentation and live examples are published via [GitHub](https://svonharris.github.io/recipe-tin-ui/?path=/docs/docs-introduction--docs). There you can:
 
 - Explore components
 - View accessibility notes
 - Inspect props and variants
 - Review usage guidelines
-
-> The Chromatic link will be added here once published.
 
 ### Run Storybook locally
 
