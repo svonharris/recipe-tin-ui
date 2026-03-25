@@ -1,4 +1,4 @@
-name: Storybook Documentation
+name: Storybook Documentation Deploy
 
 on:
   push:
