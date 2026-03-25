@@ -107,3 +107,7 @@ SVG icons are generated from source files in `design/icons/`:
 ```
 npm run icons:export
 ```
+
+## Credits
+
+Restaurant Icon used for favicon. <a href="https://iconscout.com/icons/restaurant" class="text-underline font-size-sm" target="_blank">Restaurant</a> by <a href="https://iconscout.com/contributors/yulidor" class="text-underline font-size-sm">YuliDor</a> on <a href="https://iconscout.com" class="text-underline font-size-sm">IconScout</a>.
