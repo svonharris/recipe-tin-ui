@@ -19,7 +19,8 @@ const meta = {
       description: "Horizontal alignment of children along the cross axis.",
     },
     justify: {
-      description: "Vertical distribution of children along the main axis (`between` or `around`). Omit to use default flow.",
+      description:
+        "Vertical distribution of children along the main axis (`between` or `around`). Omit to use default flow.",
     },
     gap: {
       description: "Spacing between children in pixels.",
@@ -36,7 +37,7 @@ export const Default: Story = {
     children: (
       <>
         <Image
-          src="../bruschetta.jpeg"
+          src="./bruschetta.jpeg"
           altText="Bruschetta with ricotta and pesto"
           width={"200px"}
         />

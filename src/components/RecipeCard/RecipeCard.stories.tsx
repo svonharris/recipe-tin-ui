@@ -12,13 +12,16 @@ const meta = {
       description: "URL of the recipe image.",
     },
     cookTime: {
-      description: "Cook time in minutes. Displayed via `RecipeDuration` — values over 60 are formatted as hours and minutes, `0` displays `n/a`.",
+      description:
+        "Cook time in minutes. Displayed via `RecipeDuration` — values over 60 are formatted as hours and minutes, `0` displays `n/a`.",
     },
     ratings: {
-      description: "The recipe's average rating between 0 and 5. Displayed as filled stars.",
+      description:
+        "The recipe's average rating between 0 and 5. Displayed as filled stars.",
     },
     reviews: {
-      description: "The total number of reviews displayed alongside the star rating.",
+      description:
+        "The total number of reviews displayed alongside the star rating.",
     },
   },
 } satisfies Meta<typeof RecipeCard>;
@@ -29,7 +32,7 @@ type Story = StoryObj<typeof RecipeCard>;
 export const Default: Story = {
   args: {
     title: "Bruschetta Ricotta Pesto",
-    image: "../bruschetta.jpeg",
+    image: "./bruschetta.jpeg",
     cookTime: 30,
     ratings: 4.5,
     reviews: 120,

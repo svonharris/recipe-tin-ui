@@ -10,7 +10,8 @@ const meta = {
     },
     borderRadius: {
       control: "text",
-      description: "CSS border-radius value applied to the image (e.g. `8px`, `10px 50px`).",
+      description:
+        "CSS border-radius value applied to the image (e.g. `8px`, `10px 50px`).",
     },
     width: {
       control: "text",
@@ -22,7 +23,8 @@ const meta = {
     },
     altText: {
       control: false,
-      description: "Accessible alt text describing the image for screen readers.",
+      description:
+        "Accessible alt text describing the image for screen readers.",
     },
   },
 } satisfies Meta<typeof Image>;
@@ -33,7 +35,7 @@ type Story = StoryObj<typeof Image>;
 export const Default: Story = {
   argTypes: { borderRadius: { control: false } },
   args: {
-    src: "/bruschetta.jpeg",
+    src: "./bruschetta.jpeg",
     altText: "Bruschetta Ricotta Pesto",
     width: "auto",
     height: "240px",
