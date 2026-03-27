@@ -53,6 +53,3 @@ export type { RecipeDurationProps } from './components/RecipeDuration/RecipeDura
 
 export { RecipeGallery } from './components/RecipeGallery/RecipeGallery'
 export type { RecipeGalleryProps } from './components/RecipeGallery/RecipeGallery'
-
-export { RecipeRecommend } from './components/RecipeRecommend/RecipeRecommend'
-export type { RecipeRecommendProps } from './components/RecipeRecommend/RecipeRecommend'
