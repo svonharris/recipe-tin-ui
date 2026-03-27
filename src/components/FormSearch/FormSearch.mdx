@@ -13,7 +13,7 @@ A generic, reusable search form. Renders a search input and calls `onSubmit` wit
 - Always provide an `onSubmit` handler — this is how the parent receives the query and decides what to do with it.
 - Use `hideLabel` to visually hide the label when the search icon provides enough context, while keeping it accessible to screen readers.
 - Empty or whitespace-only submissions are ignored — no need to guard against them in the parent.
-- To connect to an API, pair this component with a data-fetching hook (e.g. `useEdamamSearch`) in the parent. The form and the fetch logic should stay separate.
+- To connect to an API, pair this component with a data-fetching hook in the parent. The form and the fetch logic should stay separate.
 
 ## Props
 
@@ -25,9 +25,8 @@ A generic, reusable search form. Renders a search input and calls `onSubmit` wit
 `FormSearch` is API-agnostic — it only handles the input and submission. Connect it to a data source by pairing it with a hook in the parent.
 
 ```tsx
-import FormSearch from "../Forms/FormSearch";
-import useEdamamSearch from "../../hooks/useEdamamSearch";
-import RecipeGallery from "../RecipeGallery/RecipeGallery";
+import { useEdamamSearch } from "./hooks/useEdamamSearch"; // your app's hook
+import { FormSearch, RecipeGallery } from "recipe-tin-ui";
 
 const [recipes, setRecipes] = useState<any[]>([]);
 const { search } = useEdamamSearch(setRecipes);
@@ -36,7 +35,7 @@ const { search } = useEdamamSearch(setRecipes);
 <RecipeGallery recipes={recipes} />
 ```
 
-`useEdamamSearch` takes the `setRecipes` state setter as its `onResults` callback. When a search completes it updates `recipes`, which `RecipeGallery` renders. `FormSearch` is unaware of either — it simply calls `onSubmit` with the query string.
+`useEdamamSearch` is owned by your app — pass its `search` function to `onSubmit`. `FormSearch` is unaware of the data layer; it simply calls `onSubmit` with the query string.
 
 ---
 
