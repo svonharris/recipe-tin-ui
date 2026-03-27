@@ -33,9 +33,19 @@ The system is built on:
 
 ## Get Started
 
+Install the latest version:
+
 ```
 npm install github:svonharris/recipe-tin-ui
 ```
+
+To install a specific release, append the version tag:
+
+```
+npm install github:svonharris/recipe-tin-ui#v1.0.1
+```
+
+Tags follow [semantic versioning](https://semver.org) and map to GitHub releases. Pinning to a tag is recommended for production use to ensure reproducible installs.
 
 ### Peer Dependencies
 
@@ -65,6 +75,30 @@ import { Button } from 'recipe-tin-ui';
 export function Example() {
     return <Button variant="primary">Browse Recipes</Button>;
 }
+```
+
+### Using Icons
+
+<hr width="50%" align="left">
+
+Icons are available as a separate entry point to keep them tree-shakeable from the main bundle:
+
+```
+import { Heart, Search01, Star } from 'recipe-tin-ui/icons';
+
+export function Example() {
+    return <Heart aria-hidden="true" />;
+}
+```
+
+All icons are React SVG components and accept standard SVG props (`className`, `width`, `height`, `aria-hidden`, etc.).
+
+### Regenerate icons
+
+SVG icons are generated from source files in `design/icons/`:
+
+```
+npm run icons:export
 ```
 
 ### Using Design Tokens
@@ -99,14 +133,6 @@ npm run storybook
 ```
 
 Opens at [http://localhost:6006](http://localhost:6006).
-
-### Regenerate icons
-
-SVG icons are generated from source files in `design/icons/`:
-
-```
-npm run icons:export
-```
 
 ## Credits
 
