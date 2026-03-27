@@ -4,13 +4,21 @@ import cssInjectedByJsPlugin from 'vite-plugin-css-injected-by-js'
 import { resolve } from 'path'
 
 export default defineConfig({
-  plugins: [react(), cssInjectedByJsPlugin()],
+  plugins: [
+    react(),
+    cssInjectedByJsPlugin({
+      jsAssetsFilterFunction: ({ fileName }) => !fileName.includes('icons'),
+    }),
+  ],
   build: {
     lib: {
-      entry: resolve(__dirname, 'src/index.ts'),
+      entry: {
+        index: resolve(__dirname, 'src/index.ts'),
+        'icons/index': resolve(__dirname, 'src/icons/index.ts'),
+      },
       name: 'RecipeTinUI',
       formats: ['es', 'cjs'],
-      fileName: (format) => `index.${format}.js`,
+      fileName: (format, entryName) => `${entryName}.${format}.js`,
     },
     rollupOptions: {
       external: ['react', 'react-dom'],

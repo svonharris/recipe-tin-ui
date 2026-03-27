@@ -1,6 +1,6 @@
 {
   "name": "recipe-tin-ui",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A shared React component library for the Recipe Tin project, providing reusable UI components to ensure consistency and efficiency across the application.",
   "main": "dist/index.cjs.js",
   "module": "dist/index.es.js",
@@ -21,6 +21,11 @@
       "types": "./dist/index.d.ts",
       "import": "./dist/index.es.js",
       "require": "./dist/index.cjs.js"
+    },
+    "./icons": {
+      "types": "./dist/icons/index.d.ts",
+      "import": "./dist/icons/index.es.js",
+      "require": "./dist/icons/index.cjs.js"
     }
   },
   "files": ["dist"],
