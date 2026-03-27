@@ -13,7 +13,8 @@ A navigation bar that provides links to key areas of the application.
 - Provide a clear, concise `name` for each nav item so users can quickly identify destinations.
 - Use a recognisable icon alongside each label to reinforce meaning at a glance.
 - Keep the number of nav items small — typically three to five — to avoid overwhelming the user.
-- Ensure each `href` points to a distinct, meaningful route.
+- Ensure each `to` points to a distinct, meaningful route.
+- Pass your router's link component via `linkComponent` to enable client-side navigation (e.g. `NavLink` from React Router). When omitted, a plain `<a>` tag is rendered.
 
 ## Props
 

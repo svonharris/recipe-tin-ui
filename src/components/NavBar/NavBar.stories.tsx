@@ -8,7 +8,12 @@ const meta = {
   argTypes: {
     navItems: {
       control: false,
-      description: "Array of navigation items, each with a `name`, `icon`, and `href`.",
+      description: "Array of navigation items, each with a `name`, `icon`, and `to`.",
+    },
+    linkComponent: {
+      control: false,
+      description:
+        "The link component to render. Defaults to a plain `<a>` tag. Pass your router's link component (e.g. `NavLink` from React Router) to enable client-side navigation.",
     },
   },
 } satisfies Meta<typeof NavBar>;
@@ -19,9 +24,9 @@ type Story = StoryObj<typeof NavBar>;
 export const Default: Story = {
   args: {
     navItems: [
-      { name: "Home", icon: <Home04 />, href: "/" },
-      { name: "Discover", icon: <Compass />, href: "/discover" },
-      { name: "Search", icon: <Search01 />, href: "/search" },
+      { name: "Home", icon: <Home04 />, to: "/" },
+      { name: "Discover", icon: <Compass />, to: "/discover" },
+      { name: "Search", icon: <Search01 />, to: "/search" },
     ],
   },
 };
