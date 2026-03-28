@@ -1,34 +1,46 @@
 import styles from "./CaloriesBar.module.css";
 
-type CaloriesBarProps = {
+export type CaloriesBarProps = {
   calories: number;
   protein: number;
   carb: number;
   fat: number;
-  proteinColor: string;
-  carbColor: string;
-  fatColor: string;
 };
 
-const CaloriesBar = ({ calories, protein, carb, fat, proteinColor, carbColor, fatColor }: CaloriesBarProps) => {
-  const total = protein + carb + fat;
+type Macro = "protein" | "carb" | "fat";
+
+const MACRO_COLORS: Record<Macro, string> = {
+  protein: "var(--color-secondary-500)",
+  carb: "var(--color-information-500)",
+  fat: "var(--color-warning-500)",
+};
+
+const CaloriesBar = ({ calories, protein, carb, fat }: CaloriesBarProps) => {
+  const macros: { key: Macro; value: number }[] = [
+    { key: "fat", value: fat },
+    { key: "carb", value: carb },
+    { key: "protein", value: protein },
+  ];
+
+  const nonZeroCount = macros.filter((m) => m.value > 0).length;
+  const segmentWidth = nonZeroCount > 0 ? 100 / nonZeroCount : 0;
 
   return (
     <div className={styles.caloriesBar}>
-      <progress
-        className={styles.progress}
-        value={calories}
-        max={2000}
-        style={
-          {
-            "--p1": `${((protein / total) * 100).toFixed(1)}%`,
-            "--p2": `${(((protein + carb) / total) * 100).toFixed(1)}%`,
-            "--protein-color": proteinColor,
-            "--carb-color": carbColor,
-            "--fat-color": fatColor,
-          } as React.CSSProperties
-        }
-      />
+      <div className={styles.bar}>
+        {macros.map(({ key, value }) =>
+          value > 0 ? (
+            <div
+              key={key}
+              className={styles.segment}
+              style={{
+                height: `${segmentWidth}%`,
+                backgroundColor: MACRO_COLORS[key],
+              }}
+            />
+          ) : null,
+        )}
+      </div>
       <label className={styles.label}>
         <p className={`text-lg-bold ${styles.amount}`}>{calories}</p>
         <p className={`text-sm-regular ${styles.macronutrient}`}>calories</p>
@@ -37,4 +49,5 @@ const CaloriesBar = ({ calories, protein, carb, fat, proteinColor, carbColor, fa
   );
 };
 
+export { CaloriesBar };
 export default CaloriesBar;

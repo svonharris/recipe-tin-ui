@@ -4,38 +4,17 @@
     gap: 8px;
 }
 
-.progress {
+.bar {
+    display: flex;
+    flex-direction: column;
     width: 6px;
     height: 52px;
-    writing-mode: vertical-rl;
-    transform: rotate(180deg);
-    appearance: none;
-    -webkit-appearance: none;
+    border-radius: 3px;
+    overflow: hidden;
 }
 
-.progress::-webkit-progress-bar {
-    background-color: var(--color-gray-100);
-    border-radius: 3px;
-}
-
-.progress::-webkit-progress-value {
-    background: linear-gradient(
-        to top,
-        var(--protein-color) 0% var(--p1),
-        var(--carb-color) var(--p1) var(--p2),
-        var(--fat-color) var(--p2) 100%
-    );
-    border-radius: 3px;
-}
-
-.progress::-moz-progress-bar {
-    background: linear-gradient(
-        to top,
-        var(--protein-color) 0% var(--p1),
-        var(--carb-color) var(--p1) var(--p2),
-        var(--fat-color) var(--p2) 100%
-    );
-    border-radius: 3px;
+.segment {
+    width: 100%;
 }
 
 .label {

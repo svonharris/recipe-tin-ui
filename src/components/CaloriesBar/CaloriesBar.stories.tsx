@@ -4,7 +4,6 @@ import CaloriesBar from "./CaloriesBar";
 const meta = {
   title: "Components/Charts/CaloriesBar",
   component: CaloriesBar,
-  tags: ["!dev"],
 } satisfies Meta<typeof CaloriesBar>;
 
 export default meta;
@@ -16,8 +15,5 @@ export const Default: Story = {
     protein: 16,
     carb: 65,
     fat: 90,
-    proteinColor: "var(--color-secondary-500)",
-    carbColor: "var(--color-information-500)",
-    fatColor: "var(--color-warning-500)",
   },
 };
