@@ -38,7 +38,14 @@ export const Default: Story = {
     reviews: 120,
   },
   render: (args) => (
-    <div style={{ maxWidth: "375px" }}>
+    <div
+      style={{
+        maxWidth: "375px",
+        boxSizing: "border-box",
+        paddingLeft: "16px",
+        paddingRight: "16px",
+      }}
+    >
       <RecipeCard {...args} />
     </div>
   ),
