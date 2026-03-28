@@ -1,3 +1,4 @@
+import { CALORIES_PER_GRAM } from "../../constants/nutrition";
 import ProgressBar from "../ProgressBar/ProgressBar";
 import styles from "./NutrientBar.module.css";
 
@@ -7,11 +8,6 @@ export type NutrientBarProps = {
   macronutrient: string;
 };
 
-const CALORIES_PER_GRAM: Record<string, number> = {
-  protein: 4,
-  carb: 4,
-  fat: 9,
-};
 
 const COLORS: Record<string, { track: string; value: string }> = {
   protein: {
