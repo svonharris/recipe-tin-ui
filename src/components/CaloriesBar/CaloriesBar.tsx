@@ -8,6 +8,15 @@ export type CaloriesBarProps = {
   fat: number;
 };
 
+export const calculateMacroCalories = (
+  protein: number,
+  carb: number,
+  fat: number,
+) =>
+  protein * CALORIES_PER_GRAM.protein +
+  carb * CALORIES_PER_GRAM.carb +
+  fat * CALORIES_PER_GRAM.fat;
+
 const CaloriesBar = ({ protein, carb, fat }: CaloriesBarProps) => {
   const macros: { key: Macro; value: number }[] = [
     { key: "protein", value: protein },
@@ -15,10 +24,7 @@ const CaloriesBar = ({ protein, carb, fat }: CaloriesBarProps) => {
     { key: "fat", value: fat },
   ];
 
-  const macroCalories = macros.reduce(
-    (sum, { key, value }) => sum + value * CALORIES_PER_GRAM[key],
-    0,
-  );
+  const macroCalories = calculateMacroCalories(protein, carb, fat);
 
   return (
     <div className={styles.caloriesBar}>

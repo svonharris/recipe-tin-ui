@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from "@storybook/react";
-import CaloriesBar from "./CaloriesBar";
+import CaloriesBar, { calculateMacroCalories } from "./CaloriesBar";
 import NutrientBar from "../NutrientBar/NutrientBar";
 import Inline from "../Inline/Inline";
 
@@ -30,27 +30,33 @@ export const Combination: Story = {
       <Inline gap={24}>
         <NutrientBar
           value={args.protein}
-          totalCalories={3414}
+          totalCalories={calculateMacroCalories(
+            args.protein,
+            args.carb,
+            args.fat,
+          )}
           macronutrient={"protein"}
         />
         <NutrientBar
           value={args.carb}
-          totalCalories={3414}
+          totalCalories={calculateMacroCalories(
+            args.protein,
+            args.carb,
+            args.fat,
+          )}
           macronutrient={"carb"}
         />
         <NutrientBar
           value={args.fat}
-          totalCalories={3414}
+          totalCalories={calculateMacroCalories(
+            args.protein,
+            args.carb,
+            args.fat,
+          )}
           macronutrient={"fat"}
         />
         <CaloriesBar {...args} />
       </Inline>
-      <p
-        className="text-sm-regular"
-        style={{ marginTop: "12px", color: "var(--color-gray-800)" }}
-      >
-        * Calories total shown can be off by up to 3%.
-      </p>
     </>
   ),
 };
