@@ -1,7 +1,7 @@
+import { CALORIES_PER_GRAM } from "../../constants/nutrition";
 import styles from "./CaloriesBar.module.css";
 
 export type CaloriesBarProps = {
-  calories: number;
   protein: number;
   carb: number;
   fat: number;
@@ -15,34 +15,40 @@ const MACRO_COLORS: Record<Macro, string> = {
   fat: "var(--color-warning-500)",
 };
 
-const CaloriesBar = ({ calories, protein, carb, fat }: CaloriesBarProps) => {
+const CaloriesBar = ({ protein, carb, fat }: CaloriesBarProps) => {
   const macros: { key: Macro; value: number }[] = [
-    { key: "fat", value: fat },
-    { key: "carb", value: carb },
     { key: "protein", value: protein },
+    { key: "carb", value: carb },
+    { key: "fat", value: fat },
   ];
 
-  const nonZeroCount = macros.filter((m) => m.value > 0).length;
-  const segmentWidth = nonZeroCount > 0 ? 100 / nonZeroCount : 0;
+  const macroCalories = macros.reduce(
+    (sum, { key, value }) => sum + value * CALORIES_PER_GRAM[key],
+    0,
+  );
 
   return (
     <div className={styles.caloriesBar}>
       <div className={styles.bar}>
-        {macros.map(({ key, value }) =>
-          value > 0 ? (
+        {macros.map(({ key, value }) => {
+          const caloricValue = value * CALORIES_PER_GRAM[key];
+          const segmentHeight =
+            macroCalories > 0 ? (caloricValue / macroCalories) * 100 : 0;
+
+          return caloricValue > 0 ? (
             <div
               key={key}
               className={styles.segment}
               style={{
-                height: `${segmentWidth}%`,
+                height: `${segmentHeight}%`,
                 backgroundColor: MACRO_COLORS[key],
               }}
             />
-          ) : null,
-        )}
+          ) : null;
+        })}
       </div>
       <label className={styles.label}>
-        <p className={`text-lg-bold ${styles.amount}`}>{calories}</p>
+        <p className={`text-lg-bold ${styles.amount}`}>{macroCalories}</p>
         <p className={`text-sm-regular ${styles.macronutrient}`}>calories</p>
       </label>
     </div>
