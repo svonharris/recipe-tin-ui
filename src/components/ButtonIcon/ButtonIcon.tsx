@@ -10,7 +10,6 @@ export type ButtonIconProps = {
   type?: "button" | "submit";
   disabled?: boolean;
   rounded?: boolean;
-
   size?: "xl" | "lg" | "md" | "sm";
   variant?: "primary" | "secondary" | "tertiary" | "primaryGhost";
 };
