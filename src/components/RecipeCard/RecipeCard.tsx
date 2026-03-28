@@ -25,7 +25,7 @@ const RecipeCard = ({
       <div style={{ alignSelf: "center" }}>
         <Image
           src={image}
-          height="240px"
+          height="300px"
           altText={"Image of " + title}
           borderRadius={"var(--border-radius-lg)"}
         />
