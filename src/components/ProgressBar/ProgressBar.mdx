@@ -6,11 +6,12 @@ import * as ProgressBarStories from "./ProgressBar.stories";
 
 # Progress Bar
 
-Displays a value as a filled bar relative to a maximum of 100.
+Displays a value as a filled bar relative to a configurable maximum.
 
 ## Guidelines
 
-- Use `value` to set the filled amount, between `0` and `100`.
+- Use `value` to set the current filled amount.
+- Use `maxValue` to set the maximum value the bar can represent.
 - Use `trackColor` to set the background colour of the unfilled track.
 - Use `valueColor` to set the colour of the filled portion.
 - Prefer design token CSS variables for colours to stay consistent with the design system.

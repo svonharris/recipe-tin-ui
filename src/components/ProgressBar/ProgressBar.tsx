@@ -2,15 +2,16 @@ import styles from "./ProgressBar.module.css";
 
 export type ProgressBarProps = {
   value: number;
+  maxValue: number;
   trackColor: string;
   valueColor: string;
 };
 
-const ProgressBar = ({ value, trackColor, valueColor }: ProgressBarProps) => (
+const ProgressBar = ({ value, maxValue, trackColor, valueColor }: ProgressBarProps) => (
   <progress
     className={styles.progressBar}
     value={value}
-    max={100}
+    max={maxValue}
     style={
       {
         "--track-color": trackColor,
