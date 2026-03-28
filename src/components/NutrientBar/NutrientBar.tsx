@@ -3,6 +3,7 @@ import styles from "./NutrientBar.module.css";
 
 export type NutrientBarProps = {
   value: number;
+  maxValue: number;
   macronutrient: string;
 };
 
@@ -26,13 +27,14 @@ const FALLBACK_COLORS = {
   value: "var(--color-gray-500)",
 };
 
-const NutrientBar = ({ value, macronutrient }: NutrientBarProps) => {
+const NutrientBar = ({ value, maxValue, macronutrient }: NutrientBarProps) => {
   const colors = COLORS[macronutrient] ?? FALLBACK_COLORS;
 
   return (
     <div className={styles.nutrientBar}>
       <ProgressBar
         value={value}
+        maxValue={maxValue}
         trackColor={colors.track}
         valueColor={colors.value}
       />
