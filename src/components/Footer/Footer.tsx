@@ -6,7 +6,12 @@ export type FooterProps = {
 
 const Footer = ({ children }: FooterProps) => {
   return (
-    <footer style={{ borderTop: "1px solid var(--color-gray-100)" }}>
+    <footer
+      style={{
+        borderTop: "1px solid var(--color-gray-100)",
+        backgroundColor: "--color-white",
+      }}
+    >
       {children}
     </footer>
   );
