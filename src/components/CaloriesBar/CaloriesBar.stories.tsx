@@ -29,12 +29,20 @@ export const Combination: Story = {
     <>
       <Inline gap={24}>
         <NutrientBar
-          value={97}
+          value={args.protein}
           totalCalories={3414}
           macronutrient={"protein"}
         />
-        <NutrientBar value={401} totalCalories={3414} macronutrient={"carb"} />
-        <NutrientBar value={147} totalCalories={3414} macronutrient={"fat"} />
+        <NutrientBar
+          value={args.carb}
+          totalCalories={3414}
+          macronutrient={"carb"}
+        />
+        <NutrientBar
+          value={args.fat}
+          totalCalories={3414}
+          macronutrient={"fat"}
+        />
         <CaloriesBar {...args} />
       </Inline>
       <p

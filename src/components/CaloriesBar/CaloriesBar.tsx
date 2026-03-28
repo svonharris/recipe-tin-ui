@@ -1,18 +1,11 @@
-import { CALORIES_PER_GRAM } from "../../constants/nutrition";
+import { CALORIES_PER_GRAM, MACRO_COLORS } from "../../constants/nutrition";
+import type { Macro } from "../../constants/nutrition";
 import styles from "./CaloriesBar.module.css";
 
 export type CaloriesBarProps = {
   protein: number;
   carb: number;
   fat: number;
-};
-
-type Macro = "protein" | "carb" | "fat";
-
-const MACRO_COLORS: Record<Macro, string> = {
-  protein: "var(--color-secondary-500)",
-  carb: "var(--color-information-500)",
-  fat: "var(--color-warning-500)",
 };
 
 const CaloriesBar = ({ protein, carb, fat }: CaloriesBarProps) => {
@@ -41,7 +34,7 @@ const CaloriesBar = ({ protein, carb, fat }: CaloriesBarProps) => {
               className={styles.segment}
               style={{
                 height: `${segmentHeight}%`,
-                backgroundColor: MACRO_COLORS[key],
+                backgroundColor: MACRO_COLORS[key].value,
               }}
             />
           ) : null;
