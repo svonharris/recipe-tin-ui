@@ -3,8 +3,14 @@ import styles from "./NutrientBar.module.css";
 
 export type NutrientBarProps = {
   value: number;
-  maxValue: number;
+  totalCalories: number;
   macronutrient: string;
+};
+
+const CALORIES_PER_GRAM: Record<string, number> = {
+  protein: 4,
+  carb: 4,
+  fat: 9,
 };
 
 const COLORS: Record<string, { track: string; value: string }> = {
@@ -27,14 +33,19 @@ const FALLBACK_COLORS = {
   value: "var(--color-gray-500)",
 };
 
-const NutrientBar = ({ value, maxValue, macronutrient }: NutrientBarProps) => {
+const NutrientBar = ({
+  value,
+  totalCalories,
+  macronutrient,
+}: NutrientBarProps) => {
   const colors = COLORS[macronutrient] ?? FALLBACK_COLORS;
+  const caloricValue = value * (CALORIES_PER_GRAM[macronutrient] ?? 1);
 
   return (
     <div className={styles.nutrientBar}>
       <ProgressBar
-        value={value}
-        maxValue={maxValue}
+        value={caloricValue}
+        maxValue={totalCalories}
         trackColor={colors.track}
         valueColor={colors.value}
       />

@@ -6,15 +6,15 @@ import * as NutrientBarStories from "./NutrientBar.stories";
 
 # Nutrient Bar
 
-Displays the amount of a macronutrient as a labelled progress bar.
+Displays a macronutrient's caloric contribution as a proportion of the recipe's total calories.
 
 ## Guidelines
 
-- Use NutrientBar to visualise a single macronutrient value at a time.
+- Use NutrientBar to visualise a single macronutrient's caloric contribution at a time.
 - The `macronutrient` prop accepts `"protein"`, `"carb"`, or `"fat"` — each renders with a distinct colour.
 - Unrecognised macronutrient values fall back to a neutral grey colour scheme.
-- The `value` prop represents the amount in grams and is displayed as a label alongside the bar.
-- The `maxValue` prop sets the maximum value the bar can represent, determining the scale for `value`.
+- The `value` prop is the amount in grams. The component converts this to calories internally (`protein`/`carb` × 4, `fat` × 9).
+- The `totalCalories` prop is the total calories of the recipe. The bar fills proportionally to the macronutrient's caloric share.
 
 ## Props
 

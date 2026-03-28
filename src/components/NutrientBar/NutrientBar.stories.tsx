@@ -11,11 +11,11 @@ const meta = {
     },
     value: {
       description:
-        "The amount of the macronutrient in grams displayed on the bar.",
+        "The amount of the macronutrient in grams. Converted to calories internally to determine the bar fill proportion.",
     },
-    maxValue: {
+    totalCalories: {
       description:
-        "The maximum value of the progress bar. Determines the scale for the `value` prop.",
+        "The total calories of the recipe. Used to calculate each macronutrient's caloric contribution as a proportion of the whole.",
     },
   },
 } satisfies Meta<typeof NutrientBar>;
@@ -32,7 +32,7 @@ export const Default: Story = {
   },
   args: {
     value: 10,
-    maxValue: 50,
+    totalCalories: 120,
     macronutrient: "protein",
   },
 };
@@ -40,7 +40,7 @@ export const Default: Story = {
 export const CustomMacronutrient: Story = {
   args: {
     value: 50,
-    maxValue: 78,
+    totalCalories: 100,
     macronutrient: "fiber",
   },
 };
