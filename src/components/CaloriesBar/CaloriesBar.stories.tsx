@@ -4,7 +4,7 @@ import NutrientBar from "../NutrientBar/NutrientBar";
 import Inline from "../Inline/Inline";
 
 const meta = {
-  title: "Components/Charts/CaloriesBar",
+  title: "Components/Charts/Calories Bar",
   component: CaloriesBar,
 } satisfies Meta<typeof CaloriesBar>;
 
