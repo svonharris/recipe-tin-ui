@@ -1,0 +1,35 @@
+import { Canvas, Meta, Controls } from "@storybook/addon-docs/blocks";
+
+import * as CaloriesBarStories from "./CaloriesBar.stories";
+
+<Meta of={CaloriesBarStories} />
+
+# Calories Bar
+
+Displays a segmented bar showing each macronutrient's caloric contribution as a proportion of the total.
+
+## Guidelines
+
+- Use CaloriesBar to visualise the caloric breakdown of all three macronutrients together.
+- The `protein`, `carb`, and `fat` props are amounts in grams. Calories are calculated internally (`protein`/`carb` × 4, `fat` × 9).
+- Each segment fills proportionally to its share of the total calculated calories.
+- If a macronutrient value is zero, its segment is omitted and the remaining macros fill the bar.
+- The calorie total displayed may differ slightly from API-provided values as it is derived from the 4-4-9 formula.
+- Intended to be used alongside `NutrientBar` components for a full macronutrient breakdown.
+
+## Props
+
+<Canvas of={CaloriesBarStories.Default} />
+<Controls of={CaloriesBarStories.Default} />
+
+---
+
+## Examples
+
+### Default
+
+<Canvas of={CaloriesBarStories.Default} />
+
+### Combination
+
+<Canvas of={CaloriesBarStories.Combination} />
