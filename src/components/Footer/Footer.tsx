@@ -9,7 +9,7 @@ const Footer = ({ children }: FooterProps) => {
     <footer
       style={{
         borderTop: "1px solid var(--color-gray-100)",
-        backgroundColor: "--color-white",
+        backgroundColor: "var(--color-white)",
       }}
     >
       {children}
