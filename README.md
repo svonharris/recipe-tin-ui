@@ -136,4 +136,14 @@ Opens at [http://localhost:6006](http://localhost:6006).
 
 ## Credits
 
-Restaurant Icon used for favicon. <a href="https://iconscout.com/icons/restaurant" class="text-underline font-size-sm" target="_blank">Restaurant</a> by <a href="https://iconscout.com/contributors/yulidor" class="text-underline font-size-sm">YuliDor</a> on <a href="https://iconscout.com" class="text-underline font-size-sm">IconScout</a>.
+#### Icons:
+
+- Restaurant by <a href="https://iconscout.com/contributors/yulidor" class="text-underline font-size-sm">YuliDor</a> on IconScout.
+
+- Pancake by <a href="https://iconscout.com/contributors/faishal-lathief" class="text-underline font-size-sm">Faishal Lathief</a> on IconScout.
+
+- Cupcake by <a href="https://iconscout.com/contributors/aomam" class="text-underline font-size-sm">Aomam .</a> on IconScout.
+
+- Sandwich by <a href="https://iconscout.com/contributors/kerismaker" class="text-underline font-size-sm" target="_blank">Kerismaker Studio</a> on IconScout.
+
+- Veg Food by <a href="https://iconscout.com/contributors/iconscout" class="text-underline font-size-sm" target="_blank">IconScout Store</a> on IconScout.
