@@ -1,15 +1,15 @@
 import * as React from "react";
 import type { SVGProps } from "react";
 type IconProps = SVGProps<SVGSVGElement> & {
-  size?: number,
-  color?: string,
-  title?: string,
-  titleId?: string,
+  size?: number;
+  color?: string;
+  title?: string;
+  titleId?: string;
 };
 const SvgCupcake = React.forwardRef(
   (
     { size = 24, color = "currentColor", title, titleId, ...props }: IconProps,
-    ref: React.Ref<SVGSVGElement>
+    ref: React.Ref<SVGSVGElement>,
   ) => {
     const svgProps = {
       width: size,
@@ -25,7 +25,6 @@ const SvgCupcake = React.forwardRef(
         id="SvgjsSvg1026"
         xmlns="http://www.w3.org/2000/svg"
         xmlnsXlink="http://www.w3.org/1999/xlink"
-        xmlns:svgjs="http://svgjs.com/svgjs"
         viewBox="0 0 288 288"
         ref={ref}
         aria-labelledby={titleId}
@@ -76,7 +75,7 @@ const SvgCupcake = React.forwardRef(
       </svg>
     );
     return React.cloneElement(inner, svgProps);
-  }
+  },
 );
 SvgCupcake.displayName = "SvgCupcake";
 export default SvgCupcake;
