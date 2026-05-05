@@ -4,6 +4,8 @@
 
 <h1 align="center">Recipe Tin UI Design System</h1>
 
+Storybook is live at: https://svonharris.github.io/recipe-tin-ui
+
 Recipe Tin UI Design System provides reusable UI components, design tokens, and foundations that help build a consistent, accessible, and scalable digital recipe box. Inspired by the classic kitchen tin filled with handwritten recipe cards, it keeps all the building blocks for discovering, saving, and sharing recipes in one place.
 
 This guide walks you through installing and using the design system in your project.
@@ -109,7 +111,7 @@ Design tokens are available for direct use in CSS.
 
 ```
 .my-card {
-  background: var(--color-surface-primary);
+  background: var(--color-primary-800);
   border-radius: var(--border-radius-md);
 }
 ```
@@ -117,6 +119,8 @@ Design tokens are available for direct use in CSS.
 <hr size="4" color="#ededed">
  
 ## Documentation
+
+Storybook is live at: https://svonharris.github.io/recipe-tin-ui
 
 Interactive documentation and live examples are published via [GitHub](https://svonharris.github.io/recipe-tin-ui/?path=/docs/docs-introduction--docs) . There you can:
 
