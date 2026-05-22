@@ -120,7 +120,7 @@ Design tokens are available for direct use in CSS.
  
 ## Documentation
 
-Storybook is live at: <a href="https://svonharris.github.io/recipe-tin-ui" target="_blank">https://svonharris.github.io/recipe-tin-ui</a>
+Storybook is live at: [https://svonharris.github.io/recipe-tin-ui](https://svonharris.github.io/recipe-tin-ui "Go view the Storybook Documentation live")
 
 Interactive documentation and live examples are published via [GitHub](https://svonharris.github.io/recipe-tin-ui/?path=/docs/docs-introduction--docs) . There you can:
 
