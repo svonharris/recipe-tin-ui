@@ -1,0 +1,10 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(mkdir -p /Users/sheonnaharris/Documents/Javascript-Projects/React/recipe-tin-ui/scripts/hooks)"
+    ],
+    "additionalDirectories": [
+      "/Users/sheonnaharris/Documents/Javascript-Projects/React/recipe-tin-ui/scripts"
+    ]
+  }
+}

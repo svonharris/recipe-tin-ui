@@ -1,0 +1,18 @@
+#!/bin/sh
+set -e
+
+if ! git diff --cached --name-only | grep -q "^package.json$"; then
+  exit 0
+fi
+
+NEW_VERSION=$(git show :package.json | node -e "let d='';process.stdin.on('data',c=>d+=c).on('end',()=>console.log(JSON.parse(d).version))")
+OLD_VERSION=$(git show HEAD:package.json 2>/dev/null | node -e "let d='';process.stdin.on('data',c=>d+=c).on('end',()=>console.log(JSON.parse(d).version))" 2>/dev/null || echo "")
+
+if [ -z "$OLD_VERSION" ] || [ "$NEW_VERSION" = "$OLD_VERSION" ]; then
+  exit 0
+fi
+
+echo "Version bump detected: $OLD_VERSION -> $NEW_VERSION"
+node scripts/update-changelog.js "$NEW_VERSION"
+git add CHANGELOG.md
+echo "CHANGELOG.md updated for v$NEW_VERSION"

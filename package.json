@@ -14,7 +14,8 @@
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build",
     "icons:export": "npx @svgr/cli --no-index --config-file svgr.config.cjs --out-dir src/icons ./design/icons && node scripts/generate-icon-index.js",
-    "typecheck": "tsc --noEmit"
+    "typecheck": "tsc --noEmit",
+    "setup:hooks": "sh scripts/install-hooks.sh"
   },
   "exports": {
     ".": {

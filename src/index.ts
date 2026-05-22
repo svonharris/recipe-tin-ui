@@ -8,6 +8,7 @@ export type { ButtonIconProps } from './components/ButtonIcon/ButtonIcon'
 
 export { CaloriesBar } from './components/CaloriesBar/CaloriesBar'
 export type { CaloriesBarProps } from './components/CaloriesBar/CaloriesBar'
+export { calculateMacroCalories } from './components/CaloriesBar/CaloriesBar'
 
 export { Footer } from './components/Footer/Footer'
 export type { FooterProps } from './components/Footer/Footer'
