@@ -47,7 +47,7 @@ To install a specific release, append the version tag:
 npm install github:svonharris/recipe-tin-ui#v1.0.1
 ```
 
-Tags follow [semantic versioning](https://semver.org) and map to GitHub releases. Pinning to a tag is recommended for production use to ensure reproducible installs.
+Version Tags: [here](https://github.com/svonharris/recipe-tin-ui/tags)
 
 ### Peer Dependencies
 
