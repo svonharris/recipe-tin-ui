@@ -1,0 +1,32 @@
+import { Canvas, Meta, Controls } from "@storybook/addon-docs/blocks";
+
+import * as ImageContainerStories from "./ImageContainer.stories";
+
+<Meta of={ImageContainerStories} />
+
+# ImageContainer
+
+A layout component that constrains and centres an image within a fixed-size box.
+
+## Guidelines
+
+- Use ImageContainer to wrap an `Image` component when you need a fixed, clipped display area.
+- Use the `height` prop to control the vertical size of the container.
+- Use the `width` prop to control the horizontal size of the container.
+- Use `minWidth` to prevent the container from collapsing on narrow screens.
+- Pair with `objectFit="cover"` on the `Image` child to fill the container without distortion.
+
+## Props
+
+<Canvas of={ImageContainerStories.Default} />
+<Controls of={ImageContainerStories.Default} />
+
+---
+
+## Examples
+
+### Default
+
+Centers an image inside a `50% × 250px` container with a minimum width of `300px`.
+
+<Canvas of={ImageContainerStories.Default} />
