@@ -1,0 +1,31 @@
+import { Canvas, Meta, Controls } from "@storybook/addon-docs/blocks";
+
+import * as ContainerStories from "./Container.stories";
+
+<Meta of={ContainerStories} />
+
+# Container
+
+A layout component that wraps content in a configurable HTML element with controllable padding on each side.
+
+## Guidelines
+
+- Use Container to add consistent horizontal padding around page-level or section-level content.
+- Use the `paddingLeft` and `paddingRight` props to override the default `16px` horizontal padding.
+- Use `paddingTop` and `paddingBottom` to add vertical spacing when needed.
+- Use the `htmlElement` prop to render the appropriate semantic HTML element (`main`, `section`, `article`, etc.).
+
+## Props
+
+<Canvas of={ContainerStories.Default} />
+<Controls of={ContainerStories.Default} />
+
+---
+
+## Examples
+
+### Default
+
+Renders a `div` with `16px` left and right padding and `24px` top and bottom padding.
+
+<Canvas of={ContainerStories.Default} />
