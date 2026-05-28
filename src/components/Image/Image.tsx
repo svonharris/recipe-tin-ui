@@ -15,7 +15,7 @@ const Image = ({
   height = "auto",
   altText,
   borderRadius = "none",
-  objectFit,
+  objectFit = "cover",
 }: ImageProps) => {
   return (
     <img
