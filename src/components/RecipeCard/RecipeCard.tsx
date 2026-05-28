@@ -2,6 +2,7 @@ import Ratings from "../Ratings/Ratings";
 import RecipeDuration from "../RecipeDuration/RecipeDuration";
 import Inline from "../Inline/Inline";
 import Image from "../Image/Image";
+import ImageContainer from "../ImageContainer/ImageContainer";
 import Stack from "../Stack/Stack";
 import Heading from "../Heading/Heading";
 
@@ -22,14 +23,15 @@ const RecipeCard = ({
 }: RecipeCardProps) => {
   return (
     <Stack gap={8}>
-      <div style={{ alignSelf: "center" }}>
+      <ImageContainer>
         <Image
           src={image}
-          height="300px"
+          width="90%"
+          height="90%"
           altText={"Image of " + title}
           borderRadius={"var(--border-radius-lg)"}
         />
-      </div>
+      </ImageContainer>
       <Inline gap={0} justify="between">
         <Ratings rating={ratings} reviews={reviews} />
         <RecipeDuration duration={cookTime} />
