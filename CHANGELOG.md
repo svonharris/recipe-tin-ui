@@ -6,11 +6,23 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 
 ## [Unreleased]
 
-### Added
-- Storybook build and debug files
+---
 
-### Removed
-- Unused file
+## [1.0.8] — 2026-05-28
+
+- Added Container component with stories and docs.
+- Updated RecipeCard to wrap image in ImageContainer.
+- Added settings.local.json to .gitignore.
+- Set default objectFit to "cover" on Image component.
+- Added objectFit prop to Image component.
+- Added ImageContainer component with stories and docs.
+- Updated docs usage examples to use typed Recipe state instead of any[].
+- Live url does not open in new tab. Reverted back to original state with a title.
+- Updated live url to open in new tab.
+- Created a hook for the CHANGELOG to update every time the package version changes.
+- Added a CHANGELOG.md with versioning entries history showing how the system evolved.
+- Added storybook build and debug files.
+- Removed unused file.
 
 ---
 
