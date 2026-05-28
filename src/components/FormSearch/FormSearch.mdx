@@ -26,9 +26,11 @@ A generic, reusable search form. Renders a search input and calls `onSubmit` wit
 
 ```tsx
 import { useEdamamSearch } from "./hooks/useEdamamSearch"; // your app's hook
-import { FormSearch, RecipeGallery } from "recipe-tin-ui";
+import { FormSearch, RecipeGallery, type RecipeGalleryProps } from "recipe-tin-ui";
 
-const [recipes, setRecipes] = useState<any[]>([]);
+type Recipe = RecipeGalleryProps["recipes"][number];
+
+const [recipes, setRecipes] = useState<Recipe[]>([]);
 const { search } = useEdamamSearch(setRecipes);
 
 <FormSearch onSubmit={search} />
