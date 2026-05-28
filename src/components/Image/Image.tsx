@@ -6,6 +6,7 @@ export type ImageProps = {
   height?: string;
   altText: string;
   borderRadius?: React.CSSProperties["borderRadius"];
+  objectFit?: React.CSSProperties["objectFit"];
 };
 
 const Image = ({
@@ -14,6 +15,7 @@ const Image = ({
   height = "auto",
   altText,
   borderRadius = "none",
+  objectFit,
 }: ImageProps) => {
   return (
     <img
@@ -21,7 +23,7 @@ const Image = ({
       width={width}
       height={height}
       alt={altText}
-      style={{ borderRadius }}
+      style={{ borderRadius, objectFit }}
     />
   );
 };
