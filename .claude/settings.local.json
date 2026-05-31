@@ -1,10 +1,16 @@
 {
   "permissions": {
     "allow": [
-      "Bash(mkdir -p /Users/sheonnaharris/Documents/Javascript-Projects/React/recipe-tin-ui/scripts/hooks)"
+      "Bash(mkdir -p /Users/sheonnaharris/Documents/Javascript-Projects/React/recipe-tin-ui/scripts/hooks)",
+      "Bash(mkdir -p /Users/sheonnaharris/Documents/Javascript-Projects/React/recipe-tin-ui/.claude/commands)",
+      "Bash(git status)",
+      "Bash(git diff)",
+      "Bash(git diff --staged)",
+      "Bash(git push)"
     ],
     "additionalDirectories": [
-      "/Users/sheonnaharris/Documents/Javascript-Projects/React/recipe-tin-ui/scripts"
+      "/Users/sheonnaharris/Documents/Javascript-Projects/React/recipe-tin-ui/scripts",
+      "/Users/sheonnaharris/Documents/Javascript-Projects/React/recipe-tin-ui/.claude"
     ]
   }
 }
