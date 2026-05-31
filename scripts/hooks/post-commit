@@ -1,0 +1,11 @@
+#!/bin/sh
+
+NEW_VERSION=$(git show HEAD:package.json | node -e "let d='';process.stdin.on('data',c=>d+=c).on('end',()=>console.log(JSON.parse(d).version))")
+OLD_VERSION=$(git show HEAD~1:package.json 2>/dev/null | node -e "let d='';process.stdin.on('data',c=>d+=c).on('end',()=>console.log(JSON.parse(d).version))" 2>/dev/null || echo "")
+
+if [ -z "$OLD_VERSION" ] || [ "$NEW_VERSION" = "$OLD_VERSION" ]; then
+  exit 0
+fi
+
+git tag "v$NEW_VERSION"
+echo "Tagged v$NEW_VERSION"
