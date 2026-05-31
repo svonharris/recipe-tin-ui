@@ -1,14 +1,22 @@
 import React from "react";
 
-type ContainerElement = "div" | "main" | "section" | "article" | "aside" | "header" | "footer" | "nav";
+type ContainerElement =
+  | "div"
+  | "main"
+  | "section"
+  | "article"
+  | "aside"
+  | "header"
+  | "footer"
+  | "nav";
 
 export type ContainerProps = {
   children?: React.ReactNode;
   htmlElement?: ContainerElement;
-  paddingTop?: string;
-  paddingBottom?: string;
-  paddingLeft?: string;
-  paddingRight?: string;
+  paddingTop?: number;
+  paddingBottom?: number;
+  paddingLeft?: number;
+  paddingRight?: number;
 };
 
 const Container = ({
@@ -16,8 +24,8 @@ const Container = ({
   htmlElement: Tag = "div",
   paddingTop,
   paddingBottom,
-  paddingLeft = "16px",
-  paddingRight = "16px",
+  paddingLeft = 16,
+  paddingRight = 16,
 }: ContainerProps) => (
   <Tag style={{ paddingTop, paddingBottom, paddingLeft, paddingRight }}>
     {children}
