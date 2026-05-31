@@ -3,6 +3,16 @@ name: UI Library Release
 on:
   push:
     branches: [main]
+    paths:
+      - 'src/**'
+      - '!src/docs/**'
+      - '!src/**/*.stories.tsx'
+      - '!src/**/*.stories.ts'
+      - 'package.json'
+      - 'vite.config.ts'
+      - 'tsconfig.json'
+      - 'tsconfig.app.json'
+      - 'tsconfig.build.json'
 
 permissions:
   contents: write
