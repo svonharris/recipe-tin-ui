@@ -8,6 +8,34 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 
 ---
 
+## [1.0.9] — 2026-05-31
+
+- chore: expand Claude Code permissions and directory access in settings.local.json
+- chore: add generate:index npm script for manual src/index.ts regeneration
+- chore: add /commit-and-push Claude slash command for staged commits
+- feat: add script to auto-generate src/index.ts from component exports
+- ci: auto-regenerate src/index.ts in pre-commit hook when component files change
+- refactor(Container): change padding props from string to number; regenerate src/index.ts
+- ci: skip release on story, docs, and non-build file changes
+- ci: scope deploy workflow to relevant source paths
+- docs: replace semver description with direct link to version tags
+- version: "1.0.8" release
+- Added Container component with stories and docs.
+- Updated RecipeCard to wrap image in ImageContainer.
+- Added settings.local.json to .gitignore.
+- Set default objectFit to "cover" on Image component.
+- Added objectFit prop to Image component.
+- Added ImageContainer component with stories and docs.
+- Updated docs usage examples to use typed Recipe state instead of any[].
+- Live url does not open in new tab. Reverted back to original state with a title.
+- Updated live url to open in new tab.
+- Created a hook for the CHANGELOG to update every time the package version changes.
+- Added a CHANGELOG.md with versioning entries history showing how the system evolved.
+- Added storybook build and debug files.
+- Removed unused file.
+
+---
+
 ## [1.0.8] — 2026-05-28
 
 - Added Container component with stories and docs.
