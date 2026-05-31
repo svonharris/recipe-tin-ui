@@ -1,6 +1,11 @@
 #!/bin/sh
 set -e
 
+if git diff --cached --name-only | grep -q "^src/components/"; then
+  node scripts/generate-component-index.js
+  git add src/index.ts
+fi
+
 if ! git diff --cached --name-only | grep -q "^package.json$"; then
   exit 0
 fi
